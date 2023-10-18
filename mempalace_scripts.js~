@@ -1,0 +1,3 @@
+import {eng_concrete_nouns} from './resources/word_lists.mjs'
+
+console.log(eng_concrete_nouns()[2]);
