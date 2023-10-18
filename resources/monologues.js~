@@ -1,0 +1,59 @@
+eng_monologue_library = [
+[
+  "Are you tired of unhealthy fast food?",
+  "Introducing the revolutionary Super Salad Maker!",
+  "With our Super Salad Maker, you can create delicious and nutritious salads in minutes!",
+  "Just imagine having a fresh and satisfying salad whenever you want.",
+  "Our Super Salad Maker is equipped with state-of-the-art slicing and dicing technology.",
+  "Chop up your favorite vegetables in seconds with the press of a button.",
+  "No more tedious cutting and chopping by hand!",
+  "But wait, there's more!",
+  "The Super Salad Maker also comes with a variety of salad dressing dispensers.",
+  "Choose from a range of flavors to add the perfect finishing touch to your salad.",
+  "From tangy vinaigrettes to creamy ranch, we've got you covered.",
+  "And clean-up is a breeze!",
+  "The Super Salad Maker's parts are dishwasher safe, saving you time and effort.",
+  "Say goodbye to the hassle of preparing salads and hello to a healthier lifestyle!",
+  "But don't just take our word for it - listen to what our satisfied customers have to say:",
+  "Customer 1: 'I used to dread making salads, but the Super Salad Maker has changed everything. It's so easy and convenient!'",
+  "Customer 2: 'I've never had such fresh and crisp salads before. This machine is a game-changer!'",
+  "Don't miss out on this incredible offer!",
+  "Order your Super Salad Maker today and take the first step towards a healthier you!",
+  "Operators are standing by, so call now!"
+],    
+    ["I understand that you've been bitten by a snake, and I want to assure you that we're here to help.",
+  "Snakebites can be serious, but with prompt medical attention, the chances of a full recovery are high.",
+  "The first step in your treatment is to keep calm and try to immobilize the affected limb.",
+  "This will help slow down the spread of venom in your body.",
+  "We'll assess the severity of the bite and identify the specific snake species, if possible.",
+  "This information is crucial in determining the appropriate treatment.",
+  "In most cases, we'll administer antivenom, which is a specialized medication that counteracts the snake's venom.",
+  "Antivenom helps neutralize the toxins and prevent further damage.",
+  "We'll closely monitor your vital signs and the progression of symptoms.",
+  "It's essential to stay at the hospital for observation and ensure your safety.",
+  "During your treatment, we'll provide supportive care to manage any complications or symptoms that may arise.",
+  "This can include pain management, wound care, and the administration of intravenous fluids.",
+  "In some cases, additional treatments like antibiotics may be necessary to prevent infection.",
+  "We understand that snakebites can be emotionally distressing, so we have a team of counselors available to provide support.",
+  "Once you're stable and showing signs of improvement, we'll discuss your ongoing care and any necessary follow-up appointments.",
+  "Recovery from a snakebite can take time, and we'll be with you every step of the way to ensure your well-being.",
+  "Remember, it's crucial to avoid attempting any home remedies or applying tourniquets on your own.",
+  "These actions can worsen the situation and delay appropriate medical treatment.",
+  "You've taken the right step by seeking medical help promptly, and together, we'll work towards your recovery."
+]
+
+    ]//end library
+
+
+function get_monolog(n_items){
+    console.log("hi")
+    candidate_list = [];
+    while(candidate_list.length < n_items){
+	candidate_list = candidate_list.concat(shuffle(eng_monologue_library)[0])
+	console.log("looping");
+    }
+    console.log("cd")
+    return(
+	candidate_list.slice(0,n_items)
+    )
+}
