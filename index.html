@@ -3,55 +3,50 @@
 <head>
 <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-<!-- order is important   -->
-<script type="text/javascript" src="mempalace_scripts.js"></script>
-<script type="text/javascript" src="mempalace_tour_scripts.js"></script>
-<script type="text/javascript">
-  //capture choices made on this page before continuing:
-  let targ_lang = "blank targlang"
-  let text_type = "blank text type"
+  <!-- script load order is important. Exercise setup doesn't ref anything on this page, can go first   -->
+  <!-- resource getters refer to global vars (language, difficulty settings), need to follow setup. -->
+  <!-- menu scripts ref things on this page, go last-->
+  <!-- this is dumb and you should go learn how to do it properly, especially the global-var settings thing -->
   
-  function submit_settings_start(){
-      targ_lang = document.querySelector('input[name="targ_language"]:checked').value;
-      text_type = document.querySelector('input[name="text_type"]:checked').value;
-
-      mempalace_startfresh();
-  }
-  
-</script>
-<!-- resource files must come last because the contain getters that reference setting (target language, text type) -->
-<script type="text/javascript" src="resources/word_lists.js"></script>
-<script type="text/javascript" src="resources/my_palace.js"></script>
-<script type="text/javascript" src="resources/monologues.js"></script>
-
-
+  <script type="text/javascript" src="mempalace_scripts.js"></script>
+  <script type="text/javascript" src="mempalace_tour_scripts.js"></script>
+  <script type="text/javascript" src="nback_scripts.js"></script>
 </head>
 <body>
 
-  <div id="uberdiv">
-    <p>I want to:</p>
-    <ul>
-      <li><button onClick=viewTour()> tour my palace </button></li>      
-      <li><button onClick=submit_settings_start()>Train my memory</button></li>
-    </ul>
-    <div style="border:1px solid black">
-    <h2>Settings</h2>
-      <h3>Language</h3>
-      <input type="radio" id="eng" name="targ_language" value="eng">
-      <label for="eng">English</label><br>
-      <input type="radio" id="zh" name="targ_language" value="zh">
-      <label for="zh">Chinese</label><br>
-      <input type="radio" id="rnd" name="targ_language" value="rnd" checked>
-      <label for="rnd">Surprise me</label><br>
-      <h3>Text type</h3>
-      <input type="radio" id="tt_words" name="text_type" value="words">
-      <label for="eng">Words</label><br>
-      <input type="radio" id="tt_texts" name="text_type" value="texts">
-      <label for="zh">Texts</label><br>
-      <input type="radio" id="tt_rnd" name="text_type" value="rnd" checked>
-      <label for="rnd">Surprise me</label><br>
-    </div>
+  <div id="uberdiv" class="maindiv">
+    <p><button onClick='mempalace_home()'>Memory Palace</button></p>
+    <p><button onClick='nback_home()'>N-back</button></p>
+    <p><button onClick='cloze_home()' disabled>Cloze completions</button></p>
+    <p><button onClick='translate_home()' disabled>Just translate</button></p>
   </div>
+
+
+  <script type="text/javascript">
+    
+  //capture choices made on this page before continuing: (these are the global vars that need to be set for resource getters)
+  let targ_lang = "blank targlang"
+  let text_type = "blank text type"
   
+  function mempalace_submit_settings_start(){
+      targ_lang = document.querySelector('input[name="targ_language"]:checked').value;
+      text_type = document.querySelector('input[name="text_type"]:checked').value;
+
+      mempalace_startfresh(3);
+  }
+
+    //DEV ONLY
+//    nback_home()//skip to current-dev exercise
+ </script>
+ 
+<!-- resource files come last because they can contain getters that reference target language, text type etc, vars must exist -->
+<script type="text/javascript" src="resources/concrete_wordlists.js"></script>
+<script type="text/javascript" src="resources/my_palace.js"></script>
+<script type="text/javascript" src="resources/monologues.js"></script>
+<script type="text/javascript" src="resources/common_wordlists.js"></script>
+
+<!-- <script type="text/javascript" src="mainmenu_scripts.js"></script> -->
+
+
 </body>
 </html>

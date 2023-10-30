@@ -1,3 +1,24 @@
 body{
     background:grey;
 }
+
+.maindiv{
+    width:80%;
+    margin:auto;
+    border:1px solid black;
+}
+.nback_inner_p{
+    border:1px solid green;
+    text-align:center;
+}
+.nback_final_p{
+    border:1px solid red;
+    color:red;
+    text-align:center;
+}
+.nback_response_p{
+    text-align:center;
+}
+.nback_outer_div{
+    border:1px solid blue;
+}

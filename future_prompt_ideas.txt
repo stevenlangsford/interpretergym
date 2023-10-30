@@ -1,0 +1,410 @@
+MADLIB PROMPTS:
+Create a list of eg professions.
+Create a bunch of templates where X spins through the list.
+Create a bunch of optional flavor-text prefixes and suffixes that go with everything (make it interesting, lots of detail, casual style, slightly formal style etc, deliver the monologue deadpan without flagging that anything is unusual, but make part of it surreal)
+In chinese / in english explicit, so languages take turns being first.
+Have some always-on suffixes eg javascript array formatting.
+
+Ring the changes! Shuffle the output, write 'em to a file, drip-feed to poe and delete the prompts from the master file as you go.
+
+Probaby good to hit 'retry' and get two copies of each. They'll be sorta different enough (and possibly the existence of some near-matches will be good to discourage memorizing?)
+
+1) please output a list of 30 specialized jobs in the X profession for
+
+DONE
+{medical, legal, public service, finance, hospitality, science, education, government, arts, trades, some joke entries
+
+For each:
+
+write a monologue from a senior X to a junior X. The senior X is going on leave and is giving the junior X a list of things to remember while they are away. There are at least ten things in the list.
+
+write a monologue from a junior X to a senior X. The senior X has just come back from leave and the junior X is updating them on important things that happened while they were away. There are at least 10 things.
+
+Write a monologue from a senior X to a junior X. The senior X is giving career advice, things they wish they had known when they started, and is trying to give the junior X a sense of which parts of the job are most important, which are nice-to-have, and which are commonly thought to be important by outsiders but can actually be ignored. There are at least three examples of each.
+
+A senior X is trying to give a younger friend a sense of whether they should consider becoming an X in the future. Basically of the form if you like X, Y, and Z, then you should consider it, if you have trouble with A, B, or C, consider another profession. Give as much detail specific to X as possible.
+
+write a resignation letter from an X to their supervisor detailing ten concrete reasons why they cannot continue in the job. Include at least two detailed stories about specific incidents that happened to them while at work.
+
+write a cover letter for someone applying for a job as an X. The letter gives several detailed examples of stories from the applicant's relevant experience.
+
+Write a letter of complaint from someone who had a bad interaction with an X. The letter gives a lot of detail about everything that happened over the course of the interaction. There are at least seven separate things.
+
+write a letter of praise from someone who had a good interaction with an X. The person recounts in great detail everything the X did and the specific positive impact it had on them. There are at least seven separate things.
+
+write a speech from a retiring X. They describe a personal story that motivated them to become a X in the first place. They give three examples of things that surprised them when they actually started doing the job. They describe their best ever work achievement and their worst ever failure in detail. They finish by giving some advice to newcomers just starting their careers in the field.
+
+Write a monologue from an X describing their greatest professional rival. They go into great detail about specific characteristics that they hate about their rival and tell a detailed story about the worst mistake their rival has ever made.
+
+Write a monologue from an X nominating their colleague for a prestigious award. They go into great detail about specific characteristics that make the person a worthy recipient and tell a detailed story about a specific incident that made them want to nominate this person for the award.
+
+Choose a common tool used often by a X (and not so much by other professions). Describe a normal workday from the tool's perspective, giving a detailed account of at least five different things that happened that day
+
+write a diary entry from an X walking through the things that happened to them that day in great detail. At least seven things happened. It was a pretty good day.
+
+write a diary entry from an X walking through the things that happened to them that day in great detail. At least seven things happened. It was a pretty bad day. Describe each event in detail.
+
+write a diary entry from an X walking through the things that happened to them that day in great detail. At least seven things happened. It was an absolutely wonderful day and more than one of the events was unusual and extremely positive. Describe each event in detail.
+
+write a diary entry from an X walking through the things that happened to them that day in great detail. At least seven things happened. It was an absolutely awful day and more than one of the events was unusual and extremely negative. Describe each event in detail.
+
+
+
+    Cardiothoracic Surgeon
+    Neurologist
+    Anesthesiologist
+    Radiologist
+    Oncologist
+    Pediatrician
+    Orthopedic Surgeon
+    Dermatologist
+    Gastroenterologist
+    Obstetrician/Gynecologist (OB/GYN)
+    Ophthalmologist
+    Psychiatrist
+    Nephrologist
+    Endocrinologist
+    Hematologist
+    Urologist
+    Allergist/Immunologist
+    Pulmonologist
+    Infectious Disease Specialist
+    Rheumatologist
+    Plastic Surgeon
+    Emergency Medicine Physician
+    Geriatrician
+    Pathologist
+    Medical Geneticist
+    Cardiovascular Technologist
+    Clinical Laboratory Scientist
+    Nurse
+    Physical Therapist
+    Speech-Language Pathologist
+    Dentist
+
+    Judge
+    Prosecutor
+    Defense Attorney
+    Corporate Lawyer
+    Intellectual Property Lawyer
+    Family Law Attorney
+    Immigration Lawyer
+    Environmental Lawyer
+    Tax Attorney
+    Employment Lawyer
+    Real Estate Lawyer
+    Personal Injury Lawyer
+    Criminal Law Specialist
+    Bankruptcy Lawyer
+    Health Law Attorney
+    Entertainment Lawyer
+    Trusts and Estates Lawyer
+    Civil Litigation Attorney
+    Securities Lawyer
+    International Law Specialist
+    Admiralty Lawyer (Maritime Law)
+    Constitutional Law Attorney
+    Legal Researcher
+    Mediator
+    Arbitrator
+    Legal Compliance Officer
+    Legal Consultant
+    Law Librarian
+    Legal Writer/Editor
+    Legal Technology Specialist
+
+    Civil Servant
+    Foreign Service Officer
+    Policy Analyst
+    Social Worker
+    Public Health Officer
+    Environmental Specialist
+    Urban Planner
+    Emergency Management Coordinator
+    Education Administrator
+    Public Administrator
+    Human Resources Specialist
+    Budget Analyst
+    Diplomat
+    Public Relations Officer
+    Regulatory Affairs Specialist
+    Grant Writer
+    Public Safety Officer
+    Transportation Planner
+    Community Development Specialist
+    Economic Development Analyst
+    Public Policy Researcher
+    Housing Specialist
+    Public Health Inspector
+    Public Defender
+    Immigration Officer
+    Public Information Officer
+    Youth Program Coordinator
+    Equal Opportunity Specialist
+    Census Bureau Analyst
+    Government Auditor
+
+    Investment Banker
+    Financial Analyst
+    Portfolio Manager
+    Risk Manager
+    Asset Manager
+    Financial Planner
+    Hedge Fund Manager
+    Private Equity Analyst
+    Quantitative Analyst
+    Credit Analyst
+    Fixed Income Analyst
+    Compliance Officer
+    Derivatives Trader
+    Equity Research Analyst
+    Mergers and Acquisitions Specialist
+    Wealth Manager
+    Venture Capitalist
+    Corporate Finance Analyst
+    Real Estate Analyst
+    Insurance Underwriter
+    Actuary
+    Financial Controller
+    Treasury Analyst
+    Investment Advisor
+    Financial Consultant
+    Fund Accountant
+    Commodities Trader
+    Retail Banker
+    Financial Operations Manager
+    Financial Systems Analyst
+    
+    Hotel Manager
+    Restaurant Manager
+    Event Planner
+    Banquet Manager
+    Front Office Manager
+    Food and Beverage Manager
+    Executive Chef
+    Sommelier
+    Concierge
+    Resort Manager
+    Catering Manager
+    Revenue Manager
+    Spa Manager
+    Bar Manager
+    Guest Relations Manager
+    Housekeeping Manager
+    Travel Coordinator
+    Venue Coordinator
+    Wedding Planner
+    Casino Manager
+    Cruise Director
+    Night Auditor
+    Golf Course Manager
+    Tourism Officer
+    Room Service Manager
+    Hotel Sales Manager
+    Hospitality Trainer
+    Theme Park Manager
+    Airline Catering Manager
+
+    Geneticist
+    Biochemist
+    Epidemiologist
+    Biophysicist
+    Pharmacologist
+    Astrobiologist
+    Nanotechnologist
+    Geologist
+    Neuroscientist
+    Marine Biologist
+    Ecologist
+    Environmental Scientist
+    Seismologist
+    Meteorologist
+    Forensic Scientist
+    Paleontologist
+    Immunologist
+    Virologist
+    Biomedical Engineer
+    Food Scientist
+    Materials Scientist
+    Psychologist
+    Biostatistician
+    Physicist
+    Physiologist
+    Robotics Engineer
+    Chemical Engineer
+    Space Scientist
+    Biologist
+
+    School Principal
+    Curriculum Developer
+    Education Administrator
+    Instructional Designer
+    School Counselor
+    Special Education Teacher
+    School Psychologist
+    Literacy Specialist
+    Education Consultant
+    College Admissions Counselor
+    Educational Researcher
+    Education Policy Analyst
+    Educational Technologist
+    Early Childhood Educator
+    Teacher
+    ESL (English as a Second Language) Teacher
+    Gifted and Talented Education Specialist
+    School Librarian
+    Music Teacher
+    Art Teacher
+    Physical Education Teacher
+    Career Counselor
+    Online Education Instructor
+    Educational Therapist
+    School Social Worker
+    School Nurse
+    Adult Education Instructor
+    International Education Program Coordinator
+    School Technology Coordinator
+    Education Program Evaluator
+
+    Diplomat
+    Policy Analyst
+    Legislative Assistant
+    Government Lawyer
+    Foreign Service Officer
+    Intelligence Analyst
+    Urban Planner
+    Public Relations Specialist
+    Budget Analyst
+    City Manager
+    Environmental Compliance Officer
+    Government Auditor
+    Public Health Administrator
+    Economic Development Specialist
+    Political Campaign Manager
+    Contract Specialist
+    Homeland Security Officer
+    Tax Policy Analyst
+    Human Resources Manager
+    Public Information Officer
+    Government Translator/Interpreter
+    Regulatory Affairs Specialist
+    Legislative Liaison
+    Census Bureau Statistician
+    Government Archivist
+    Public Safety Officer
+    Emergency Management Specialist
+    Immigration Officer
+    Government IT Specialist
+    Grant Writer
+    Member of Parliment
+    Prime Minister
+    President
+
+    Store Manager
+    Sales Associate
+    Cashier
+    Visual Merchandiser
+    Inventory Manager
+    Retail professional buyer
+    Loss Prevention Specialist
+    Customer Service Representative
+    Retail Operations Manager
+    E-commerce Specialist
+    Merchandise Planner
+    Store Supervisor
+    Sales Lead
+    Assistant Buyer
+    Retail Analyst
+    Product Demonstrator
+    Retail Trainer
+    Store Designer
+    Warehouse Associate
+    Retail Marketer
+    Fulfillment Coordinator
+    Pricing Analyst
+    Retail Consultant
+    Fashion Stylist
+    Brand Ambassador
+    Visual Display Coordinator
+    Stockroom Associate
+    Personal Shopper
+    Beauty Advisor
+    Floor Manager
+
+    Painter
+    Sculptor
+    Illustrator
+    Graphic Designer
+    Photographer
+    Art Director
+    Animator
+    Printmaker
+    Ceramic Artist
+    Textile Designer
+    Art Teacher
+    Gallery Curator
+    Art Therapist
+    Art Historian
+    Set Designer
+    Costume Designer
+    Art Conservator
+    Muralist
+    Exhibition Designer
+    Jewelry Designer
+    Art Gallery Manager
+    Creative Director
+    Art Critic
+    Digital Artist
+    Art Appraiser
+    Art Administrator
+    Art Consultant
+    Art Auctioneer
+    Makeup Artist
+    Festival organizer
+
+    Electrician
+    Plumber
+    Carpenter
+    Welder
+    HVAC Technician
+    Automotive Technician
+    Mason
+    Painter
+    Roofing Contractor
+    Flooring Installer
+    Bricklayer
+    Landscaper
+    Cabinetmaker
+    Glazier
+    Ironworker
+    Heavy Equipment Operator
+    Pipefitter
+    Sheet Metal Worker
+    Drywaller
+    Stonemason
+    Locksmith
+    Scaffolder
+    Insulation Installer
+    Tile Setter
+    Upholsterer
+    Glass Installer
+    Solar Panel Installer
+    Concrete Finisher
+    Elevator Mechanic
+    Fence Installer
+
+    Environmentalist
+    Volunteer
+    stay-at-home-mum
+    stay-at-home-dad
+    leader of a particularly nasty motorbike gang
+    professional card player
+    space alien
+    pet cat
+    comic book superhero
+    celebrity 
+    TV host
+    taxi driver
+    astronaut
+    comedian
+    child genius

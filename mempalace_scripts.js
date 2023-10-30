@@ -11,6 +11,32 @@ function shuffleslice(arr, n_items){
     return(arr.sort(() => Math.random() - 0.5).slice(0,n_items))
 }
 
+function mempalace_home(){
+    document.getElementById("uberdiv").innerHTML = ""+
+	"<p>I want to:</p>"+
+"    <ul>"+
+"      <li><button onClick=viewTour()> tour my palace </button></li>      "+
+"      <li><button onClick=mempalace_submit_settings_start()>Train my memory</button></li>"+
+"    </ul>"+
+"    <div style='border:1px solid black'>"+
+"    <h2>Settings</h2>"+
+"      <h3>Language</h3>"+
+"      <input type='radio' id='eng' name='targ_language' value='eng'>"+
+"      <label for='eng'>English</label><br>"+
+"      <input type='radio' id='zh' name='targ_language' value='zh'>"+
+"      <label for='zh'>Chinese</label><br>"+
+"      <input type='radio' id='rnd' name='targ_language' value='rnd' checked>"+
+"      <label for='rnd'>Surprise me</label><br>"+
+"      <h3>Text type</h3>"+
+"      <input type='radio' id='tt_words' name='text_type' value='words'>"+
+"      <label for='eng'>Words</label><br>"+
+"      <input type='radio' id='tt_texts' name='text_type' value='texts'>"+
+"      <label for='zh'>Texts</label><br>"+
+"      <input type='radio' id='tt_rnd' name='text_type' value='rnd' checked>"+
+"      <label for='rnd'>Surprise me</label><br>"+
+"    </div>"
+}
+
 
 //GLOBAL STATE VARS
 
@@ -23,14 +49,21 @@ let responselist = [];
 let correct_count = 0;
 
 //USER ACTIONS
-function mempalace_startfresh(){
+function mempalace_startfresh(new_length){
     live_item = 0;
     //resources getter functions check targ_language
+    
+    if(targ_lang =="rnd"){
+	targ_lang = shuffle(["zh","eng"])[0];
+    }
+    if(text_type=="rnd"){
+	text_type = shuffle(["words","texts"])[0];
+    }
     if(text_type=="words"){ 
-	itemlist = get_wordlist(itemlist.length + 1)
+	itemlist = get_wordlist(new_length)
     } else if(text_type=="texts"){
 	//get_monologue checks targ_languauge
-	itemlist = get_monologue(itemlist.length + 1)
+	itemlist = get_monologue(new_length)
     }
     
     responselist = [];
@@ -78,11 +111,7 @@ function nextViewHandler(){
 
 //DRAW TO THE SCREEN FUNCTIONS
 function viewItem(){
-    console.log("tl check")
-    console.log(targ_lang)
-    console.log(text_type)
-    console.log("endcheck")
-    
+      
     headerprompt = "<h1>Place this in your next location:</h1>";
     itemview = "<p>"+itemlist[live_item]+"</p>";
     responsezone = "<p><button onClick=nextViewHandler()>NEXT</button></p>"
@@ -102,14 +131,17 @@ function testItem(){
 
 function checkResponses(){
     headerprompt= "<h1>Check your answers:</h1>"
-    itemcheck = "<p>Original was "+(itemlist[live_item])+" you said "+(responselist[live_item])+"</p>"
+    itemcheck = "<p>Original was <br/><strong> "+(itemlist[live_item])+"</strong> <br/> you said <br/> "+(responselist[live_item])+"</p>"
     acceptreject = "<p><button onclick=checkHandler(true)>Accept match</button><button onclick=checkHandler(false)>Reject: mistake</button></p>";
     toUberdiv(headerprompt+itemcheck+acceptreject)
 }
 
 function outro(){
     feedback = "<h1>You accepted "+correct_count+" of "+(itemlist.length)+" ("+(Math.round(correct_count/itemlist.length*100))+"%)";
-    options = "<p><button onclick=mempalace_startfresh()>Success! Make it harder</button></p>"+
+    options =
+	"<p><button onclick=mempalace_startfresh("+(itemlist.length+1)+")>Ok, make it harder by one</button>"+
+	"<button onclick=mempalace_startfresh("+(itemlist.length+5)+")>Easy, make it harder by five</button>"+
+	"<button onclick=mempalace_startfresh("+(itemlist.length)+")>Go again at this length</button></p>"+
 	"<p><button onClick=location.reload()>Main menu</button></p>";
     toUberdiv(feedback+options)
 }
