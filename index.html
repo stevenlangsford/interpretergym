@@ -21,7 +21,7 @@
     <p><button onClick='nback_home()'>N-back</button></p>
     <p><button onClick='cloze_home()' disabled>Cloze completions</button></p>
     <p><button onClick='translate_home()' disabled>Just translate</button></p>
-    <p><button onClick='numbers_home()' disabled>Infinite numbers</button></p>
+    <p><button onClick='numbers_home()' >Infinite numbers</button></p>
   </div>
 
 
@@ -40,7 +40,8 @@
 
     //DEV ONLY: skip to current exercise here if you're gonna.
     //    nback_home()
-    draw_numberChallenge()
+    //    draw_numberChallenge()
+        nback_home()
  </script>
  
 <!-- resource files come last because they can contain getters that reference target language, text type etc, vars must exist -->

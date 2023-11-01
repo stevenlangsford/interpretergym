@@ -11,9 +11,9 @@ body{
     border:1px solid green;
     text-align:center;
 }
-.nback_final_p{
-    border:1px solid red;
-    color:red;
+.nback_tomatch_p{
+    border:1px solid yellow;
+    color:black;
     text-align:center;
 }
 .nback_response_p{

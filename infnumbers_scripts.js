@@ -296,10 +296,23 @@ function draw_numberChallenge(){
 	"<div class='number_innerdiv'><span id='showsize'>Random number size:"+Math.round(current_sizeprob*100)+"%</span></div>"+
 	"<div class='number_innerdiv'><button onclick='change_sizeprob(0.05)'>Larger numbers</button></div>"+
 	"</div>"+
+    "<div>"+
+	"<div class='number_innerdiv'><button onClick=location.reload()>Back to Main Menu</button></div>"+
+	"<div class='number_innerdiv'></div>"+
+	"<div class='number_innerdiv'></div>"+
+	"</div>"+
+
     
+
 	"</div>"//end uberwrapper
     
     toUberdiv(drawme);
 }
 
+function numbers_home(){
+    //currently no-action bounce to exercise
+    //but undecided if there should be a menu here or something
+    //probably not?
+    draw_numberChallenge()
+}
 //TODOS: looks like 7019 is a problem for numberToChinese? Wassup with that. Can fix?

@@ -139,9 +139,10 @@ function checkResponses(){
 function outro(){
     feedback = "<h1>You accepted "+correct_count+" of "+(itemlist.length)+" ("+(Math.round(correct_count/itemlist.length*100))+"%)";
     options =
-	"<p><button onclick=mempalace_startfresh("+(itemlist.length+1)+")>Ok, make it harder by one</button>"+
-	"<button onclick=mempalace_startfresh("+(itemlist.length+5)+")>Easy, make it harder by five</button>"+
-	"<button onclick=mempalace_startfresh("+(itemlist.length)+")>Go again at this length</button></p>"+
+	"<p><button onclick=mempalace_startfresh("+(itemlist.length+1)+")>Ok, +1</button>"+
+	"<button onclick=mempalace_startfresh("+(itemlist.length+5)+")>Easy, +5</button>"+
+	"<button onclick=mempalace_startfresh("+(itemlist.length+10)+")>Unleash, +10</button>"+
+	"<button onclick=mempalace_startfresh("+(itemlist.length)+")>Again at this length</button></p>"+
 	"<p><button onClick=location.reload()>Main menu</button></p>";
     toUberdiv(feedback+options)
 }
