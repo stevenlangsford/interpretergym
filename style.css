@@ -20,7 +20,8 @@ body{
     text-align:center;
 }
 .nback_outer_div{
-    border:1px solid blue;
+    /* border:1px solid blue; */
+    border-width:5px;
 }
 .number_framediv{
     border:1px solid white;

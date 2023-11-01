@@ -24,12 +24,36 @@ function nback_respond(response){
     
     if(response_status == true){
 	current_wins = current_wins + 1;
+	//flash_border("green")
+	document.getElementById("nback_outer").style="border:4px solid green"
     } else{
+	//flash_border("red")
 	current_fails = current_fails + 1;
+	document.getElementById("nback_outer").style="border:4px dashed red"
     }
 
+    //trigger list length adjustments if you're gonna:
+    if(current_wins == wins_to_increase){
+	nback_itemlist = [];
+	current_n = current_n+1;
+	current_wins = 0;
+	current_fails = 0;
+	document.body.style.backgroundColor = "green";
+	//flash_background("green")
+    }
+    if(current_fails == fails_to_decrease){
+	nback_itemlist = [];
+	current_n = Math.max(current_n - 1, 1)
+	current_wins = 0;
+	current_fails = 0;
+	document.body.style.backgroundColor = "red";
+	//flash_background("black")
+    }
+    
+    
     nback_itemlist.shift() //removes [0]
-    nback_drawnext() //drawnext appends a new item
+    //timeout is to leave feedback onscreen, vanishes on re-drawing.
+    setTimeout(nback_drawnext, 450) //drawnext appends a new item
 }
 
 function nback_pushitem(){
@@ -73,9 +97,11 @@ function start_nback(){
 }
 
 function nback_drawnext(){
+    document.body.style.backgroundColor = "grey";//undoes feedback-flash
+    
     nback_pushitem(); //adds to the end: last is most recent.
 
-    my_table = "<div class='nback_outer_div'><p class='nback_tomatch_p'>"+ //
+    my_table = "<div id='nback_outer' class='nback_outer_div'><p class='nback_tomatch_p'>"+ //
     nback_itemlist[nback_itemlist.length-1]+//most recent item is visible
     "</p>"
     for(i=1;i<nback_itemlist.length;i++){
@@ -86,7 +112,8 @@ function nback_drawnext(){
     nback_itemlist.length < current_n + 2 ? my_table = my_table + "<p class='nback_inner_p'><button onclick='nback_drawnext()'>LOAD</button></p>" : my_table = my_table + "<p class='nback_response_p'><button onclick=nback_respond('same')>Same</button>&nbsp<button onclick=nback_respond('different')>Different</button></p>"
     
     my_table = my_table + "</div>"+
-	"<div> <div style='text-align:left; width:45%; margin:auto; display:inline-block;'>Hits: "+(current_wins)+"</div><div style='text-align:right; display:inline-block; width:45%;margin:auto;'>"+current_fails+" :Misses</div>"
+	"<div> <div style='text-align:left; width:45%; margin:auto; display:inline-block;'>Hits: "+(current_wins)+"</div><div style='text-align:right; display:inline-block; width:45%;margin:auto;'>"+current_fails+" :Misses</div>"+
+	"<h3>Level "+(current_n)+"</h3>"
     
     //current_target = nback_itemlist.shift() //removes and returns first element: do this on response only if the list is long enough
     toUberdiv(my_table+"</br><p><button onclick=location.reload()>Main menu</button></p>")
@@ -95,7 +122,7 @@ function nback_drawnext(){
 function nback_home(){
     toUberdiv(
 	"<button onclick='start_nback()'> Start n-back</button>"+
-	    "    <div style='border:1px solid black'>"+
+	    "    <div>"+
 	    "    <h2>Settings</h2>"+
 	    "<p>Increase n every <input type='text' id='nback_to_increase' value='5'> wins</p>"+
 	    "<p>Decrease n every <input type='text' id='nback_to_decrease' value='3'> failures</p>"+
