@@ -9,14 +9,12 @@ function numberPicker(){
 	n_digits = n_digits + 1
     }
 
-    console.log(n_digits)
     somedigits = ['0','1','2','3','4','5','6','7','8','9']
 
     astring = ""
     while(astring.length < n_digits){
 	astring = astring + shuffle(somedigits)[0]
     }
-    console.log("picking "+astring)
     while(astring.substring(0,1)=='0')astring=astring.substring(1)
     return(astring)
 }
@@ -24,6 +22,8 @@ function numberPicker(){
 function numberToChinese(n){
     return cn.numberToChinese(n)
 }
+
+let bob;
 
 function numberToEnglish(n){
 //adapted from http://www.java2s.com/ref/javascript/javascript-algorithm-string-convert-number-to-english.html
@@ -92,7 +92,7 @@ var tscribe = function(){
       tensPlace != 0 ? tensHundredsSpace = ' ' : tensHundredsSpace = '';
 
       // if the hundreds place is 0 we don't want to include it's suffix
-      return hundredsPlace == 0 ? '' : maps.onesMap[hundredsPlace] + ' hundred' + tensHundredsSpace;
+      return hundredsPlace == 0 ? '' : maps.onesMap[hundredsPlace] + ' hundred ' + tensHundredsSpace;//SL: added trailing space
     }
 
     // transcribing
@@ -164,21 +164,20 @@ var arrayifyNumber = function(number){
   }
 
   placeArray.unshift(splitNum);
-    // console.log(placeArray);
-   // bob = placeArray
-    //if there's more than one chunk, say 'and' before the last one
    
   return placeArray;
 }
 
-
     unchunk = numberToEnglish_no_and(n).split(/\s/)
-    if(unchunk.length > 1){
+    dont_and_me = ['hundred','thousand','million','billion','trillion','quadrillion']
+    
+    if(unchunk.length > 1 && ! dont_and_me.includes(unchunk[unchunk.length-1])){
 	lastchunk = unchunk.pop()
 	unchunk.push("and")
 	unchunk.push(lastchunk)
-	unchunk = unchunk.join(' ')
     }
+    
+    unchunk = unchunk.join(' ')
     return unchunk; 
 }
 
@@ -219,22 +218,55 @@ let show_zh = false;
 let show_numeral = true;
 
 function change_sizeprob(amt){
+
+    function get_amt(){
     newsize = current_sizeprob + amt;
 
     //cap min and max probs
-    if(newsize < .2){return(0.2)}    
-    if(newsize > .99){return(0.99)}
+    if(newsize <= .2){return(0.2)}    
+    if(newsize >= 1){return(1)}
 
-    return(newsize)
-    
+	return(newsize)
+    }
+    current_sizeprob = get_amt()
+    document.getElementById("showsize").innerHTML = "Random number size:"+Math.round(current_sizeprob*100)+"%"
+}
+
+//toggle fns are hella repetitive, there's got to be a better way
+function statustext(status){
+    return status ? "Open" : "Hidden"
+}
+
+function toggle_eng(){
+    show_eng = !show_eng
+    document.getElementById('toggleeng').textContent = statustext(show_eng)
+    document.getElementById('eng_number').innerHTML = (show_eng ? numberToEnglish(current_number) : "???")
+}
+
+function toggle_numeral(){
+    show_numeral = !show_numeral
+    document.getElementById('togglenum').textContent = statustext(show_numeral)
+    document.getElementById('numeral').innerHTML = (show_numeral ? current_number : "???")
+}
+
+function toggle_zh(){
+    show_zh = !show_zh
+    document.getElementById('togglezh').textContent = statustext(show_zh)
+    document.getElementById('zh_number').innerHTML = (show_zh ? numberToChinese(current_number) : "???")
+}
+
+
+function reveal(){
+    document.getElementById("eng_number").innerHTML = numberToEnglish(current_number);
+    document.getElementById("numeral").innerHTML = current_number;
+    document.getElementById("zh_number").innerHTML = numberToChinese(current_number);
 }
 
 function draw_numberChallenge(){
     current_number = numberPicker()
 
     drawme = 
-	"<div>"+ //uberwrapper
-	
+	"<div>"+ //uberwrapper	
     "<div class='number_framediv'>"+
 	"<div class='number_innerdiv'><strong>English</strong></div>"+
 	"<div class='number_innerdiv'><strong>Numeral</strong></div>"+
@@ -242,32 +274,32 @@ function draw_numberChallenge(){
 	"</div>"+
 	
     "<div class='number_framediv'>"+
-	"<div class='number_innerdiv'><button>Show</button></div>"+
-	"<div class='number_innerdiv'><button>Hide</button></div>"+
-	"<div class='number_innerdiv'><button>Show</button></div>"+
+	"<div class='number_innerdiv'><button id='toggleeng' onclick='toggle_eng()'>"+statustext(show_eng)+"</button></div>"+
+	"<div class='number_innerdiv'><button id='togglenum' onclick='toggle_numeral()'>"+statustext(show_numeral)+"</button></div>"+
+	"<div class='number_innerdiv'><button id='togglezh' onclick='toggle_zh()'>"+statustext(show_zh)+"</button></div>"+
 	"</div>"+
 	
     "<div class='number_framediv'>"+
-	"<div class='number_innerdiv'>L_LEFT</div>"+
-	"<div class='number_innerdiv'>L_CENTER</div>"+
-	"<div class='number_innerdiv'>L_RIGHT</div>"+
+	"<div class='number_innerdiv'><span id='eng_number'>"+(show_eng ? numberToEnglish(current_number) : "???" )+"</span></div>"+
+	"<div class='number_innerdiv'><span id='numeral'>"+(show_numeral ? current_number : "???" )+"</span></div>"+
+	"<div class='number_innerdiv'><span id='zh_number'>"+ (show_zh ? numberToChinese(current_number) : "???" )+"</span></div>"+
 	"</div>"+
     "<div class='number_framediv'>"+
+	"<div class='number_innerdiv'><button onclick='reveal()'>REVEAL</button></div>"+
 	"<div class='number_innerdiv'></div>"+
-	"<div class='number_innerdiv'><button>REVEAL</button></div>"+
-	"<div class='number_innerdiv'></div>"+
+	"<div class='number_innerdiv'><button onclick='draw_numberChallenge()'>NEXT</button></div>"+
 	"</div>"+
 
 
     "<div class='number_framediv'>"+
-	"<div class='number_innerdiv'><button>Smaller numbers</button></div>"+
-	"<div class='number_innerdiv'>Random number size:"+(current_sizeprob*100)+"%</div>"+
-	"<div class='number_innerdiv'><button>Larger numbers</button></div>"+
+	"<div class='number_innerdiv'><button onclick='change_sizeprob(-0.05)'>Smaller numbers</button></div>"+
+	"<div class='number_innerdiv'><span id='showsize'>Random number size:"+Math.round(current_sizeprob*100)+"%</span></div>"+
+	"<div class='number_innerdiv'><button onclick='change_sizeprob(0.05)'>Larger numbers</button></div>"+
 	"</div>"+
-
-
     
 	"</div>"//end uberwrapper
     
     toUberdiv(drawme);
 }
+
+//TODOS: looks like 7019 is a problem for numberToChinese? Wassup with that. Can fix?
