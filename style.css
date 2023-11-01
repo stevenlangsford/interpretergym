@@ -22,3 +22,13 @@ body{
 .nback_outer_div{
     border:1px solid blue;
 }
+.number_framediv{
+    border:1px solid white;
+}
+.number_innerdiv{
+    width:33%;
+    display:inline-block;
+    margin:auto;
+    text-align:center;
+    padding-block: 20px;
+}
