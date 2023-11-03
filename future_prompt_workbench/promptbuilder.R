@@ -1,3 +1,4 @@
+library(tidyverse)
 jobs  <-  c(
 "Cardiothoracic Surgeon",
 "Neurologist",
@@ -344,44 +345,39 @@ jobs  <-  c(
 "taxi driver",
 "astronaut",
 "comedian",
-"child genius")
+"child genius",
+"clown",
+"pickpocket"
+)
 
 scenarios  <-  function(job){
 prompts <- 
     c(
-        paste0("Write a monologue from a senior ",job," to a junior",job,". The senior ",job," is going on leave and is giving the junior ",job," a list of things to remember while they are away. There are at least ten things in the list."),
-        paste0("Write a monologue from a junior ",job," to a senior ",job,". The senior ",job," has just come back from leave and the junior ",job," is updating them on important things that happened while they were away. There are at least 10 things.")
+        paste0("Write a monologue from a senior ",job," to a junior ",job,". The senior ",job," is going on leave and is giving the junior ",job," a list of things to remember while they are away. There are at least ten things in the list."),
+        paste0("Write a monologue from a junior ",job," to a senior ",job,". The senior ",job," has just come back from leave and the junior ",job," is updating them on important things that happened while they were away. There are at least 10 things."),
+        paste0("Write a monologue from a senior ",job,", to a junior ",job,". The senior ",job," is giving career advice, things they wish they had known when they started, and is trying to give the junior ",job," a sense of which parts of the job are most important, which are nice-to-have, and which are commonly thought to be important by outsiders but can actually be ignored. There are at least three examples of each."),  
+ paste0("A senior ",job," is trying to give a younger friend a sense of whether they should consider becoming an ",job," in the future. Basically advice of the form if you like X, Y, and Z, then you should consider it, if you have trouble with A, B, or C, consider another profession. Give as much detail specific to being a ",job," as possible."),
+ paste0("write a resignation letter from a ",job," to their supervisor detailing ten concrete reasons why they cannot continue in the job. Include at least two detailed stories about specific incidents that happened to them while at work."),
+paste0("write a cover letter for someone applying for a job as a ",job, ". The letter gives several detailed examples of stories from the applicant's relevant experience."),
+paste0("Write a letter of complaint from someone who had a bad interaction with a ",job,". The letter gives a lot of detail about everything that happened over the course of the interaction. There are at least seven separate things."),
+paste0("Write a letter of praise from someone who had a good interaction with a ",job,". The person recounts in great detail everything the ",job," did and the specific positive impact it had on them. There are at least seven separate things."),
+paste0("write a speech from a retiring ",job,". They describe a personal story that motivated them to become a ",job," in the first place. They give three examples of things that surprised them when they actually started doing the job. They describe their best ever work achievement and their worst ever failure in detail. They finish by giving some advice to newcomers just starting their careers in the field."),
+paste0("Write a monologue from a ",job," describing their greatest professional rival. They go into great detail about specific characteristics that they hate about their rival and tell a detailed story about the worst mistake their rival has ever made."),
+paste0("Write a monologue from a ",job," nominating their colleague for a prestigious award. They go into great detail about specific characteristics that make the person a worthy recipient and tell a detailed story about a specific incident that made them want to nominate this person for the award."),
+paste0("Choose a common tool used often by a ",job," (and not so much by other professions). Describe a normal workday from the tool's perspective, giving a detailed account of at least five different things that happened that day"),
+paste0("Write a diary entry from an ",job," walking through the things that happened to them that day in great detail. At least seven things happened. It was a pretty good day."),
+paste0("write a diary entry from a ",job," walking through the things that happened to them that day in great detail. At least seven things happened. It was a pretty bad day. Describe each event in detail."),
+paste0("write a diary entry from a ",job," walking through the things that happened to them that day in great detail. At least seven things happened. It was an absolutely wonderful day and more than one of the events was unusual and extremely positive. Describe each event in detail."),
+paste0("write a diary entry from a ",job," walking through the things that happened to them that day in great detail. At least seven things happened. It was an absolutely awful day and more than one of the events was unusual and extremely negative. Describe each event in detail.")
+)#end c(scenarios)
 
-    )#end c of prompts
-return(sample(prompts, 1))
+prompt_suffix <- " Please format your output as a javascript array. Use natural-sounding language."
 
-paste0("Write a monologue from a senior ",job,", to a junior ",job,". The senior ",job," is giving career advice, things they wish they had known when they started, and is trying to give the junior ",job," a sense of which parts of the job are most important, which are nice-to-have, and which are commonly thought to be important by outsiders but can actually be ignored. There are at least three examples of each.")
+return(paste0(prompts,prompt_suffix))
+}
 
-## A senior X is trying to give a younger friend a sense of whether they should consider becoming an X in the future. Basically of the form if you like X, Y, and Z, then you should consider it, if you have trouble with A, B, or C, consider another profession. Give as much detail specific to X as possible.
+all_prompts  <- map_dfr(jobs,function(ajob){data.frame(prompt=scenarios(ajob))})
 
-## write a resignation letter from an X to their supervisor detailing ten concrete reasons why they cannot continue in the job. Include at least two detailed stories about specific incidents that happened to them while at work.
+all_prompts <- all_prompts[sample(1:nrow(all_prompts)), ]
 
-## write a cover letter for someone applying for a job as an X. The letter gives several detailed examples of stories from the applicant's relevant experience.
-
-## Write a letter of complaint from someone who had a bad interaction with an X. The letter gives a lot of detail about everything that happened over the course of the interaction. There are at least seven separate things.
-
-## write a letter of praise from someone who had a good interaction with an X. The person recounts in great detail everything the X did and the specific positive impact it had on them. There are at least seven separate things.
-
-## write a speech from a retiring X. They describe a personal story that motivated them to become a X in the first place. They give three examples of things that surprised them when they actually started doing the job. They describe their best ever work achievement and their worst ever failure in detail. They finish by giving some advice to newcomers just starting their careers in the field.
-
-## Write a monologue from an X describing their greatest professional rival. They go into great detail about specific characteristics that they hate about their rival and tell a detailed story about the worst mistake their rival has ever made.
-
-## Write a monologue from an X nominating their colleague for a prestigious award. They go into great detail about specific characteristics that make the person a worthy recipient and tell a detailed story about a specific incident that made them want to nominate this person for the award.
-
-## Choose a common tool used often by a X (and not so much by other professions). Describe a normal workday from the tool's perspective, giving a detailed account of at least five different things that happened that day
-
-## write a diary entry from an X walking through the things that happened to them that day in great detail. At least seven things happened. It was a pretty good day.
-
-## write a diary entry from an X walking through the things that happened to them that day in great detail. At least seven things happened. It was a pretty bad day. Describe each event in detail.
-
-## write a diary entry from an X walking through the things that happened to them that day in great detail. At least seven things happened. It was an absolutely wonderful day and more than one of the events was unusual and extremely positive. Describe each event in detail.
-
-## write a diary entry from an X walking through the things that happened to them that day in great detail. At least seven things happened. It was an absolutely awful day and more than one of the events was unusual and extremely negative. Describe each event in detail.
-
-}##end scenario
-
+write.csv(all_prompts, file="buncha_prompts.csv",row.names=FALSE)

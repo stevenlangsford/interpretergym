@@ -26,6 +26,34 @@
 
 
   <script type="text/javascript">
+
+    //Not sure which is worse, trying to have different games overwrite doc onkeypress or having this giant kludge of global vars
+    //Probably the real problem is trying to do everything on one page by overwriting uberdiv, that's the real antipattern here.
+    let which_keylistener = "none"
+    
+    document.onkeypress = function (e) {
+	if(which_keylistener=="none"){
+	    return
+	}
+	if(which_keylistener =="nback"){
+	    if(targ_lang == "blank targlang"){
+		//means you haven't started yet
+		return
+	    }
+	    e = e || window.event; //e.keyCode not consistent across browsers? TODO check?
+	    if(nback_itemlist.length < current_n + 2){
+		//still loading: press the any key to continue
+		nback_drawnext()
+		return 
+	    }
+	    if(e.keyCode==97){//'a' key
+		nback_respond("same")
+	    }else if(e.keyCode==108){//'l' key
+		nback_respond("different")
+	    }	    
+	}
+    };
+
     
   //capture choices made on this page before continuing: (these are the global vars that need to be set for resource getters)
   let targ_lang = "blank targlang"
@@ -41,7 +69,7 @@
     //DEV ONLY: skip to current exercise here if you're gonna.
     //    nback_home()
     //    draw_numberChallenge()
-        nback_home()
+    //    nback_home()
  </script>
  
 <!-- resource files come last because they can contain getters that reference target language, text type etc, vars must exist -->

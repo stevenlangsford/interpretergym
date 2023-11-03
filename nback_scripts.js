@@ -12,15 +12,7 @@ function nback_respond(response){
 
     newest = nback_itemlist[nback_itemlist.length-1] //newest
     oldest = nback_itemlist[0]
-    
-    console.log("showing-recent: "+newest)
-    console.log("hidden-oldest:" +oldest)
-    
     response_status = ( (newest == oldest) ? response=="same" : response=="different" )
-    console.log("Is a match: "+(newest == oldest))
-    console.log("response was "+response)
-    console.log("status"+response_status)
-    console.log()
     
     if(response_status == true){
 	current_wins = current_wins + 1;
@@ -33,7 +25,7 @@ function nback_respond(response){
     }
 
     //trigger list length adjustments if you're gonna:
-    if(current_wins == wins_to_increase){
+    if(current_wins >= current_n + wins_to_increase){
 	nback_itemlist = [];
 	current_n = current_n+1;
 	current_wins = 0;
@@ -58,7 +50,6 @@ function nback_respond(response){
 
 function nback_pushitem(){
     if(Math.random() < 0.5 || (nback_itemlist.length < current_n+1)){//current_n is the GAP, n+2 is the list length
-	console.log("pushing different")
 	if(targ_lang == "eng"){
 	    nback_itemlist.push(shuffle(common_eng)[0])
 	}else if(targ_lang == "zh"){
@@ -67,18 +58,22 @@ function nback_pushitem(){
 	    Math.random() < 0.5 ? nback_itemlist.push(shuffle(common_eng)[0]) : nback_itemlist.push(shuffle(common_zh)[0]);
 	}
     } else {//end if pushing novel
-	console.log("pushing match")
 	nback_itemlist.push(nback_itemlist[0])//push a match. List is recent-last, oldest first, match matches oldest
     }
-    console.log("list is:")
-    console.log(nback_itemlist)
 }
 
 function start_nback(){
+    
+    if(isNaN(parseInt(document.getElementById("nback_to_increase").value)) ||
+       isNaN(parseInt(document.getElementById("nback_to_decrease").value))){
+	alert("to-increase and to decrease need to be integers")
+	return;
+    }
+	     
     targ_lang = document.querySelector('input[name="targ_language"]:checked').value;
     text_type = document.querySelector('input[name="text_type"]:checked').value;
-    wins_to_increase = document.getElementById("nback_to_increase").value;
-    fails_to_decrease = document.getElementById("nback_to_decrease").value;
+    wins_to_increase = parseInt(document.getElementById("nback_to_increase").value);//TODO user input: need to handle garbage!
+    fails_to_decrease = parseInt(document.getElementById("nback_to_decrease").value);
 
     if(targ_lang == "rnd"){
 	targ_lang = shuffle(["zh","eng","mix"])[0];
@@ -88,12 +83,6 @@ function start_nback(){
     }
 
     nback_drawnext();
-    // console.log("Starting nback")
-    // console.log(wins_to_increase)
-    // console.log(fails_to_decrease)
-    // console.log(targ_lang)
-    // console.log(text_type)
-    // console.log()
 }
 
 function nback_drawnext(){
@@ -104,15 +93,24 @@ function nback_drawnext(){
     my_table = "<div id='nback_outer' class='nback_outer_div'><p class='nback_tomatch_p'>"+ //
     nback_itemlist[nback_itemlist.length-1]+//most recent item is visible
     "</p>"
+
+    my_table = my_table+"<p class='nback_inner_p'>"
     for(i=1;i<nback_itemlist.length;i++){
-	my_table = my_table + "<p class="+(i<current_n+1 ? 'nback_inner_p' : 'nback_tomatch_p')+">?</p>"
+	my_table = my_table + "?"
     }
+    my_table = my_table+"</p>"
+    if(nback_itemlist.length==current_n+2){
+	my_table = my_table + "<p class= 'nback_tomatch_p'>?</p>"
+    }
+//    for(i=1;i<nback_itemlist.length;i++){
+//	my_table = my_table + "<p class="+(i<current_n+1 ? 'nback_inner_p' : 'nback_tomatch_p')+">?</p>"
+//    }
     
     //current_n refs n blanked items, +2 is to add current_target and candidate
     nback_itemlist.length < current_n + 2 ? my_table = my_table + "<p class='nback_inner_p'><button onclick='nback_drawnext()'>LOAD</button></p>" : my_table = my_table + "<p class='nback_response_p'><button onclick=nback_respond('same')>Same</button>&nbsp<button onclick=nback_respond('different')>Different</button></p>"
     
     my_table = my_table + "</div>"+
-	"<div> <div style='text-align:left; width:45%; margin:auto; display:inline-block;'>Hits: "+(current_wins)+"</div><div style='text-align:right; display:inline-block; width:45%;margin:auto;'>"+current_fails+" :Misses</div>"+
+	"<div> <div style='text-align:left; width:45%; margin:auto; display:inline-block;'>Hits: "+(current_wins)+" / "+(current_n + wins_to_increase)+"</div><div style='text-align:right; display:inline-block; width:45%;margin:auto;'>"+current_fails+" /"+fails_to_decrease+" :Misses</div>"+
 	"<h3>Level "+(current_n)+"</h3>"
     
     //current_target = nback_itemlist.shift() //removes and returns first element: do this on response only if the list is long enough
@@ -120,12 +118,14 @@ function nback_drawnext(){
 }
 
 function nback_home(){
+    which_keylistener = "nback"
+    
     toUberdiv(
 	"<button onclick='start_nback()'> Start n-back</button>"+
 	    "    <div>"+
 	    "    <h2>Settings</h2>"+
-	    "<p>Increase n every <input type='text' id='nback_to_increase' value='5'> wins</p>"+
-	    "<p>Decrease n every <input type='text' id='nback_to_decrease' value='3'> failures</p>"+
+	    "<p>Increase list length at level + <input type='text' id='nback_to_increase' value='5'> wins</p>"+
+	    "<p>Decrease list length every <input type='text' id='nback_to_decrease' value='3'> failures</p>"+
 	    "      <h3>Language</h3>"+
 	    "      <input type='radio' id='eng' name='targ_language' value='eng'>"+
 	    "      <label for='eng'>English</label><br>"+
