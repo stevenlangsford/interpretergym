@@ -33,8 +33,8 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><button>How to play</button></td>
-      <td><button>Why to play</button></td>
+      <td><button onClick="mempalace_howtoplay()">How to play</button></td>
+      <td><button onClick="mempalace_whytoplay()">Why to play</button></td>
     </tr>
  <tr>
       <td><button onClick='nback_home()'>N-back</button></td>
@@ -45,8 +45,8 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><button>How to play</button></td>
-      <td><button>Why to play</button></td>
+      <td><button onclick ='nback_howtoplay()'>How to play</button></td>
+      <td><button onclick = 'nback_whytoplay()'>Why to play</button></td>
     </tr>
 
   <tr>
@@ -82,8 +82,8 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><button>How to play</button></td>
-      <td><button>Why to play</button></td>
+      <td><button disabled>How to play</button></td>
+      <td><button disabled>Why to play</button></td>
     </tr>
    
     </table></div>
@@ -94,7 +94,7 @@
 
 
   <script type="text/javascript">
-
+    let instruction_index = 0; //another global var used by everything. :-( Kinda nice that it resets whenever main menu reloaded tho.
     //Not sure which is worse, trying to have different games overwrite doc onkeypress or having this giant kludge of global vars
     //Probably the real problem is trying to do everything on one page by overwriting uberdiv, that's the real antipattern here.
     let which_keylistener = "none"

@@ -11,10 +11,92 @@ function shuffleslice(arr, n_items){
     return(arr.sort(() => Math.random() - 0.5).slice(0,n_items))
 }
 
+let mempalace_instructions =[
+    "Memory palace is all about remembering lists of things.",
+    "Using the memory palace technique is <strong>very strongly recommended</strong> for this exercise.",
+    "There's a more detailed description of how the memory palace works in the 'why to play' section.",
+    "In stage one, you'll get the list. Remember each item and hit 'Next' to continue.",
+    "In stage two, you'll get a series of blank text boxes. Enter each of the items you remembered.",
+    "In stage three, you'll get a chance to check your answers.",
+    "It's up to you if you want to accept or reject each answer. At the end you'll get a count of how many you accepted.",
+    "When you get to the end of the review, you can choose to increase the list length by one, five, or ten. Or you can go back to the main menu.",
+    "In the setup menu you can choose if the items you're going to remember are individual words or chunks of a monologue.",
+    "Individual words are easier, and the word list is mostly things that work well with the memory palace technique.",
+    "Chunks of monologue is harder, and if you're using memory palace, you'll have to decide for yourself how many palace locations to use for each chunk presented. You'll probably want to place an extra object to represent the breaks between each chunk.",
+    "Enjoy! How long a monologue can you remember?"
+]
+
+mempalace_motivation = "<h1>Why play memory palace</h1>"+
+    "<p>If you want to remember a list of things, it's very hard to beat the memory palace technique.</p>"+
+    "<p>It's <strong>overwhelmingly</strong> the most popular technique among competitive memory athletes.</p>"+
+    "<p>It's also very well studied. One nice entry-point to the literature might be <a href='https://www.nature.com/articles/nn988'>Maguire et al (2003) Routes to remembering: the brains behind superior memory</a>"+
+    " From the abstract: \"... superior memory was not driven by exceptional intellectual ability or structural brain differences. Rather, we found that superior memorizers used a spatial learning strategy.\" The 'spatial learning strategy' is a memory palace, also known as 'the method of loci'.</p>"+
+    "<p>This is not at all a controvertial claim! The real meat of that 2003 paper is investigating this well-established fact using brain-imaging techniques, the novelty is the imaging, not the claim about memory. It's really very well established that if you want to remember a list of things, use some kind of memory palace.</p>"+
+    "<p>Building a memory palace takes a bit of time investment. It takes some practice to get good at it. On the other hand, once you have built your palace, you can re-use it over and over again.</p>"+
+    "<p>Here's what to do:</p>"+
+    "<p>Pick a place that you know very well. A house you grew up in is often a good choice, a park you know well, or maybe a workplace or school/university.</p>"+
+    "<p>The most important thing about this place is that it should support a connected chain of distinct locations. These are going to be the 'loci' that will hold your memory prompts.</p>"+    
+    "<p>One important feature of the loci is that they should be well connected in a sensible order.</p>"+
+    "<p>The other important feature of the loci is that they should be very easy to tell apart.</p>"+
+    "<p>You're going to create a tour where you visit each of these loci in order</p>"+
+    "<p>If they're scattered around so that the path between them has unnatural jumps or twists and turns the palace will probably be harder to use. If you're using your house, try to use locations that are close together, and tour the rooms in a simple way that avoids doubling back too much. You can usually get several locations in one room, but you don't have to!</p>"+
+    "<p>You want the loci to be very distinct. If the locations in the tour have bland or very similar backgrounds the palace will be harder to use. For example, if your tour goes through a kitchen, 'check in the fridge', 'look on the stovetop', 'look in the bin under the sink' will give you three pretty distinct locations, whereas 'look in the top drawer, look in the second drawer, look in the third drawer' is probably not going to work very well. Avoid having a location where the background is basically just a wall, and definitely avoid having two of them.</p>"+
+    "It's usually good to have your locations pretty close together. You want to pack a lot of them into whatever space you're using, if you can. But the only really important rules are 'make them distinct' and 'make them well connected, so the link to the next location is always obvious'. If you have both of those things, you have a good palace."+
+    "<p>You can abandon a palace and start a new one if you decide you've messed up your choice of locations. You can also extend an existing palace. Ten or twenty locations is more than enough to start with, but you might want to prepare a tour with fifty or more locations and save the rest for later. To keep the palace extensible, try to avoid boxing yourself in with your tour. For example, if it's your house, make the tour a loop that finishes in the street outside. Then, if you need to, you can extend the tour by walking around the block, or following a familiar commute to your workplace or old school and continuing there.</p>"+
+    "<p>Write down the locations in your tour and review them often. Draw a little mud-map. Then write out the list from memory. Check it against your master list. Then do it all again. I know, it's annoying. Honestly, it's just a bit of grind. But this is where the magic happens: with practice, you can effortlessly tour through a long list of locations. Congratulations, now you own a memory palace! You can then use it by 'placing' things you want to remember in each location as you tour.</p>"+
+    "<p>Memorizing the tour takes the most tedious effort. But coming up with good reminders to 'place' at each location is the part of the memory palace that takes the most skill.</p>"+
+    "<p>A reminder should be some kind of physical object. Writing a word you want to remember on an imaginary post-it-note and sticking that to your location is probably not going to work.</p>"+
+    "<p>Here are some tips for ways to come up with good 'reminder'"+
+    "<ul>"+
+    "<li>Make it unusual. The rule of thumb is: if you saw this in real life, would you definitely tell your friends about it?</li>"+
+    "<li>One simple way to 'make it unusual' is to make the thing huge or tiny. Vulgar is also often effective.</li>"+
+    "<li>Make it active. Things that are doing something: spinning, burning, swaying, biting, falling, are more striking than static.</li>"+
+    "<li>Interact with the location: Sit on something, swing off something, be hiding badly behind something that is part of that location.</li>"+
+    "<li>Make it personal. A lot of the skill is getting really good at snap associations between abstract concepts and concrete ones. Maybe you represent accuracy with a dartsboard. Dizziness with a spinning top. Surgery with a fountain of blood. The associations don't have to make sense to anyone else so long as they make sense to you.</li>"+
+    "</ul></p>"+
+    "<p>Here's an example to get the feeling.</p>"+
+    "<p>Imagine your memory palace is the house you grew up in and you're starting from the mailbox. Ahead of time, you prepared a tour that starts at the mailbox, then goes up the driveway, to a pot-plant by the front door, and then to front door. (Your tour continues inside the house, but this example is only a couple items long.) Now you're interpreting for a doctor who has just started listing out symptoms of high blood pressure.</p>"+
+    "<p>The doctor says \"High blood pressure can cause headaches, especially in the morning or after physical exertion.\"</p>"+
+    "<p>You put a very sore head in your letterbox.</p>"+
+    "<img src='resources/headache_palace_prompt.png' width='200' height='200'>"+
+    "<p>Then an exhausted rooster in a judo outfit in the driveway. Roosters crow in the morning, and this one has just been physically exerting itself.</p>"+
+    "<img src='resources/exhausted_rooster.png' width='200' height='200'>"+
+    "<p>The doctor continues: \"Another symptom is dizziness and lightheadedness: Due to the impact of high blood pressure on blood flow, you may experience dizziness or a lightheaded sensation.\"</p>"+
+    "<p>Your next location is the pot plant by the door: you pick a spinning top to represent dizziness and have it float around the plant like a balloon as it spins.</p>"+
+    "<img src='resources/potplant.jpeg' width='200' height='200'>"+
+    "<p>You get the idea! When the doctor finishes their list, you can go back and re-do the tour: first the mailbox with the severed head to remind you of headaches, then up the driveway where the rooster is, to remind you that this is morning and after physical activity, then to the pot plant where you have placed a reminder of dizziness and lightheadedness.</p>"+
+    "<p>There are a couple advantages to this technique. When it comes to sheer volume, it's very hard to beat. With practice, memory palace users can remember startlingly long lists.</p>"+
+    "<p>But, possibly more importantly, you very often notice when you've forgotten something! In this example, if you remember headaches and dizziness, you are definitely going to notice that the thing you put in the driveway is missing (and you'll know what to ask for: the thing in the driveway is the bit just after the headaches.)</p>"+
+    "<p>You don't have to be a genius to use a memory palace! It's really mostly just showing up and doing the practice. Very much like lifting weights in the gym, it's a bit tedious, if you put in the reps, you get the gains. Also like lifting weights in the gym, it's possible to overdo it and build muscles that are mainly good for bodybuilding (memory competitions) rather than a sport (interpreting), so it's good to mindfully check that it's actually helping.</p><p>It can be fun though: it's pretty satisfying to stick the landing on a really long tour.</p>"+
+    "<p>For more on this technique, try <a href='https://en.wikipedia.org/wiki/Method_of_loci'>Wikipedia</a> or <a href='https://artofmemory.com/blog/moonwalking-with-einstein-joshua-foer/'>this pretty entertaining pop-sci book from a journalist who got assigned to cover the world memory championships and got interested enough to return as a competitor.</a>"+
+    "<p>Good luck have fun!</p>"+
+    "<p><button onclick=location.reload()>Main menu</button></p>"
+    
+
+    
+
+function mempalace_howtoplay(){
+    if(instruction_index == mempalace_instructions.length){
+	document.getElementById("instructionnext").disabled = true;
+	return;
+    }
+    toUberdiv(
+	"<h1>How to play Memory Palace</h1>"+
+	    mempalace_instructions[instruction_index]+
+	    "<p><button id='instructionnext' onclick=mempalace_howtoplay()>Next</button></p>"+
+	"<p><button onclick='location.reload()'>Main menu</button></p>"
+    )
+    instruction_index = instruction_index + 1;
+}
+function mempalace_whytoplay(){
+    toUberdiv(mempalace_motivation);
+}
+
+
 function mempalace_home(){
     document.getElementById("uberdiv").innerHTML = ""+
 	"<p>I want to:</p>"+
-	"      <p><button onClick=viewTour()> tour my palace </button></p>      "+
+//	"      <p><button onClick=viewTour()> tour my palace </button></p>      "+
 	"      <p><button onClick=mempalace_submit_settings_start()>Train my memory</button></p>"+
 	"    <div style='border:1px solid black'>"+
 	"    <h2>Settings</h2>"+
