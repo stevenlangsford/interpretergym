@@ -17,11 +17,79 @@
 <body>
 
   <div id="uberdiv" class="maindiv">
-    <p><button onClick='mempalace_home()'>Memory Palace</button></p>
-    <p><button onClick='nback_home()'>N-back</button></p>
-    <p><button onClick='cloze_home()' disabled>Cloze completions</button></p>
-    <p><button onClick='translate_home()' disabled>Just translate</button></p>
-    <p><button onClick='numbers_home()' >Infinite numbers</button></p>
+
+    <div class="bg">
+      <img src="resources/liftreading_fem.png" alt="">
+    </div>
+    
+    <div>
+      <table class='home_menu'>
+      <tr>
+      <td><button onClick='mempalace_home()'>Memory Palace</button></td>
+      <td></td> <!-- HAHA spot the n00b go learn flexbox or something -->
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><button>How to play</button></td>
+      <td><button>Why to play</button></td>
+    </tr>
+ <tr>
+      <td><button onClick='nback_home()'>N-back</button></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><button>How to play</button></td>
+      <td><button>Why to play</button></td>
+    </tr>
+
+  <tr>
+      <td><button onClick='cloze_home()' disabled >CLoze completions</button></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><button disabled>How to play</button></td>
+      <td><button disabled>Why to play</button></td>
+    </tr>
+   <tr>
+      <td><button onClick='translate_home()' disabled >Just translate</button></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><button disabled>How to play</button></td>
+      <td><button disabled>Why to play</button></td>
+    </tr>
+   <tr>
+      <td><button onClick='numbers_home()'>Infinite numbers</button></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><button>How to play</button></td>
+      <td><button>Why to play</button></td>
+    </tr>
+   
+    </table></div>
+    <!--   <p><button onClick='cloze_home()' disabled>Cloze completions</button><button>How to play</button><button>Why to play</button></p> -->
+  <!--   <p><button onClick='translate_home()' disabled>Just translate</button><button>How to play</button><button>Why to play</button></p> -->
+  <!--   <p><button onClick='numbers_home()' >Infinite numbers</button><button>How to play</button><button>Why to play</button></p> -->
   </div>
 
 
@@ -35,6 +103,15 @@
 	if(which_keylistener=="none"){
 	    return
 	}
+
+	if(which_keylistener =="numbers"){
+	    if(e.keyCode==97){//'a'
+		reveal()
+	    }else if(e.keyCode==108){//'l'
+		draw_numberChallenge()//"next"
+	    }
+	}
+	
 	if(which_keylistener =="nback"){
 	    if(targ_lang == "blank targlang"){
 		//means you haven't started yet

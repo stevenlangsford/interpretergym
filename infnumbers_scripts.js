@@ -281,9 +281,8 @@ function draw_numberChallenge(){
 }
 
 function numbers_home(){
-    //currently no-action bounce to exercise
-    //but undecided if there should be a menu here or something
-    //probably not?
+    //bounce to exercise
+    which_keylistener = "numbers" //key listener lives in index.html. Ugh.
     draw_numberChallenge()
 }
 //TODOS: looks like 7019 is a problem for numberToChinese? Wassup with that. Can fix?

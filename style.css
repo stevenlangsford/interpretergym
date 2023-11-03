@@ -1,12 +1,47 @@
 body{
     background:grey;
 }
-
-.maindiv{
+button{
+    border-radius:12px;
+}
+#uberdiv{
+    /* display:flex; */
+    justify-content:space-between;
+    text-align:center;
     width:80%;
     margin:auto;
-    border:1px solid black;
 }
+h1{
+    width:100%;
+}
+table{
+    margin:auto;
+    width:50%;
+    position:absolute;
+    bottom: 25%;
+    left:25%;
+}
+
+.bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+
+  z-index:-5;
+}
+.bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  width: 23%;
+  height: auto;
+}
+
 .nback_inner_p{
     border:1px solid green;
     text-align:center;

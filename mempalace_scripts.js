@@ -14,27 +14,26 @@ function shuffleslice(arr, n_items){
 function mempalace_home(){
     document.getElementById("uberdiv").innerHTML = ""+
 	"<p>I want to:</p>"+
-"    <ul>"+
-"      <li><button onClick=viewTour()> tour my palace </button></li>      "+
-"      <li><button onClick=mempalace_submit_settings_start()>Train my memory</button></li>"+
-"    </ul>"+
-"    <div style='border:1px solid black'>"+
-"    <h2>Settings</h2>"+
-"      <h3>Language</h3>"+
-"      <input type='radio' id='eng' name='targ_language' value='eng'>"+
-"      <label for='eng'>English</label><br>"+
-"      <input type='radio' id='zh' name='targ_language' value='zh'>"+
-"      <label for='zh'>Chinese</label><br>"+
-"      <input type='radio' id='rnd' name='targ_language' value='rnd' checked>"+
-"      <label for='rnd'>Surprise me</label><br>"+
-"      <h3>Text type</h3>"+
-"      <input type='radio' id='tt_words' name='text_type' value='words'>"+
-"      <label for='eng'>Words</label><br>"+
-"      <input type='radio' id='tt_texts' name='text_type' value='texts'>"+
-"      <label for='zh'>Texts</label><br>"+
-"      <input type='radio' id='tt_rnd' name='text_type' value='rnd' checked>"+
-"      <label for='rnd'>Surprise me</label><br>"+
-"    </div>"
+	"      <p><button onClick=viewTour()> tour my palace </button></p>      "+
+	"      <p><button onClick=mempalace_submit_settings_start()>Train my memory</button></p>"+
+	"    <div style='border:1px solid black'>"+
+	"    <h2>Settings</h2>"+
+	"      <h3>Language</h3>"+
+	"      <input type='radio' id='eng' name='targ_language' value='eng'>"+
+	"      <label for='eng'>English</label><br>"+
+	"      <input type='radio' id='zh' name='targ_language' value='zh'>"+
+	"      <label for='zh'>Chinese</label><br>"+
+	"      <input type='radio' id='rnd' name='targ_language' value='rnd' checked>"+
+	"      <label for='rnd'>Surprise me</label><br>"+
+	"      <h3>Text type</h3>"+
+	"      <input type='radio' id='tt_words' name='text_type' value='words'>"+
+	"      <label for='eng'>Words</label><br>"+
+	"      <input type='radio' id='tt_texts' name='text_type' value='texts'>"+
+	"      <label for='zh'>Texts</label><br>"+
+	"      <input type='radio' id='tt_rnd' name='text_type' value='rnd' checked>"+
+	"      <label for='rnd'>Surprise me</label><br>"+
+	"<button onclick='location.reload()'>Back to Main menu</button>"+
+	"    </div>"
 }
 
 
