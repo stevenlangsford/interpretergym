@@ -94,8 +94,13 @@
 
 
   <script type="text/javascript">
-    let instruction_index = 0; //another global var used by everything. :-( Kinda nice that it resets whenever main menu reloaded tho.
-    //Not sure which is worse, trying to have different games overwrite doc onkeypress or having this giant kludge of global vars
+   //Global vars (ouch)
+    let targ_lang = "blank targlang"
+    let text_type = "blank text type"
+    let instruction_index = 0; //bad to be global, kinda nice that it resets whenever this main pg reloads tho.
+
+    //Keylisteners also global, with a flag changing the listener's behavior for each game.
+    //Not sure which is worse, trying to have different games overwrite doc onkeypress or having this giant kludge of global vars?
     //Probably the real problem is trying to do everything on one page by overwriting uberdiv, that's the real antipattern here.
     let which_keylistener = "none"
     
@@ -132,16 +137,19 @@
     };
 
     
-  //capture choices made on this page before continuing: (these are the global vars that need to be set for resource getters)
-  let targ_lang = "blank targlang"
-  let text_type = "blank text type"
-  
-  function mempalace_submit_settings_start(){
-      targ_lang = document.querySelector('input[name="targ_language"]:checked').value;
-      text_type = document.querySelector('input[name="text_type"]:checked').value;
-
-      mempalace_startfresh(3);
-  }
+   
+    //Generally handy helper fns
+    function toUberdiv(myhtml){
+	document.getElementById("uberdiv").innerHTML = myhtml;
+    }
+    
+    function shuffle(arr){
+	return(arr.sort(()=>Math.random() - 0.5))
+    }
+    
+    function shuffleslice(arr, n_items){
+	return(arr.sort(() => Math.random() - 0.5).slice(0,n_items))
+    }
 
     //DEV ONLY: skip to current exercise here if you're gonna.
     //    nback_home()

@@ -1,15 +1,3 @@
-//HELPER FNS AND HOUSEKEEPING
-function toUberdiv(myhtml){
-    document.getElementById("uberdiv").innerHTML = myhtml;
-}
-
-function shuffle(arr){
-    return(arr.sort(()=>Math.random() - 0.5))
-}
-
-function shuffleslice(arr, n_items){
-    return(arr.sort(() => Math.random() - 0.5).slice(0,n_items))
-}
 
 let mempalace_instructions =[
     "Memory palace is all about remembering lists of things.",
@@ -38,7 +26,7 @@ mempalace_motivation = "<h1>Why play memory palace</h1>"+
     "<p>The most important thing about this place is that it should support a connected chain of distinct locations. These are going to be the 'loci' that will hold your memory prompts.</p>"+    
     "<p>One important feature of the loci is that they should be well connected in a sensible order.</p>"+
     "<p>The other important feature of the loci is that they should be very easy to tell apart.</p>"+
-    "<p>You're going to create a tour where you visit each of these loci in order</p>"+
+    "<p>You're going to create a tour where you visit each of these loci in order.</p>"+
     "<p>If they're scattered around so that the path between them has unnatural jumps or twists and turns the palace will probably be harder to use. If you're using your house, try to use locations that are close together, and tour the rooms in a simple way that avoids doubling back too much. You can usually get several locations in one room, but you don't have to!</p>"+
     "<p>You want the loci to be very distinct. If the locations in the tour have bland or very similar backgrounds the palace will be harder to use. For example, if your tour goes through a kitchen, 'check in the fridge', 'look on the stovetop', 'look in the bin under the sink' will give you three pretty distinct locations, whereas 'look in the top drawer, look in the second drawer, look in the third drawer' is probably not going to work very well. Avoid having a location where the background is basically just a wall, and definitely avoid having two of them.</p>"+
     "It's usually good to have your locations pretty close together. You want to pack a lot of them into whatever space you're using, if you can. But the only really important rules are 'make them distinct' and 'make them well connected, so the link to the next location is always obvious'. If you have both of those things, you have a good palace."+
@@ -59,12 +47,12 @@ mempalace_motivation = "<h1>Why play memory palace</h1>"+
     "<p>The doctor says \"High blood pressure can cause headaches, especially in the morning or after physical exertion.\"</p>"+
     "<p>You put a very sore head in your letterbox.</p>"+
     "<img src='resources/headache_palace_prompt.png' width='200' height='200'>"+
-    "<p>Then an exhausted rooster in a judo outfit in the driveway. Roosters crow in the morning, and this one has just been physically exerting itself.</p>"+
+    "<p>Then an exhausted rooster in a judo outfit in the driveway. Roosters crow in the morning, and this one has just been physically exerting itself. It's not obvious from the picture, but the rooster also has a headache (because the info is about the headaches)</p>"+
     "<img src='resources/exhausted_rooster.png' width='200' height='200'>"+
     "<p>The doctor continues: \"Another symptom is dizziness and lightheadedness: Due to the impact of high blood pressure on blood flow, you may experience dizziness or a lightheaded sensation.\"</p>"+
     "<p>Your next location is the pot plant by the door: you pick a spinning top to represent dizziness and have it float around the plant like a balloon as it spins.</p>"+
     "<img src='resources/potplant.jpeg' width='200' height='200'>"+
-    "<p>You get the idea! When the doctor finishes their list, you can go back and re-do the tour: first the mailbox with the severed head to remind you of headaches, then up the driveway where the rooster is, to remind you that this is morning and after physical activity, then to the pot plant where you have placed a reminder of dizziness and lightheadedness.</p>"+
+    "<p>You get the idea! When the doctor finishes their list, you can go back and re-do the tour: first the mailbox with the severed head to remind you of headaches, then up the driveway where the exhausted rooster with a headache is, to remind you that this is morning and after physical activity, then to the pot plant where you have placed a reminder of dizziness and lightheadedness.</p>"+
     "<p>There are a couple advantages to this technique. When it comes to sheer volume, it's very hard to beat. With practice, memory palace users can remember startlingly long lists.</p>"+
     "<p>But, possibly more importantly, you very often notice when you've forgotten something! In this example, if you remember headaches and dizziness, you are definitely going to notice that the thing you put in the driveway is missing (and you'll know what to ask for: the thing in the driveway is the bit just after the headaches.)</p>"+
     "<p>You don't have to be a genius to use a memory palace! It's really mostly just showing up and doing the practice. Very much like lifting weights in the gym, it's a bit tedious, if you put in the reps, you get the gains. Also like lifting weights in the gym, it's possible to overdo it and build muscles that are mainly good for bodybuilding (memory competitions) rather than a sport (interpreting), so it's good to mindfully check that it's actually helping.</p><p>It can be fun though: it's pretty satisfying to stick the landing on a really long tour.</p>"+
@@ -95,11 +83,11 @@ function mempalace_whytoplay(){
 
 function mempalace_home(){
     document.getElementById("uberdiv").innerHTML = ""+
-	"<p>I want to:</p>"+
 //	"      <p><button onClick=viewTour()> tour my palace </button></p>      "+
-	"      <p><button onClick=mempalace_submit_settings_start()>Train my memory</button></p>"+
+	"      <p><button onClick=mempalace_submit_settings_start()>Start!</button></p>"+
 	"    <div style='border:1px solid black'>"+
 	"    <h2>Settings</h2>"+
+	"<p>Start length: <input type='text' id='startlength' value='5'></p>"+
 	"      <h3>Language</h3>"+
 	"      <input type='radio' id='eng' name='targ_language' value='eng'>"+
 	"      <label for='eng'>English</label><br>"+
@@ -227,6 +215,22 @@ function outro(){
 	"<p><button onClick=location.reload()>Main menu</button></p>";
     toUberdiv(feedback+options)
 }
+   function mempalace_submit_settings_start(){
+      targ_lang = document.querySelector('input[name="targ_language"]:checked').value;
+      text_type = document.querySelector('input[name="text_type"]:checked').value;
+	  
+       if(isNaN(
+         parseInt(document.getElementById("startlength").value)
+       )){
+	   alert("Start length must be an integer")
+	   return;
+       }
+
+      mempalace_startfresh(
+          parseInt(document.getElementById("startlength").value)
+	  )
+  }
+
 
 //MAIN
 //viewItem()
