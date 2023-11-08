@@ -184,8 +184,9 @@ function nback_home(){
     which_keylistener = "nback"
     
     toUberdiv(
+	"<img src ='resources/femreader.png' class = 'bright_img'>"+
 	"<button onclick='start_nback()'> Start n-back</button>"+
-	    "    <div>"+
+	    "    <div class='settings_div'>"+
 	    "    <h2>Settings</h2>"+
 	    "<p>Increase list length at level + <input type='text' id='nback_to_increase' value='5'> wins</p>"+
 	    "<p>Decrease list length every <input type='text' id='nback_to_decrease' value='3'> failures</p>"+

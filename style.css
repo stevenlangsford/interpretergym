@@ -68,3 +68,35 @@ table{
     text-align:center;
     padding-block: 30px;
 }
+.rnddrilldiv{
+    /* border:1px solid red; */
+    text-align:center;
+    position:absolute;
+    margin:auto;
+    width:80%;
+    bottom:0%;
+}
+
+.settings_div{
+    border:1px solid black;
+    width:25%;
+    margin:auto;
+}
+
+.bleft_img{
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    height: 200px;
+}
+.bright_img{
+    position: fixed; 
+    bottom: 0;
+    right: 0;
+    height: 200px;
+}
+/* #rnd_drill_button{ */
+/*     position:absolute; */
+/*     bottom:0%; */
+/*     margin:auto; */
+/* } */

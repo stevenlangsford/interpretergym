@@ -2,9 +2,9 @@
 let mempalace_instructions =[
     "Memory palace is all about remembering lists of things.",
     "Using the memory palace technique is <strong>very strongly recommended</strong> for this exercise.",
-    "There's a more detailed description of how the memory palace works in the 'why to play' section.",
+    "There's a more detailed description of how the memory palace works in the 'why to play' section, this just covers the mechanics of what you'll see when doing the exercise.",
     "In stage one, you'll get the list. Remember each item and hit 'Next' to continue.",
-    "In stage two, you'll get a series of blank text boxes. Enter each of the items you remembered.",
+    "In stage two, you'll get a series of blank text boxes. Write in each of the items you remembered. Press 'enter' to continue to the next item.",
     "In stage three, you'll get a chance to check your answers.",
     "It's up to you if you want to accept or reject each answer. At the end you'll get a count of how many you accepted.",
     "When you get to the end of the review, you can choose to increase the list length by one, five, or ten. Or you can go back to the main menu.",
@@ -55,7 +55,7 @@ mempalace_motivation = "<h1>Why play memory palace</h1>"+
     "<p>You get the idea! When the doctor finishes their list, you can go back and re-do the tour: first the mailbox with the severed head to remind you of headaches, then up the driveway where the exhausted rooster with a headache is, to remind you that this is morning and after physical activity, then to the pot plant where you have placed a reminder of dizziness and lightheadedness.</p>"+
     "<p>There are a couple advantages to this technique. When it comes to sheer volume, it's very hard to beat. With practice, memory palace users can remember startlingly long lists.</p>"+
     "<p>But, possibly more importantly, you very often notice when you've forgotten something! In this example, if you remember headaches and dizziness, you are definitely going to notice that the thing you put in the driveway is missing (and you'll know what to ask for: the thing in the driveway is the bit just after the headaches.)</p>"+
-    "<p>You don't have to be a genius to use a memory palace! It's really mostly just showing up and doing the practice. Very much like lifting weights in the gym, it's a bit tedious, if you put in the reps, you get the gains. Also like lifting weights in the gym, it's possible to overdo it and build muscles that are mainly good for bodybuilding (memory competitions) rather than a sport (interpreting), so it's good to mindfully check that it's actually helping.</p><p>It can be fun though: it's pretty satisfying to stick the landing on a really long tour.</p>"+
+    "<p>Researchers seem to agree that pretty much anyone can learn to use a memory palace, it's really mostly just about showing up and doing the practice. Very much like lifting weights in the gym, it's a bit tedious, but if you put in the reps, you get the gains. Also like lifting weights in the gym, it's possible to overdo it and build muscles that are mainly good for bodybuilding (memory competitions) rather than a sport (interpreting), so it's good to mindfully check that it's actually helping.</p><p>It can be fun though: it's pretty satisfying to stick the landing on a really long tour.</p>"+
     "<p>For more on this technique, try <a href='https://en.wikipedia.org/wiki/Method_of_loci'>Wikipedia</a> or <a href='https://artofmemory.com/blog/moonwalking-with-einstein-joshua-foer/'>this pretty entertaining pop-sci book from a journalist who got assigned to cover the world memory championships and got interested enough to return as a competitor.</a>"+
     "<p>Good luck have fun!</p>"+
     "<p><button onclick=location.reload()>Main menu</button></p>"
@@ -83,9 +83,10 @@ function mempalace_whytoplay(){
 
 function mempalace_home(){
     document.getElementById("uberdiv").innerHTML = ""+
-//	"      <p><button onClick=viewTour()> tour my palace </button></p>      "+
-	"      <p><button onClick=mempalace_submit_settings_start()>Start!</button></p>"+
-	"    <div style='border:1px solid black'>"+
+//	"      <p><button onClick=viewTour()> tour my palace </button></p>      "
+"<img src ='resources/lift_reading.png' class = 'bleft_img'>"+
+    "      <p><button onClick=mempalace_submit_settings_start()>Start memory palace</button></p>"+
+	"    <div class='settings_div'>"+
 	"    <h2>Settings</h2>"+
 	"<p>Start length: <input type='text' id='startlength' value='5'></p>"+
 	"      <h3>Language</h3>"+

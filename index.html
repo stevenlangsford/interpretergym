@@ -82,15 +82,36 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><button disabled>How to play</button></td>
-      <td><button disabled>Why to play</button></td>
+      <td><button onclick='numbers_howtoplay()'>How to play</button></td>
+      <td><button onclick='numbers_whytoplay()'>Why to play</button></td>
     </tr>
-   
+    <tr>
+      <td><button onClick='accent_home()' disabled>Accent gym</button></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><button onclick='accent_howtoplay()' disabled>How to play</button></td>
+      <td><button onclick='accent_whytoplay()' disabled>Why to play</button></td>
+    </tr>
+      <!-- <tr> -->
+      <!-- <td style='color:white'>Other resources: <br/><a style='color:white' href='https://apps.ankiweb.net/'>Anki</a> flashcards<br/> <a style='color:white' href='https://www.poe.com'>Poe</a> chatbot</td> -->
+      <!-- <td></td> -->
+      <!-- <td></td> -->
+      <!-- <td></td> -->
+      <!-- <td></td> -->
+      <!-- <td></td> -->
+      <!-- <td></td> -->
+      <!-- <td></td> -->
+      <!-- <td></td> -->
+      <!-- <td></td> -->
+      <!-- 	</tr> -->
     </table></div>
-    <!--   <p><button onClick='cloze_home()' disabled>Cloze completions</button><button>How to play</button><button>Why to play</button></p> -->
-  <!--   <p><button onClick='translate_home()' disabled>Just translate</button><button>How to play</button><button>Why to play</button></p> -->
-  <!--   <p><button onClick='numbers_home()' >Infinite numbers</button><button>How to play</button><button>Why to play</button></p> -->
-  </div>
+    <div class="rnddrilldiv"><button onclick="randomdrill()">Random drill</button></div>
+ </div>
 
 
   <script type="text/javascript">
@@ -151,6 +172,12 @@
 	return(arr.sort(() => Math.random() - 0.5).slice(0,n_items))
     }
 
+    function randomdrill(){
+	shuffle([mempalace_home,
+		 nback_home,
+		 numbers_home
+		])[0]();
+    }
     //DEV ONLY: skip to current exercise here if you're gonna.
     //    nback_home()
     //    draw_numberChallenge()

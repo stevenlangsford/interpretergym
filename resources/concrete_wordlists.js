@@ -1,5 +1,7 @@
 eng_concrete_nouns = Array.from(new Set( //auto-remove duplicates. Although better to actually clean up! There's about 737 repeats 
     ["milk",
+     "acorn",
+     "whisk",
      "tomato",
  "grasshopper",
  "ape",
@@ -5695,7 +5697,6 @@ zh_concrete_nouns = Array.from(new Set([
  "亲人",
  "人家",
  "沙漠",
- "四肢",
  "同学",
  "兔子",
  "玩具",
@@ -6745,7 +6746,6 @@ zh_concrete_nouns = Array.from(new Set([
 "门",
 "宝石",
 "镜片",
-"外屋",
 "牡蛎",
 "胰腺",
 "医生",
