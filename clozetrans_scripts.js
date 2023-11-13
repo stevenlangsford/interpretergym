@@ -1,34 +1,13 @@
 //todo: fetch these from some library!
-//what're you going to do about punctuation? Right now gloms to prev word
-let reference_story = [
-    ["有", "一只", "小山羊", "走丢","了"],
-    ["它", "离开","了", "它的", "家，", "迷路了"],
-    ["小山羊", "感到", "非常", "害怕", "和", "孤单"],
-    ["幸运的是", "一位", "好心的", "农夫", "发现了", "它"],
-    ["农夫", "带着", "小山羊", "回到了", "它的", "家"],
-    ["小山羊", "和", "它的", "家人", "团聚了"],
-    ["它们", "都", "非常", "高兴，", "庆祝着", "团圆"],
-    ["小山羊", "再也", "不会", "迷路了"],
-    ["它", "学会了", "留在", "家人"],
-    ["这是", "一个", "快乐的", "结局。"]
-]
-
-let target_story = [
-  ["Once", "upon", "a", "time,", "a", "little", "goat", "got", "lost."],
-  ["It", "wandered", "away", "from", "its", "home", "and", "got", "lost."],
-  ["The", "little", "goat", "felt", "very", "scared", "and", "lonely."],
-  ["Luckily,", "a", "kind", "farmer", "found", "it."],
-  ["The", "farmer", "brought", "the", "little", "goat", "back", "to", "its", "home."],
-  ["The", "goat", "and", "its", "family", "were", "reunited."],
-  ["They", "were", "all", "very", "happy", "and", "celebrated", "their", "reunion."],
-  ["The", "little", "goat", "would", "never", "get", "lost", "again."],
-  ["It", "learned", "to", "stay", "close", "to", "its", "family"],
-  ["And", "they", "all", "lived", "happily", "ever", "after."]
-]
-
+//Are you ok with punctuation glomming onto the words? Probably not.
+let reference_story = []
+let target_story = []
 let cloze_sentence_pointer = 0
 let cloze_word_pointer = 0;
 let leftovers = "";
+let prob_mask = .5; //Set in menu. Actually prob of clear text, ie 1-pmask, whups.
+
+let masked_target = [];
 
 function cloze_onchangeHandler(){
     console.log("onchange saw |" +
@@ -38,7 +17,7 @@ function cloze_onchangeHandler(){
 		(target_story[cloze_sentence_pointer][cloze_word_pointer]==
 		 document.getElementById('cloze_input').value)
 	       )//ok
-my_input = document.getElementById('cloze_input').value.trim();
+    my_input = document.getElementById('cloze_input').value.trim()
     
     if(my_input.startsWith(target_story[cloze_sentence_pointer][cloze_word_pointer])){
 	console.log("got a match");
@@ -76,7 +55,7 @@ function init_cloze(){
     }
     todo_words = "</span>"
     for(i=cloze_word_pointer;i<target_story[cloze_sentence_pointer].length;i++){
-	todo_words = todo_words + target_story[cloze_sentence_pointer][i]+targ_sep;
+	todo_words = todo_words + masked_target[cloze_sentence_pointer][i]+targ_sep;
     }
     
     current_target = done_words+todo_words+
@@ -86,7 +65,7 @@ function init_cloze(){
 
     
     if(cloze_sentence_pointer + 1 < target_story.length){
-	future_target = target_story[cloze_sentence_pointer + 1].join(targ_sep)
+	future_target = masked_target[cloze_sentence_pointer + 1].join(targ_sep)
 	future_reference = reference_story[cloze_sentence_pointer + 1].join(ref_sep)
     }
     
@@ -125,14 +104,60 @@ function init_cloze(){
     document.getElementById("cloze_input").focus()
 }
 
+function cloze_submit_settings_start(){
+    //assumes targ_lang is eng or zh.
+ 
+    targ_lang = document.querySelector('input[name="targ_language"]:checked').value;
+    if(targ_lang == "rnd") {
+	targ_lang = shuffle(["zh","eng"])[0]
+    }
+    console.log(document.getElementById('cloze_theme').value)
+    prob_mask = parseFloat(document.getElementById('blank_prob_slider').value)/100;
+
+    my_text = get_bilang_text_obj(document.getElementById('cloze_theme').value)
+
+    target_story = targ_lang == "eng" ? my_text.eng : my_text.zh;
+    reference_story = targ_lang =="eng" ? my_text.zh : my_text.eng;
+
+    for(i=0; i<target_story.length;i++){
+    masked_target.push([])
+    for(j=0;j<target_story[i].length;j++){
+	masked_target[i].push(
+	    Math.random() > prob_mask ? target_story[i][j] : "□□□"
+	)
+    }
+}
+
+   
+    init_cloze();//turn into a button when home is a menu.
+}
 
 function clozetrans_home(){
     which_keylistener = "cloze"
+    toUberdiv(
+    random_eyecandy()+
+    "      <p><button onClick=cloze_submit_settings_start()>Start cloze translation</button></p>"+
+	"    <div class='settings_div'>"+
+	"    <h2>Settings</h2>"+
+	"      <h3>Cloze Language</h3>"+
+	"      <input type='radio' id='eng' name='targ_language' value='eng'>"+
+	"      <label for='eng'>English</label><br>"+
+	"      <input type='radio' id='zh' name='targ_language' value='zh'>"+
+	"      <label for='zh'>Chinese</label><br>"+
+	"      <input type='radio' id='rnd' name='targ_language' value='rnd' checked>"+
+	    "      <label for='rnd'>Surprise me</label><br>"+
+	    "<h3>How many blanks</h3>"+
+	    "0 to 100%"+
+	    "<input type='range' min='0' max='100' value='30' class='slider' id='blank_prob_slider'>"+
+	    "      <h3>Text theme</h3>"+
+	"<select id='cloze_theme'>"+
+	"<option value='rnd'>Surprise me</option>"+
+	"<option value='goats'>Goats</option>"+
+	"<option value='medical'>Medical</option>"+
+	    "</select><br/>"+
+	"<p><button onclick='location.reload()'>Back to Main menu</button></p>"+
+	"    </div>"
+    )
     
-    //assumes targ_lang is eng or zh.
-    targ_lang = "eng"
-    
-    //todo: menus here, pick source and target languages, maybe also gap density and maybe maybe topic?
 
-    init_cloze();//turn into a button when home is a menu.
 }
