@@ -1,0 +1,51 @@
+//todo: fetch these from some library!
+let zh_story = [
+    ["有", "一只", "小山羊", "走丢","了"],
+    ["它", "离开","了", "它的", "家，", "迷路了"],
+    ["小山羊", "感到", "非常", "害怕", "和", "孤单"],
+    ["幸运的是，", "一位", "好心的", "农夫", "发现了", "它"],
+    ["农夫", "带着", "小山羊", "回到了", "它的", "家"],
+    ["小山羊", "和", "它的", "家人", "团聚了"],
+    ["它们", "都", "非常", "高兴，", "庆祝着", "团圆"],
+    ["小山羊", "再也", "不会", "迷路了"],
+    ["它", "学会了", "留在", "家人"],
+    ["这是", "一个", "快乐的", "结局。"]
+]
+
+let eng_story = [
+  ["Once", "upon", "a", "time,", "a", "little", "goat", "got", "lost."],
+  ["It", "wandered", "away", "from", "its", "home", "and", "got", "lost."],
+  ["The", "little", "goat", "felt", "very", "scared", "and", "lonely."],
+  ["Luckily,", "a", "kind", "farmer", "found", "it."],
+  ["The", "farmer", "brought", "the", "little", "goat", "back", "to", "its", "home."],
+  ["The", "goat", "and", "its", "family", "were", "reunited."],
+  ["They", "were", "all", "very", "happy", "and", "celebrated", "their", "reunion."],
+  ["The", "little", "goat", "would", "never", "get", "lost", "again."],
+  ["It", "learned", "to", "stay", "close", "to", "its", "family"],
+  ["And", "they", "all", "lived", "happily", "ever", "after."]
+]
+
+let cloze_pointer = 0 //what's the current target word
+
+
+function cloze_onchangeHandler(){
+    console.log("onchange")//ok
+
+    //document.getElementById('cloze_input').value //input contents, inc partial completions.
+}
+
+function init_cloze(){
+
+    toUberdiv("<input type='text' id='cloze_input'>")
+    
+    document.getElementById("cloze_input").addEventListener('input', cloze_onchangeHandler);
+}
+
+
+function clozetrans_home(){
+    which_keylistener = "cloze"
+    
+    //todo: menus here, pick source and target languages, maybe also gap density and maybe maybe topic?
+
+    init_cloze();//turn into a button when home is a menu.
+}

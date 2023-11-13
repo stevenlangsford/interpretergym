@@ -84,7 +84,7 @@ function mempalace_whytoplay(){
 function mempalace_home(){
     document.getElementById("uberdiv").innerHTML = ""+
 //	"      <p><button onClick=viewTour()> tour my palace </button></p>      "
-"<img src ='resources/lift_reading.png' class = 'bleft_img'>"+
+    random_eyecandy()+
     "      <p><button onClick=mempalace_submit_settings_start()>Start memory palace</button></p>"+
 	"    <div class='settings_div'>"+
 	"    <h2>Settings</h2>"+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
@@ -7,12 +7,13 @@
   <!-- resource getters refer to global vars (language, difficulty settings), need to follow setup. -->
   <!-- menu scripts ref things on this page, go last-->
   <!-- this is dumb and you should go learn how to do it properly, especially the global-var settings thing -->
-  
+  <!-- the game scripts load in the head, before but the 'global vars' script in index.html <body>. So functions in game scripts that use the 'global' only work because by the time the function is *called* the var will have some value, probably because you got to the game via a 'settings' screen. This is obviously pretty unsafe/fragile. -->
   <script type="text/javascript" src="mempalace_scripts.js"></script>
   <script type="text/javascript" src="mempalace_tour_scripts.js"></script>
   <script type="text/javascript" src="nback_scripts.js"></script>
   <script src="https://unpkg.com/chinese-numbering@1.x/bundle/iife.js"></script> <!-- external dependency! -->
   <script type="text/javascript" src="infnumbers_scripts.js"></script>
+  <script type="text/javascript" src="clozetrans_scripts.js"></script>
 </head>
 <body>
 
@@ -130,6 +131,10 @@
 	    return
 	}
 
+	if(which_keylistener == "cloze"){
+	    console.log(e.keyCode)
+	}
+	
 	if(which_keylistener =="numbers"){
 	    if(e.keyCode==97){//'a'
 		reveal()
@@ -178,10 +183,28 @@
 		 numbers_home
 		])[0]();
     }
+
+    function random_eyecandy(){
+	//unpredictable decoration is probably extra rewarding?
+	css_class = shuffle(["bleft_img","bright_img"])[0]
+	img_src = shuffle(
+	    ["femreader.png",
+	     "lift_reading.png",
+	     "book_demon.png",
+	     "illuminated_readandwrite.png",
+	     "rubens_reader_fem.png",
+	     "musclebook.png"
+	    ]
+	)[0]
+	path = "resources/eyecandy/"
+	my_html = "<img src ='"+path+img_src+"' class = '"+css_class+"'>"
+	return(my_html)
+    }
     //DEV ONLY: skip to current exercise here if you're gonna.
     //    nback_home()
     //    draw_numberChallenge()
     //    nback_home()
+    clozetrans_home()
  </script>
  
 <!-- resource files come last because they can contain getters that reference target language, text type etc, vars must exist -->

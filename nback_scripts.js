@@ -23,7 +23,7 @@ let nback_instructions = [
 	    "<p>If you get enough answers right, you'll go to the next level, which means increasing the length of the hidden queue.</p>",
 	    "<p>When that happens, the whole screen will flash green, and your current queue of items will be emptied back to zero. You'll need to fill it again using the load button (or by pressing any key). When it gets to the new length that matches the level you're on, you can start making same-or-different judgments again.</p>",
 	    "<p>Similarly, if you get too many wrong you'll go down a level. The screen flashes red, the queue of items empties, and you'll load a new queue at the new (shorter) queue length. When the queue is full the same-or-different task begins again.</p>",
-	    "<p>On the start menu, you can choose whether items should be words or sentences, what language you want to use (or a mixture), and how easy it is to go up and down levels.</p><p>Enjoy! How long a queue can you handle?</p>"
+    "<p>On the start menu, you can choose whether items should be words or sentences, what language you want to use (or a mixture), and how easy it is to go up and down levels.</p><p>Enjoy! How long a queue can you handle?</p>"
 ];
 
 let nback_motivation = "<h1>Why play N-back?</h1>"+
@@ -184,7 +184,7 @@ function nback_home(){
     which_keylistener = "nback"
     
     toUberdiv(
-	"<img src ='resources/femreader.png' class = 'bright_img'>"+
+	random_eyecandy()+
 	"<button onclick='start_nback()'> Start n-back</button>"+
 	    "    <div class='settings_div'>"+
 	    "    <h2>Settings</h2>"+
