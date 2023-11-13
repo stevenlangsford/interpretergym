@@ -32,6 +32,11 @@ function cloze_onchangeHandler(){
     }
 }
 
+function flash_ans(){
+    targ_sep = targ_lang == "eng" ? " " : "";
+    alert(target_story[cloze_sentence_pointer].join(targ_sep))
+}
+
 function init_cloze(){
 
     targ_sep = targ_lang == "eng" ? " " : "";
@@ -80,8 +85,9 @@ function init_cloze(){
 	"</td>"+
 	"</tr>"+
 	"<tr>"+
-	"<td class='cloze_cell'>"+
+	"<td id='cloze_target_cell' class='cloze_cell'>"+
 	current_target+
+	"<br/><button onclick='flash_ans()'>flash answer</button>"+
 	"</td>"+
 	"<td class='cloze_cell'>"+
 	current_reference+

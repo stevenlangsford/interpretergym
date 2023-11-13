@@ -3,7 +3,7 @@
 //have fields zh, eng, and theme
 //zh and eng must be an array of sentences, where a 'sentence' is an array of words.
 //The SENTENCES must be aligned chunks: same number of 'em, same order, corresponding meanings.
-//The WORDS must be 'reasonable sized chunks to blank out in a cloze exercise'
+//The WORDS must be 'reasonable sized chunks to blank out in a cloze exercise', no need to match these cross-language
 //The THEME must be one of the theme options in the cloze theme drop-down input.
 bi_text_pairs = [
     {zh:[
@@ -14,7 +14,8 @@ bi_text_pairs = [
 	["早晨","到来,","办公室","充满了","期待"],
 	["病人们","陆续","进来,","有些","带着","忧虑","的","表情,","有些","带着","一丝","希望。"],
 	["他们","的","口腔","健康","是","我的","责任，","我","对此","充满","敬意。"],
-	["我","首先","会","查看","当天","的","日程","安排，","确保","每个","预约","都","得到","应有的","关注。","从","例行","的","洁牙","到","复杂的","手术，","每个","病人","都有","独特","的","需求","和","关切。"],
+	["我","首先","会","查看","当天","的","日程","安排，","确保","每个","预约","都","得到","应有的","关注。"],
+	["从","例行","的","洁牙","到","复杂的","手术，","每个","病人","都有","独特","的","需求","和","关切。"],
 	["仔细","聆听","是","至关重要的，","让","他们","放心","并","解决","他们","的","恐惧。"],
 	["当","第一个","病人","坐到","牙医","椅","上","时，","我","开始","进行","检查。"],
 	["我","可靠","的","工具","成为","我","手","的","延伸，","细致","地","探索","口腔","的","地形。","通过","每一次","探针","和","镜子,","我","发现","需要","关注","的","区域，","识别","出","蛀牙、","牙龈","疾病","或","其他","异常。"],
