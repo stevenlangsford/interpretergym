@@ -1,0 +1,55 @@
+library(tidyverse)
+library(jiebaR) #Chinese word segmentation
+
+bitext <- read.csv("diag1.csv")
+engine1  <-  worker()
+
+aline <- bitext[1,1]
+segment(aline, engine1)
+
+#strsplit(r'[!"\$%&\'()*+,\-.\/:;=#@?\[\\\]^_`{|}~]*', aline)
+sentence_tojs <- function(aline){
+depunct <- strsplit(aline, "[-.,?，。？:;'：；‘“——]+")[[1]]
+punct <- strsplit(aline, "\\w")
+punct <- punct[[1]][map_lgl(punct[[1]],
+                            function(i){!(i %in% c(""," "))})]
+
+if(length(depunct)!=length(punct))browser()
+
+repunct <- list()
+for(i in 1:length(depunct)){
+my_words <- segment(depunct[i],engine1)
+my_words[length(my_words)] <- paste0(my_words[length(my_words)],punct[i])
+repunct <- append(repunct,my_words)
+}
+repunct <- unlist(repunct)#list then unlist? Ugh.
+
+js_format <- paste0("[\"",paste(repunct,collapse="\",\""),"\"]")
+return(js_format)
+}
+
+story_tojs <- function(multi_sentence, langname){
+    paste0(langname,":[",
+           paste0(map_chr(multi_sentence,sentence_tojs),collapse=","),"]"
+           )
+}
+
+df_tojs <- function(bitext,themename){
+    paste0("{",
+           story_tojs(bitext[,1],"zh"),",",
+           story_tojs(bitext[,2],"eng"),",",
+           "theme:\"",themename,"\"",
+           "}"
+           )
+}
+
+fileConn<-file("output.js")
+writeLines(df_tojs(bitext,"medical"), fileConn)
+close(fileConn)
+
+
+###############notes###########
+#minimal jiebaR example:
+#hello <- bitext[1,1]
+#engine1 = worker()
+#segment(hello, engine1)

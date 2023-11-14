@@ -51,19 +51,7 @@
     </tr>
 
   <tr>
-      <td><button onClick='cloze_home()' disabled >CLoze completions</button></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><button disabled>How to play</button></td>
-      <td><button disabled>Why to play</button></td>
-    </tr>
-   <tr>
-      <td><button onClick='translate_home()' disabled >Just translate</button></td>
+      <td><button onClick='clozetrans_home()'>Cloze completions</button></td>
       <td></td>
       <td></td>
       <td></td>
@@ -123,6 +111,7 @@
 
     //Keylisteners also global, with a flag changing the listener's behavior for each game.
     //Not sure which is worse, trying to have different games overwrite doc onkeypress or having this giant kludge of global vars?
+    //(cloze has its own listener, because it wants onchange attached to a text box it just created.)
     //Probably the real problem is trying to do everything on one page by overwriting uberdiv, that's the real antipattern here.
     let which_keylistener = "none"
     
@@ -131,10 +120,6 @@
 	    return
 	}
 
-	if(which_keylistener == "cloze"){
-	    console.log(e.keyCode)
-	}
-	
 	if(which_keylistener =="numbers"){
 	    if(e.keyCode==97){//'a'
 		reveal()
@@ -189,6 +174,9 @@
 	css_class = shuffle(["bleft_img","bright_img"])[0]
 	img_src = shuffle(
 	    [
+		"porcelain.png",
+		"ivory.png",
+		"dancer.png",
 		"cossington.png",
 		"zh_tradlifter.png",
 		"book_weights.png",
@@ -218,7 +206,7 @@
     //    nback_home()
     //    draw_numberChallenge()
     //    nback_home()
-    clozetrans_home()
+    // clozetrans_home()
  </script>
  
 <!-- resource files come last because they can contain getters that reference target language, text type etc, vars must exist -->

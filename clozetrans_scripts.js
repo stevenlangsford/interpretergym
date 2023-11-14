@@ -8,26 +8,39 @@ let leftovers = "";
 let prob_mask = .5; //Set in menu. Actually prob of clear text, ie 1-pmask, whups.
 
 let masked_target = [];
+let current_theme = "rnd"
 
 function cloze_onchangeHandler(){
-    console.log("onchange saw |" +
-		document.getElementById('cloze_input').value+
-		"| looking for |"+
-		target_story[cloze_sentence_pointer][cloze_word_pointer]+"|"+
-		(target_story[cloze_sentence_pointer][cloze_word_pointer]==
-		 document.getElementById('cloze_input').value)
-	       )//ok
-    my_input = document.getElementById('cloze_input').value.trim()
-    
-    if(my_input.startsWith(target_story[cloze_sentence_pointer][cloze_word_pointer])){
-	console.log("got a match");
-	leftovers = my_input.replace(target_story[cloze_sentence_pointer][cloze_word_pointer],"")
+ 
+    my_input = document.getElementById('cloze_input').value.trim().replace(/[。，、？！‘,\.?!]/g,"").toLowerCase()
+    tomatch = target_story[cloze_sentence_pointer][cloze_word_pointer].trim().replace(/[。，、？！‘,\.?!]/g,"").toLowerCase()
+
+    if(my_input.startsWith(tomatch)){
+	leftovers = my_input.replace(tomatch,"")
+//	leftovers = my_input.replace(target_story[cloze_sentence_pointer][cloze_word_pointer],"").replace(/[。，、？！‘,\.?!]/g,"")
+	
 	document.getElementById('cloze_input').value=="";
 	cloze_word_pointer = cloze_word_pointer +1;
 	if(cloze_word_pointer >= target_story[cloze_sentence_pointer].length){
 	    cloze_sentence_pointer = cloze_sentence_pointer +1;
 	    cloze_word_pointer = 0;
-	}
+	    if(cloze_sentence_pointer >= target_story.length){		
+		my_text = get_bilang_text_obj(current_theme)
+		cloze_word_pointer = 0;
+		cloze_sentence_pointer = 0;
+		masked_target = [];
+		
+		for(i=0; i<target_story.length;i++){
+		    masked_target.push([])
+		    for(j=0;j<target_story[i].length;j++){
+			masked_target[i].push(
+			    Math.random() > prob_mask ? target_story[i][j] : "□□□"
+			)
+		    }
+		}//end setting up masked_target
+		
+	    }//end if sentence pointer runs off the end of the story
+	}//end if word pointer runs off the end of the sentence
 	init_cloze()
     }
 }
@@ -101,7 +114,8 @@ function init_cloze(){
 	future_reference+
 	"</td>"+
 	"</tr>"+
-     "</table>"
+     "</table>"+
+	"<div style='position:absolute;bottom:0;left:0;margins:auto;width:50%'><p><button onclick='location.reload()'>Main menu</button></p></div>"
     toUberdiv(cloze)
     
     document.getElementById("cloze_input").addEventListener('input', cloze_onchangeHandler);
@@ -117,10 +131,10 @@ function cloze_submit_settings_start(){
     if(targ_lang == "rnd") {
 	targ_lang = shuffle(["zh","eng"])[0]
     }
-    console.log(document.getElementById('cloze_theme').value)
     prob_mask = parseFloat(document.getElementById('blank_prob_slider').value)/100;
 
-    my_text = get_bilang_text_obj(document.getElementById('cloze_theme').value)
+    current_theme = document.getElementById('cloze_theme').value //gets re-used after wiping input element from page
+    my_text = get_bilang_text_obj(current_theme)
 
     target_story = targ_lang == "eng" ? my_text.eng : my_text.zh;
     reference_story = targ_lang =="eng" ? my_text.zh : my_text.eng;
@@ -158,6 +172,7 @@ function clozetrans_home(){
 	    "      <h3>Text theme</h3>"+
 	"<select id='cloze_theme'>"+
 	"<option value='rnd'>Surprise me</option>"+
+	"<option value='NEW'>NEW</option>"+
 	"<option value='goats'>Goats</option>"+
 	"<option value='medical'>Medical</option>"+
 	    "</select><br/>"+
@@ -167,3 +182,4 @@ function clozetrans_home(){
     
 
 }
+

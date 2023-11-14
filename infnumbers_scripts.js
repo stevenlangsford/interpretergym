@@ -1,14 +1,16 @@
 const numbers_instructions = [
     "The numbers exercise gives you a table with English on the left, numerals in the middle, and Chinese on the right.",
-    "By default, only the numerals are revealed at the start of each trial, but you can change this by toggling the buttons in the second row of the table. These set up the 'start position' depending on what you want to practice.",
+    "By default, only the numerals are revealed at the start of each trial, but you can change the 'starting position' by toggling the buttons in the second row of the table. If the button is set to 'open', it's available from the start, otherwise it's hidden.",
     "The reveal button reveals all the hidden information. The keyboard shortcut for reveal is 'a'.",
-    "The next button changes the random number, and hides the cells that have their starting position set to 'hidden'. The keyboard shortcut for next is 'l'",
+    "The 'Next' button changes the random number, and hides the cells that have their starting position set to 'hidden'. The keyboard shortcut for next is 'l'",
     "The random number size can be (very roughly) controlled by using the 'smaller numbers' and 'larger numbers' button at the bottom.",
-    "The control is very crude, the range of numbers you could get is quite wide no matter what this is set to. The largest numbers it will offer are in the hundred billions. If you want bigger numbers than that... go somewhere else, and take your perverted desires with you.",
+    "The control is very crude, the range of numbers you could get is quite wide no matter what this is set to. The largest numbers it will offer are in the hundred billions. If you want bigger numbers than that, please go somewhere else and take your perverted desires with you.",
     "Enjoy!"
 ]
+
 const numbers_motivation = "<h1>Why play Infinite Numbers</h1>"+
       "<p>Because numbers are annoying, that's why.</p><p>But any pain suffered here is not real pain.</p><p>This is a safe space to get annoyed in.</p><p>Drills will set you free.</p><p><button onclick='location.reload()'>Main menu</button></p>"
+
 function numbers_howtoplay(){
     if(instruction_index == numbers_instructions.length){
 	document.getElementById("instructionnext").disabled = true;
@@ -23,7 +25,7 @@ function numbers_howtoplay(){
     instruction_index = instruction_index + 1;
 }
 function numbers_whytoplay(){
-    toUberdiv(numbers_motivation);
+    toUberdiv(numbers_motivation+random_eyecandy());
 }
 
 
