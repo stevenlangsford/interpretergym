@@ -1,6 +1,15 @@
 //assumes the existence of shuffle and global var targ_language taking values eng or zh
 eng_monologue_library = [
 [
+  "Okay, let's see. Another patient with blurred vision and dizziness. This could be anything from a benign condition to something more serious. Gotta start by gathering some information.",
+  "Blurred vision and dizziness... Could it be related to the patient's eyes? Maybe they have a refractive error, like nearsightedness or astigmatism. But wait, if it's just an issue with their eyes, would that really cause dizziness? Hmm... I should ask them if the dizziness is more like a spinning sensation or if it feels more like lightheadedness.",
+  "If it's lightheadedness, then it could be related to their blood pressure. Perhaps they have orthostatic hypotension, where their blood pressure drops when they change positions, like when they stand up. That could definitely cause dizziness. But would it also cause blurred vision? I'm not entirely sure.",
+  "There's also the possibility of an inner ear problem. The inner ear helps with balance, so if there's an issue there, it could cause both blurred vision and dizziness. I should ask them if they've experienced any hearing loss or ringing in their ears. That could be a clue.",
+  "But what if it's something more concerning, like a neurological issue? Blurred vision and dizziness can be symptoms of a stroke or a brain tumor. I hope it's not that... but it's important to consider all possibilities. I should ask about any other neurological symptoms they might have, like weakness or difficulty speaking.",
+  "Alright, time to put all the pieces together. Based on their answers, I'll have a better idea of what tests to order. If it's more likely an eye issue, I'll refer them to an ophthalmologist. If it's a blood pressure problem, I'll check their blood pressure in different positions and maybe order some blood tests. If it's an inner ear problem, I might refer them to an audiologist or an ENT specialist. And if it's a neurological issue, I'll definitely need to order some imaging studies like an MRI.",
+  "In this case, given the complexity of the symptoms and the potential serious causes, I think it's best to refer them for further tests. I'll explain the need for additional investigations and arrange for another appointment. It's important to get to the bottom of this and provide the best care possible."
+],
+[
   "Today at the airport, something unusual happened. I can't shake off the feeling that I may have stumbled upon a spy. It all began when I noticed a person acting strangely, and my curiosity got the better of me. I decided to follow them discreetly and see if my suspicions were valid. Here's what I observed:",
   "1. Mysterious Encounters: The person seemed to engage in brief, secretive conversations with different individuals throughout the airport. They exchanged small packages, whispered words, and quickly moved on. It raised my suspicions, as it resembled scenes from the spy movies I've watched.",
   "2. Constant Surveillance: I couldn't help but notice that this person was highly alert and constantly scanning their surroundings. They seemed to be aware of everyone around them, making me wonder if they were keeping tabs on potential targets or monitoring their own back.",
@@ -339,6 +348,15 @@ eng_monologue_library = [
     ]//end library
 
 zh_monologue_library = [
+[
+  "好的，让我看看。又一个有视力模糊和头晕症状的患者。这可能是良性的情况，也可能是更严重的问题。首先要开始收集一些信息。",
+  "视力模糊和头晕... 是否可能与患者的眼睛有关？也许他们有屈光不正，比如近视或散光。但是，等等，如果只是眼睛的问题，会引起头晕吗？嗯...我应该问问他们头晕是更像是旋转感还是头晕眩晕感。",
+  "如果是头晕眩晕感，那么可能与他们的血压有关。也许他们有直立性低血压，即当他们改变姿势时，如站起时，血压会下降。这肯定会导致头晕。但是会引起视力模糊吗？我不太确定。",
+  "还有一种可能是内耳问题。内耳与平衡有关，所以如果出现问题，可能会导致视力模糊和头晕。我应该问问他们是否有听力丧失或耳鸣的情况。这可能是一个线索。",
+  "但如果是更严重的情况，比如神经问题呢？视力模糊和头晕可能是中风或脑肿瘤的症状。希望不是那样...但是必须考虑所有可能性。我应该问问他们是否有其他神经症状，比如肢体无力或说话困难。",
+  "好了，现在是将所有信息整合在一起的时候了。根据他们的回答，我将更清楚应该进行哪些测试。如果更有可能是眼睛的问题，我将转诊他们去眼科医生那里。如果是血压问题，我会在不同的姿势下检查他们的血压，可能还会进行一些血液检查。如果是内耳问题，我可能会转诊他们去听力学家或耳鼻喉科专家那里。如果是神经问题，我肯定需要进行一些影像学检查，比如核磁共振成像（MRI）。",
+  "在这种情况下，考虑到症状的复杂性和潜在的严重原因，我认为最好是转诊他们进行进一步的测试。我将解释需要进行额外调查的原因，并安排另一个预约。重要的是要搞清楚问题的根源，并提供最好的护理。"
+],
     [
   "今天在机场发生了一些不寻常的事情。我无法摆脱这种感觉，似乎我发现了一个间谍。一切都始于我注意到一个人的行为很奇怪，好奇心驱使我跟踪他们，看看我的怀疑是否成立。以下是我观察到的情况：",
   "1. 神秘的交往：这个人似乎在机场与不同的人进行短暂而秘密的对话。他们交换小包裹，低声交谈，然后迅速离开。这引起了我的怀疑，因为这与我观看的间谍电影中的场景相似。",

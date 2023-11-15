@@ -59,8 +59,8 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><button disabled>How to play</button></td>
-      <td><button disabled>Why to play</button></td>
+      <td><button onclick='cloze_howtoplay()'>How to play</button></td>
+      <td><button onclick='cloze_whytoplay()'>Why to play</button></td>
     </tr>
    <tr>
       <td><button onClick='numbers_home()'>Infinite numbers</button></td>
@@ -165,7 +165,8 @@
     function randomdrill(){
 	shuffle([mempalace_home,
 		 nback_home,
-		 numbers_home
+		 numbers_home,
+		 clozetrans_home
 		])[0]();
     }
 
@@ -174,6 +175,8 @@
 	css_class = shuffle(["bleft_img","bright_img"])[0]
 	img_src = shuffle(
 	    [
+		"olympic_unreal.png",
+		"fem_vault_unreal.png",
 		"porcelain.png",
 		"ivory.png",
 		"dancer.png",

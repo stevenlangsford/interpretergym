@@ -1,5 +1,5 @@
 
-let mempalace_instructions =[
+const mempalace_instructions =[
     "Memory palace is all about remembering lists of things.",
     "Using the memory palace technique is <strong>very strongly recommended</strong> for this exercise.",
     "There's a more detailed description of how the memory palace works in the 'why to play' section, this just covers the mechanics of what you'll see when doing the exercise.",
@@ -14,7 +14,7 @@ let mempalace_instructions =[
     "Enjoy! How long a monologue can you remember?"
 ]
 
-mempalace_motivation = "<h1>Why play memory palace</h1>"+
+const mempalace_motivation = "<h1>Why play memory palace</h1>"+
     "<p>If you want to remember a list of things, it's very hard to beat the memory palace technique.</p>"+
     "<p>It's <strong>overwhelmingly</strong> the most popular technique among competitive memory athletes.</p>"+
     "<p>It's also very well studied. One nice entry-point to the literature might be <a href='https://www.nature.com/articles/nn988'>Maguire et al (2003) Routes to remembering: the brains behind superior memory</a>"+
