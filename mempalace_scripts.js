@@ -85,8 +85,8 @@ function mempalace_whytoplay(){
 function mempalace_home(){
     document.getElementById("uberdiv").innerHTML = ""+
 //	"      <p><button onClick=viewTour()> tour my palace </button></p>      "
+	"<button onclick='location.reload()'>Back to Main menu</button>"+
     random_eyecandy()+
-    "      <p><button onClick=mempalace_submit_settings_start()>Start memory palace</button></p>"+
 	"    <div class='settings_div'>"+
 	"    <h2>Settings</h2>"+
 	"<p>Start length: <input type='text' id='startlength' value='5'></p>"+
@@ -104,7 +104,7 @@ function mempalace_home(){
 	"      <label for='zh'>Texts</label><br>"+
 	"      <input type='radio' id='tt_rnd' name='text_type' value='rnd' checked>"+
 	"      <label for='rnd'>Surprise me</label><br>"+
-	"<button onclick='location.reload()'>Back to Main menu</button>"+
+    "      <p><button onClick=mempalace_submit_settings_start()>Start memory palace</button></p>"+
 	"    </div>"
 }
 

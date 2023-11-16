@@ -185,7 +185,7 @@ function nback_home(){
     
     toUberdiv(
 	random_eyecandy()+
-	"<button onclick='start_nback()'> Start n-back</button>"+
+	    "      <p><button onclick=location.reload()>Main menu</button><p>"+
 	    "    <div class='settings_div'>"+
 	    "    <h2>Settings</h2>"+
 	    "<p>Increase list length at level + <input type='text' id='nback_to_increase' value='5'> wins</p>"+
@@ -206,6 +206,6 @@ function nback_home(){
 	    "      <label for='zh'>Texts</label><br>"+
 	    "      <input type='radio' id='tt_rnd' name='text_type' value='rnd' checked>"+
 	    "      <label for='rnd'>Surprise me</label><br>"+
-	    "      <p><button onclick=location.reload()>Main menu</button><p>"+
+	"<button onclick='start_nback()'> Start n-back</button>"+
 	    "    </div>"
     )}
