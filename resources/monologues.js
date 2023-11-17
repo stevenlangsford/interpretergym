@@ -344,10 +344,36 @@ eng_monologue_library = [
   "9. Irrigation System: Monitor and maintain the irrigation system, ensuring proper functioning of sprinklers, valves, and timers. Adjust the system as needed for optimal water efficiency.",
   "10. Garden Records: Keep detailed records of gardening activities, including planting dates, maintenance tasks performed, and observations of plant growth and health.",
   "I trust in your gardening skills and dedication. Remember to enjoy the process and connect with nature. If you have any questions or need assistance, don't hesitate to reach out. Good luck!"
+    ],
+["Dear children, I would like to share with you the seven gifts I received for Christmas and what I plan to do with each of them. First, there is this beautiful scarf. I intend to use it to keep warm during the cold winter. Its color and pattern are lovely, and it will make me look fashionable and cozy.",
+  "Next, I received a gorgeous cookbook. I have always loved cooking, and this book will provide me with more inspiration and recipes. I plan to try out some new dishes and create delightful culinary experiences for my family.",
+  "The third gift is a set of gardening tools. I thoroughly enjoy working in the garden, and these tools will help me take better care of the flowers and plants. I plan to plant some new flowers and vegetables when spring arrives, making the garden even more beautiful and diverse.",
+  "Next up is a brand new coffee machine. As a coffee enthusiast, this is a perfect gift. I will use it to make various flavors of coffee and enjoy a rich cup of coffee every morning to start my day on a positive note.",
+  "The fifth gift is a beautiful sketchbook and a set of brushes. I have always loved painting, but I haven't had much time to pursue this hobby lately. Now, with this gift, I intend to carve out dedicated time for art and create some beautiful paintings.",
+  "Next is a travel voucher. This is an exciting gift! I plan to spend a memorable vacation with my friends, exploring new places and experiencing different cultures and cuisines. It will be an adventurous journey filled with laughter and joy.",
+  "The last gift is a collection of classic novels. I adore reading, and these timeless works will provide me with endless reading pleasure. I plan to immerse myself in the books at night, enjoying moments of tranquility and contemplation.",
+  "These gifts are all very special, and I love each one of them. I am grateful for your love and care. Each gift will accompany me during wonderful moments and bring more happiness and joy into my life."
+],
+[
+  "In today's driving exam, we assessed your performance in various situations. Let's review each step and how it aligned with the exam requirements.",  
+  "Firstly, when starting the car, you followed the correct procedure by adjusting the seat and mirrors, fastening the seatbelt, and inserting the key into the ignition. You demonstrated good control and awareness of the vehicle's functions.",
+  "Moving on to exiting the driving school car park, you displayed smooth steering and appropriate use of signals. You effectively checked for oncoming traffic and executed a safe exit from the car park, indicating a good understanding of spatial awareness.",
+  "During the subsequent drive around the block, you encountered traffic lights and a roundabout. You demonstrated proper observation skills, promptly stopping at red lights, and smoothly accelerating when the lights turned green. At the roundabout, you correctly yielded to the right and smoothly merged into traffic, maintaining a safe and steady speed.",
+  "However, unfortunately, we encountered an unexpected incident. While driving, a fly seemed to distract you, causing you to lose focus. In an attempt to swat the fly, you momentarily lost control of the vehicle and veered off the road, ending up in a ditch. This incident demonstrates a lapse in attention and a failure to prioritize the task of driving.",
+  "Based on this overall assessment, I regret to inform you that you have not met the requirements to pass the driving exam. It is crucial to maintain focus and attention while operating a vehicle, as distractions can lead to dangerous situations. I would encourage you to continue practicing and prioritize safety on the road."
 ]
     ]//end library
 
 zh_monologue_library = [
+    ["亲爱的孩子们，我想和你们分享我在圣诞节收到的七件礼物以及我打算如何使用它们。首先，是这个漂亮的围巾。我打算在寒冷的冬天里用它保暖。它的颜色和花纹都很漂亮，会让我看起来时尚又温暖。",
+  "接下来，我收到了一本精美的烹饪书。我一直热爱烹饪，这本书将为我提供更多的灵感和食谱。我计划尝试一些新的菜肴，给家人带来惊喜的美食体验。",
+  "第三个礼物是一套园艺工具。我非常喜欢花园里的工作，这些工具将帮助我更好地照料花草。我打算在春天来临时，种植一些新的花朵和蔬菜，让花园更加美丽和多样化。",
+  "接下来是一台新的咖啡机。作为咖啡爱好者，这是一个完美的礼物。我将用它来制作各种口味的咖啡，每天早晨都可以享受一杯香浓的咖啡来开始美好的一天。",
+  "第五个礼物是一本精美的绘画册和一套画笔。我一直喜欢绘画，但最近很少有时间追求这个爱好。现在我打算利用这个礼物，给自己创造一些专注于艺术的时间，并创作一些美丽的画作。",
+  "接下来是一张旅行券。这是一个令人兴奋的礼物！我计划和我的朋友一起度过一个难忘的假期，探索新的地方，体验不同的文化和美食。这将是一次充满冒险和欢笑的旅程。",
+  "最后一个礼物是一本经典小说合集。我非常喜欢阅读，这些经典作品将为我提供无尽的阅读乐趣。我打算在晚上沉浸在书中，享受宁静和思考的时光。",
+  "这些礼物都非常特别，我对它们都非常喜欢。我感谢你们对我的关爱和关心。每一个礼物都会陪伴我度过美好的时光，并增添更多的欢乐和乐趣。"
+    ],
 [
   "好的，让我看看。又一个有视力模糊和头晕症状的患者。这可能是良性的情况，也可能是更严重的问题。首先要开始收集一些信息。",
   "视力模糊和头晕... 是否可能与患者的眼睛有关？也许他们有屈光不正，比如近视或散光。但是，等等，如果只是眼睛的问题，会引起头晕吗？嗯...我应该问问他们头晕是更像是旋转感还是头晕眩晕感。",
@@ -690,13 +716,10 @@ zh_monologue_library = [
 ]
 
 function get_monologue(n_items){
-    console.log("hi")
     candidate_list = [];
     while(candidate_list.length < n_items){
 	candidate_list = candidate_list.concat(shuffle(targ_lang == "eng" ? eng_monologue_library : zh_monologue_library)[0])
-	console.log("looping");
     }
-    console.log("cd")
     return(
 	candidate_list.slice(0,n_items)
     )

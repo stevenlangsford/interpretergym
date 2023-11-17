@@ -133,7 +133,7 @@ function mempalace_startfresh(new_length){
     if(text_type=="words"){ 
 	itemlist = get_wordlist(new_length)
     } else if(text_type=="texts"){
-	//get_monologue checks targ_languauge
+	//get_monologue checks targ_language. Should that happen here? Dunno
 	itemlist = get_monologue(new_length)
     }
     
