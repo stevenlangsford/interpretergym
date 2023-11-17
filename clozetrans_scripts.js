@@ -209,9 +209,10 @@ function clozetrans_home(){
 	    "      <h3>Text theme</h3>"+
 	"<select id='cloze_theme'>"+
 	"<option value='rnd'>Surprise me</option>"+
-	"<option value='NEW'>NEW</option>"+
-	"<option value='goats'>Goats</option>"+
+	"<option value='finance'>Finance</option>"+
+	"<option value='legal'>Legal</option>"+
 	"<option value='medical'>Medical</option>"+
+	"<option value='trades'>Trades</option>"+
 	    "</select><br/>"+
     "      <p><button onClick=cloze_submit_settings_start()>Start cloze drill</button></p>"+
 	"    </div>"

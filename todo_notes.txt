@@ -1,0 +1,16 @@
+Let mempalace get texts from everywhere: the monologues it's using now, plus the bilang cloze texts which it can't currently see.
+
+Have the mempalace input text box expand to fit the text you're writing into it.
+
+Add a back-to-main footer button throughout mempalace.
+
+
+**FIGURE OUT A HOST: must support backend db.**
+
+(then probably also can npm install chinese number dependency)
+
+Put all the text resources in a psql database and fetch them as needed, carrying them around as js is real bad.
+
+Add a 'track my stats' page to record pbs and/or time spent for each exercise
+
+Revisit the n-back task: clone a 'real' presentation format and start collecting data? Can you see anything interesting re item interference?

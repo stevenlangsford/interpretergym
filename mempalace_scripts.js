@@ -6,10 +6,10 @@ const mempalace_instructions =[
     "In stage one, you'll get the list. Remember each item and hit 'Next' to continue.",
     "In stage two, you'll get a series of blank text boxes. Write in each of the items you remembered. Write 'skip' or some other filler if you know you've forgotten something, doing this will help keep your responses aligned with the revealed answers in review. Press 'enter' to continue to the next item.",
     "In stage three, you'll get a chance to check your answers.",
-    "It's up to you if you want to accept or reject each answer. At the end you'll get a count of how many you accepted.",
+    "It's up to you if you want to accept or reject each answer! If you're remembering words you might want to accept spelling mistakes or conjugations of the word, if you're remembering texts you probably want to accept if you get the key points.", "You can shift your list of answers left (to see later answers) or right (to see earlier answers) using the 'shift left' and 'shift right' buttons at the bottom of the screen. This helps re-align your answers with the originals if there's a gap in your responses that you didn't cover by entering a 'skip' response. At the end you'll get a count of how many you accepted.",
     "When you get to the end of the review, you can choose to increase the list length by one, five, or ten. Or you can go back to the main menu.",
     "In the setup menu you can choose if the items you're going to remember are individual words or chunks of a monologue.",
-    "Individual words are easier, and the word list is mostly things that work well with the memory palace technique.",
+    "Individual words are easier, and the word list is mostly (but not exclusively!) concrete nouns that work well with the memory palace technique.",
     "Chunks of monologue are harder, but also much more realistic. If you're using memory palace, you'll have to decide for yourself how many palace locations to use for each chunk presented. You'll probably want to place an extra object to represent the breaks between each chunk so that the review stage properly aligns the things you remembered with the originals: this will only happen if you enter chunks as they were presented, ignoring how many actual locations you used to remember each.",
     "Enjoy! How long a monologue can you remember?"
 ]
@@ -89,7 +89,7 @@ function mempalace_home(){
     random_eyecandy()+
 	"    <div class='settings_div'>"+
 	"    <h2>Settings</h2>"+
-	"<p>Start length: <input type='text' id='startlength' value='5'></p>"+
+	"<p>Start length: <input type='text' id='startlength' value='5' size='2'></p>"+
 	"      <h3>Language</h3>"+
 	"      <input type='radio' id='eng' name='targ_language' value='eng'>"+
 	"      <label for='eng'>English</label><br>"+
@@ -185,7 +185,8 @@ function viewItem(){
       
     headerprompt = "<h1>Place this in your next location:</h1>";
     itemview = "<p>"+itemlist[live_item]+"</p>";
-    responsezone = "<p><button onClick=nextViewHandler()>NEXT</button></p>"
+    responsezone = "<p><button onClick=nextViewHandler()>NEXT</button></p>"+
+	"<button style='position:absolute; bottom:0; left:0' onclick='location.reload()'>Main menu</button>"
    
     toUberdiv(headerprompt+itemview+responsezone)
 
@@ -193,18 +194,36 @@ function viewItem(){
 
 function testItem(){
     headerprompt = "<h1>You are in location "+(live_item+1)+" of "+(itemlist.length)+"</h1>";
-    itemview = "<p>Recall your prompt: <input type='text' id='responsetext'/ onkeydown=kbd_getResponse(this)></p>";
+    itemview = "<p>Recall your prompt: <input type='text' id='responsetext'/ onkeydown=kbd_getResponse(this)></p>"+
+	"<button style='position:absolute; bottom:0; left:0' onclick='location.reload()'>Main menu</button>"
     
     toUberdiv(headerprompt+itemview)
 
     document.getElementById('responsetext').focus();
 }
 
+let ans_offset = 0;
+
+function ansoffset(mv){
+    ans_offset = ans_offset + mv;
+    checkResponses()//redraws 
+}
+
+function show_ans(){
+    if(live_item + ans_offset < 0 || live_item + ans_offset >= responselist.length){
+	return("*** no response ***")
+    }else{
+	return(responselist[live_item + ans_offset])
+    }
+}
+
 function checkResponses(){
     headerprompt= "<h1>Check your answers:</h1>"
-    itemcheck = "<p>Original was <br/><strong> "+(itemlist[live_item])+"</strong> <br/> you said <br/> "+(responselist[live_item])+"</p>"
-    acceptreject = "<p><button onclick=checkHandler(true)>Accept match</button><button onclick=checkHandler(false)>Reject: mistake</button></p>";
-    toUberdiv(headerprompt+itemcheck+acceptreject)
+    itemcheck = "<p>Original was <br/><strong> "+(itemlist[live_item])+"</strong> <br/> you said <br/> "+(show_ans())+"</p><br/><br/>"
+    acceptreject = "<p><button onclick=checkHandler(true)>Accept match</button><button onclick=checkHandler(false)>Reject: mistake</button></p><br/>";
+    move_answers = "<p><button onclick='ansoffset(1)'> \<\<\< Shift all answers left</button> <button onclick='ansoffset(-1)'>Shift all answers right\>\>\></button>"+
+	"<button style='position:absolute; bottom:0; left:0' onclick='location.reload()'>Main menu</button>"
+    toUberdiv(headerprompt+itemcheck+acceptreject+move_answers)
 }
 
 function outro(){

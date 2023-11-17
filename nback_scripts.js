@@ -11,12 +11,12 @@ let nback_itemlist = [];
 let nback_instructions = [
     "<p>The first thing you see in the N-back game is an 'item' with a yellow border around it, and a 'load' button with a green border around it.</p>",
     "<p>Click the load button (or press any key) to load the next item. You will see a new item appear at the top of the screen. The one you were just looking at goes into the N-back queue. You can't see anything in the N-back queue, all the items in the queue are hidden behind question marks.</p>",
-	    "<p>Each time you load an item, the top item will move into the queue of question marks, and a new item will appear at the top.  <p>The question marks represent a queue of hidden items.</p> <p>Keep loading until the queue is full.</p>",
-	    "When the queue is full, the most recent item in the queue (the one you can see) and the oldest item in the queue (which is hidden) will both get a yellow border.</p>",
+	    "<p>Each time you load an item, the item you were just looking at will move into the queue of question marks, and a new item will appear at the top.  <p>The question marks represent a queue of hidden items.</p> <p>Keep loading until the queue is full.</p>",
+	    "When the queue is full, the most recent item (the one you can still see at the top) and the oldest item in the queue (which is hidden behind last question mark in the queue) will both get a yellow border.</p>",
 	    "<p>The task is to say whether these two items match or not.</p>",
-	    "<p>If you think they are the same, click the 'same' button OR press the 'a' key on your keyboard.</p>",
-	    "<p>If you think they are different, click the 'different' button OR press the 'l' key on your keyboard.</p>",
-	    "<p>Here's the most important bit: when you make a response, a new item is added to the beginning of the list, and the last item (the one you just judged) falls off the end.</p>",
+	    "<p>If you think they are the same, click the 'same' button OR press the 'a' key on the keyboard.</p>",
+	    "<p>If you think they are different, click the 'different' button OR press the 'l' key on the keyboard.</p>",
+	    "<p>Here's the most important bit: with each response, a new item is added to the beginning of the list, and the last item (the one you just judged) falls off the end.</p>",
 	    "<p>All the items in the queue advance by one, but you can't see that happening because they're all hidden behind question marks.</p>",
 	    "<p>The task is still the same: judge whether the most-recent item (which is visible at the top of the screen) matches the oldest item in the queue (hidden at the bottom). Every time you make a response, every item shifts down by one.</p>",
 	    "<p>You get feedback on your responses. If you were right, the border will flash solid green, if you were wrong, it'll flash dashed red.</p>",
@@ -188,8 +188,8 @@ function nback_home(){
 	    "      <p><button onclick=location.reload()>Main menu</button><p>"+
 	    "    <div class='settings_div'>"+
 	    "    <h2>Settings</h2>"+
-	    "<p>Increase list length at level + <input type='text' id='nback_to_increase' value='5'> wins</p>"+
-	    "<p>Decrease list length every <input type='text' id='nback_to_decrease' value='3'> failures</p>"+
+	    "<p>Increase list length at level + <input type='text' id='nback_to_increase' value='5' size='2'> wins</p>"+
+	    "<p>Decrease list length every <input type='text' id='nback_to_decrease' value='3' size='2'> failures</p>"+
 	    "      <h3>Language</h3>"+
 	    "      <input type='radio' id='eng' name='targ_language' value='eng'>"+
 	    "      <label for='eng'>English</label><br>"+
