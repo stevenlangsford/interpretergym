@@ -153,7 +153,7 @@ function checkHandler(accept){
 }
 
 function kbd_getResponse(e){
-    if(event.key==='Enter'){
+    if(event.key==='Enter'){	
 	responselist.push(e.value)
 	nextTestHandler()
     }
@@ -194,11 +194,13 @@ function viewItem(){
 
 function testItem(){
     headerprompt = "<h1>You are in location "+(live_item+1)+" of "+(itemlist.length)+"</h1>";
-    itemview = "<p>Recall your prompt: <input type='text' id='responsetext'/ onkeydown=kbd_getResponse(this)></p>"+
+    itemview = //"<p>Recall your prompt: <input type='text' id='responsetext'/ onkeydown=kbd_getResponse(this)></p>"+
+	"<p>Recall your prompt:</p><br/> "+
+	"<textarea id='responsetext' onkeydown=kbd_getResponse(this) oninput='this.style.height = \"\";this.style.height = this.scrollHeight + \"px\"'></textarea>"+
+	"<p>Press 'Enter' to record and continue </p>"
 	"<button style='position:absolute; bottom:0; left:0' onclick='location.reload()'>Main menu</button>"
     
     toUberdiv(headerprompt+itemview)
-
     document.getElementById('responsetext').focus();
 }
 
