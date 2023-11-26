@@ -1,6 +1,107 @@
 //assumes the existence of shuffle and global var targ_language taking values eng or zh
 eng_monologue_library = [
 [
+  "I stood in awe as I entered the museum's grand hall, my eyes immediately drawn to the colossal dinosaur skeleton that loomed before me. Its massive frame stretched out, suspended from the ceiling, casting an imposing shadow on the polished marble floor. It was a sight that sparked my imagination and filled me with wonder.",
+  "As I walked closer, the intricate details of the skeleton began to reveal themselves. The bones, weathered by time, told a story of a creature that once roamed the Earth with majestic power. I circled around, examining it from different angles, trying to comprehend the sheer size and strength it must have possessed.",
+  "From the side, I marveled at the elongated neck, imagining how it gracefully reached for leaves on ancient trees. The ribs, like a protective cage, hinted at the immense body that once housed a beating heart. The curving tail, now motionless, seemed frozen in a moment of eternal balance.",
+  "Moving around to the back, I noticed the intricate structure of the spine, each vertebra meticulously preserved. It was a testament to the marvels of evolution and the resilience of life itself. I couldn't help but feel a sense of connection to this creature from the distant past, a reminder of our shared existence on this planet.",
+  "Finally, I reached the front of the skeleton, facing the dinosaur's skull. Its empty eye sockets seemed to gaze into the depths of time, as if holding secrets of a bygone era. The sharp teeth, once used for tearing flesh, now stood silent, frozen in a perpetual display of power.",
+  "And then, as I stood there, captivated by the enormity of the creature before me, a peculiar thought crossed my mind. For just a split second, as the light danced upon the skull, I could have sworn it winked."
+],
+[
+  "I have reflected on why I chose to play tennis and the positive impact it has had on my life.",
+  "I still remember the moment when I first picked up a tennis racket as a child. At that time, I knew nothing about tennis, except that it was a popular sport and a great way to stay active. I decided to give it a try, and from that moment on, I fell in love with the sport.",
+  "Playing tennis has given me numerous opportunities to challenge myself. I have learned the value of perseverance, no matter how difficult or challenging the situation may be. Every time I step onto the court, I give it my all and strive for every single point. This determination and resilience not only translate to the game itself but also permeate into my daily life.",
+  "There was a memorable occasion when I participated in a crucial tournament. During the competition, I faced a highly skilled opponent and found myself in a tough spot. I felt frustrated and uneasy, but I refused to give up. I reviewed the techniques and tactics I had learned, adjusted my mindset, and kept pushing forward. In the end, I defeated my opponent and emerged victorious. In that moment, I felt an overwhelming sense of pride and fulfillment, as I proved my abilities and the value of perseverance.",
+  "Another unforgettable experience was when I became part of a team. Joining a tennis team introduced me to a group of like-minded friends. We trained together, supported each other, and motivated one another during matches. This team became my second family, and their friendship and support strengthened my determination to pursue my tennis dreams.",
+  "In conclusion, playing tennis has had a tremendous positive impact on my life. It has not only given me a healthy body but also shaped my character and values. Through tennis, I have learned the importance of perseverance, resilience, and teamwork. I believe these qualities will stay with me throughout my life and play a significant role in my future endeavors."
+],
+[
+"Oh my goodness, what just happened? I was sitting in the audience, enjoying the clown performance, and then suddenly this clown collapsed right in front of me. Without thinking twice, I jumped up from my seat and rushed to their side. I'm a doctor, it's my duty to help.",
+"The crowd is in shock, their gasps and murmurs filling the theater. I block out the noise, my focus solely on this clown lying on the ground, seemingly unconscious. I quickly assess the situation, and panic sets in as I realize there's no first-aid kit available. I have to improvise, make do with whatever I can find.",
+"I check the clown's airway, ensuring it's clear. I gently tilt their head back, praying that they'll start breathing again. With each passing second, the weight of responsibility grows heavier. There's no room for doubt or hesitation. I have to act decisively.",
+"I glance around, searching desperately for anything that can help me. A discarded water bottle catches my eye. I grab it, quickly removing the cap and pouring a small amount of water onto my hand. I press my damp hand against the clown's forehead, hoping the sensation will stimulate a response.",
+"The audience watches intently, their murmurs transforming into a hushed anticipation. Time seems to stretch, each second feeling like an eternity. I check the clown's pulse, my fingers trembling slightly. It's faint but still there. A glimmer of hope.",
+"I remember the basic life support training I underwent years ago. I position the clown on their side, hoping to prevent any choking or aspiration. I watch their chest rise and fall, praying for signs of breathing. The audience holds their breath, waiting for a miracle.",
+"Minutes pass, and then, a flicker of movement. The clown stirs, their eyelids fluttering. The crowd erupts into applause, thinking it was all part of the act. But deep down, I'm still unsure if the clown is truly okay. I need to keep monitoring, keep assessing.",
+"I take a step back, allowing the clown space to regain their composure. The applause continues, but my focus remains on their well-being. I watch for any signs of distress, any indication that something is still wrong. Is it a concussion? A hidden injury? I can't be certain.",
+"As the cheers subside, I slowly make my way back to my seat, my mind filled with a mix of relief and concern. The show goes on, the clowns carry on with their performance, but I can't shake the uncertainty. Did I do enough? Is the clown truly okay?",
+"I sit there, a tangle of emotions, grateful for the applause but haunted by the lingering doubt. I hope with all my heart that the clown recovers fully, that I made a difference in that critical moment. For now, I can only wait, hoping for the best, and questioning my every action."
+],
+[
+  "As I step into this grocery store, a rush of emotions overwhelms me. It's been two decades since I last walked through these aisles, since I last experienced the sights and sounds of everyday life. The world has moved on, and I'm here, alive and breathing.",
+    "The first thing that strikes me is the sheer abundance. The shelves are adorned with an incredible variety of products, more than I could have ever imagined.", "There are fruits and vegetables I've never seen before, their vibrant colors and exotic shapes captivating my senses. Oh, how blessed I am to witness this cornucopia of nourishment!",
+    "Technology has woven its way into every corner of this store. People are tapping on screens, scanning barcodes, and seamlessly navigating the aisles with devices in hand.","It's a marvel to behold, a testament to human progress. Everything seems so efficient and interconnected, making life easier and more convenient.","I feel a mix of awe and slight trepidation, as if I've stepped into a futuristic world that was once only the stuff of dreams.",
+    "But amidst all the change, I find solace in the familiar. The aroma of freshly baked bread wafts through the air, triggering memories of simpler times. The sound of shopping carts rolling on the polished floor fills the space with a soothing melody.", "People still gather here, engaging in conversations, sharing laughter, and forming connections over shared experiences and culinary delights. It warms my heart to see that human connection remains a constant, despite the passage of time.",
+    "As I reach the checkout counter, I exchange smiles with the friendly cashier. Their eyes hold a spark of curiosity and kindness.","Perhaps they wonder about my story, about the journey I've taken to be here today. I want to convey to them how grateful I am to be back, to witness the beauty of this world after being lost in the depths of unconsciousness.",
+    "Leaving the store, I step into the warm sunlight that streams through the entrance. The gentle breeze carries a sense of freedom, a reminder of the countless days I missed while trapped in the confines of a hospital bed.", "I take a deep breath, savoring the freshness of the air that fills my lungs. Yes, the world has changed, but the essence of life remains. And as I continue my journey, I walk with gratitude, embracing the unknown with open arms, knowing that every moment is a precious gift to be cherished."
+],
+    [
+  "The cardiopulmonary system of frogs is a highly specialized system adapted for their amphibious lifestyle.",
+  "Heart: Frogs have a three-chambered heart consisting of two atria and one ventricle. The atria receive deoxygenated blood from the body tissues, while the ventricle pumps blood to the lungs and other parts of the body. Despite the structural differences from mammals, the frog's heart efficiently separates oxygenated and deoxygenated blood to ensure adequate oxygen supply and carbon dioxide removal.",
+  "Lungs: The lungs are the primary respiratory organs in frogs. When frogs are on land, they perform gas exchange through their lungs. During respiration, frogs open their mouths and nostrils, drawing air into the lungs. Oxygen enters the lung's air sacs and diffuses through the lung's walls into the bloodstream, while carbon dioxide is released from the bloodstream and expelled during exhalation.",
+  "Skin: In addition to lung respiration, frogs can also exchange gases through their skin. Frog skin is thin and highly vascularized, allowing for the absorption of oxygen and the release of carbon dioxide. This is particularly important in water, where frogs often rely on cutaneous respiration to meet their oxygen requirements.",
+  "Circulatory System: The circulatory system of frogs is a closed loop system that separates oxygenated and deoxygenated blood. In the frog's body, oxygenated blood returns from the lungs to the left atrium and is then pumped to the left ventricle. Oxygenated blood originating from the left ventricle is distributed to various tissues, providing them with oxygen and nutrients. Deoxygenated blood returns from the tissues to the right atrium and is then pumped to the right ventricle. Finally, deoxygenated blood is sent to the lungs via the pulmonary artery for reoxygenation. This separation ensures that oxygenated and deoxygenated blood do not mix.",
+  "Pulmonary Artery: Unlike mammals, the pulmonary artery in frogs is not the primary oxygenated vessel. Instead, it mainly carries deoxygenated blood from the right ventricle to the lungs. In the lungs, blood is oxygenated through pulmonary capillaries and then returns to the left atrium.",
+  "Regulation of Cardiopulmonary System: The frog's cardiopulmonary system is regulated by the nervous system and hormones. When frogs are at rest, the heart has a lower contraction rate, and blood flow is slow. However, during activity, neural and hormonal regulation increases the heart's contraction rate and force, providing more oxygen and nutrients to the active muscles.",
+  "Overall, the frog's cardiopulmonary system is a highly specialized system adapted for their amphibious lifestyle. It includes components such as the heart, lungs, skin, and circulatory system. Through the coordinated functioning of these components, frogs efficiently perform gas exchange and nutrient delivery.",
+],
+[
+  "Birds have a highly efficient cardiopulmonary system that enables them to meet the oxygen demands required for flying and their high metabolic rates.",
+  "Heart: Birds have a four-chambered heart, similar to humans, but proportionally larger in relation to their body size. This larger heart allows for increased pumping capacity and efficient oxygen delivery to the tissues. It ensures a continuous supply of oxygen for the energy-intensive activity of flight.",
+  "Double Circulation: Unlike humans, birds have a unique adaptation known as the 'double circulation' system. Their heart separates oxygenated and deoxygenated blood. The right side of the heart receives deoxygenated blood from the body and pumps it to the lungs for oxygenation. The left side of the heart receives oxygenated blood from the lungs and pumps it to the rest of the body. This separation ensures that oxygen-rich blood is efficiently distributed throughout the bird's body.",
+  "Air Sac System: Birds have a complex system of air sacs in addition to their lungs. These air sacs are found throughout their bodies, extending even into their bones. The air sacs act as reservoirs, allowing for a continuous flow of fresh air through the lungs during both inhalation and exhalation. This unique system ensures a unidirectional flow of oxygen-rich air through the lungs, maximizing oxygen uptake and facilitating efficient gas exchange.",
+  "Lungs: Bird lungs are smaller in size compared to mammals but are highly efficient. They are rigid and do not expand and contract like mammalian lungs. Instead, birds have air capillaries arranged in a parabronchial system that facilitates a unidirectional flow of air through the lungs. During inhalation, fresh air enters the posterior air sacs, passes through the lungs, and then exits through the anterior air sacs during exhalation. This unidirectional flow allows for a continuous exchange of oxygen and carbon dioxide in the lungs.",
+  "Respiratory Efficiency: The combination of air sacs, specialized lung structure, and unidirectional airflow makes the avian respiratory system highly efficient. Birds can extract a significant amount of oxygen from each breath and eliminate carbon dioxide more effectively than mammals. This efficiency is crucial for their demanding activities, such as flying, where a constant supply of oxygen is required to meet their high metabolic needs."
+],
+[
+  "1. Raw Material Selection: The first step in towel manufacturing is the selection of raw materials. Towels are commonly made from cotton, which is chosen for its absorbency and softness. High-quality cotton fibers are preferred for manufacturing premium towels.",
+  "2. Cotton Harvesting: Cotton plants are cultivated and grown in suitable regions. Once the cotton bolls mature, they are harvested by hand or machine. The harvested cotton is then transported to the processing facilities.",
+  "3. Ginning: In the ginning process, the cotton fibers are separated from the seeds and other impurities. This is done using specialized machinery called cotton gins. The extracted cotton fibers, known as lint, are ready for further processing.",
+  "4. Spinning: The cotton lint is converted into yarn through the spinning process. The fibers are straightened, cleaned, and twisted together to form continuous threads. This yarn can be either carded or combed, depending on the desired towel quality and texture.",
+  "5. Weaving or Knitting: The yarn is then used in either weaving or knitting machines to create the fabric for towels. Weaving involves interlacing the yarns at right angles to form a stable cloth, while knitting uses a series of interlocking loops to produce a fabric. Different towel designs and patterns can be achieved through varying weaving or knitting techniques.",
+  "6. Dyeing: After the fabric is produced, it goes through the dyeing process to add color. Towels can be dyed in a wide range of hues using various dyeing methods, such as piece dyeing, yarn dyeing, or printing.",
+  "7. Cutting and Sewing: The dyed fabric is then cut into individual towel sizes, such as bath towels, hand towels, or washcloths. The edges are often hemmed or finished to prevent fraying. Towel labels or tags may also be attached during this stage.",
+  "8. Finishing: Towels undergo finishing processes to enhance their softness, absorbency, and appearance. This may include washing, bleaching, drying, and ironing. Softeners or chemical treatments can be applied to achieve the desired texture and feel.",
+  "9. Quality Control: Throughout the manufacturing process, quality control measures are implemented to ensure that the towels meet the desired standards. This involves inspecting the fabric, checking for defects, and verifying absorbency and colorfastness.",
+  "10. Packaging and Distribution: Once the towels pass the quality control checks, they are packaged and prepared for distribution. Towels may be packaged individually or in sets. They are then shipped to wholesalers, retailers, or directly to consumers for sale and use."
+],
+[
+  "Ladies and gentlemen, I have a pitch that will inject some laughter and chaos into the medical drama genre. Picture this: a dark comedy set in an Australian hospital. We'll delve into the lives of our quirky, yet brilliant, main characters, each with their own unique medical specialty. Brace yourselves for a rollercoaster ride of absurd situations and complicated soap-opera relationships that connect them all.",
+  "First up, we have Dr. Emily Sullivan, an eccentric and razor-sharp diagnostician. She can solve medical mysteries faster than a kangaroo can hop, but her dry sense of humor often leaves her colleagues bewildered. Emily's complicated love life intertwines with her professional world when she discovers that her on-again, off-again boyfriend, Dr. Liam Cooper, has been appointed as the new head of surgery. Talk about awkward encounters in the sterile corridors!",
+  "Next, meet Dr. Zoe McKenzie, an outrageously flamboyant psychiatrist with a knack for reading minds. She's the one who can dig deep into the darkest corners of a patient's psyche, all while rocking the most colorful outfits you've ever seen. But here's the twist: Zoe is secretly in love with Dr. Daniel Bennett, a charming yet absent-minded neurologist who has a peculiar habit of misplacing his own notes during critical surgeries.",
+  "Now, let me introduce you to Nurse Abby Thompson, a sassy and street-smart nurse with a heart of gold. She's the glue that holds the hospital together, effortlessly juggling her duties and keeping the doctors in line. Abby's tangled web of relationships involves a forbidden romance with Dr. Ethan Mitchell, a dashing cardiologist who can mend broken hearts both literally and figuratively.",
+  "Last but not least, we have Dr. Max Anderson, the resident grumpy and sarcastic oncologist. He may not have the best bedside manner, but his brilliant mind and unconventional treatment methods have saved countless lives. Max's complicated past resurfaces when he discovers that the hospital's new administrator is none other than his estranged sister, Dr. Olivia Anderson, a no-nonsense surgeon with a penchant for stirring up trouble.",
+  "In this medical drama filled with dark humor, we'll witness the chaos that ensues when these characters' personal and professional lives collide. From witty banter in the operating room to clandestine romances in the supply closets, this Australian hospital will become a playground of absurdity and unexpected connections.",
+  "So, TV station executives, are you ready to inject some laughter, drama, and a healthy dose of medical madness into the small screen? Let's bring this dark comedy to life and give audiences a prescription for laughter and entertainment like they've never seen before!"
+],
+    [
+  "Okay, time to inspect this passenger's bags. Let's start with the suitcase. Looks like a standard one.",
+  "Hmm, what's this? A suspicious-looking device with wires. Is it a bomb? Better handle it with care. Oh, wait! It's just a portable charger. False alarm, phew!",
+  "Moving on to the next bag. Oh my, what's that liquid? Is it a dangerous chemical? Let's open it carefully. Oh, it's just a bottle of shampoo. No harm done.",
+  "Now, this package feels heavy. Could it be some illegal substance? I need to be cautious. Wait a minute... it's just a box of chocolates. My heart skipped a beat for nothing.",
+  "What's this strange-looking tool? Is it a weapon? I better inspect it closely. Oh, it's just a Swiss Army knife. Nothing to worry about.",
+  "Oh no, what's that ticking sound? Is it a time bomb? Stay calm and handle it carefully. Hold on... it's just an alarm clock. False alarm once again.",
+  "Last but not least, a mysterious envelope. Is there something dangerous inside? Let me open it cautiously. Oh, it's just a handwritten letter from a loved one. Nothing to be concerned about.",
+  "Whew! That was a rollercoaster of emotions. Six false alarms in a row. Just goes to show how important it is to thoroughly inspect every item. Now, onto the next passenger's bags. Hopefully, it's a smoother inspection this time.",
+],
+  ["Hello everyone! I am an Olympic pole-vault champion, and I'm delighted to have the opportunity to share my love for this sport with all of you.",
+  "Firstly, the reason I love pole-vaulting is because of its challenges and exhilaration. This sport requires me to unleash my strength, speed, and technique within a very short period of time to clear the bar suspended high in the air. Each successful jump gives me an incredible sense of achievement, while every failed attempt motivates me to improve and surpass myself.",
+  "I began training in pole-vaulting due to a fortunate coincidence. I was still in middle school when my physical education teacher noticed my body coordination and jumping ability and encouraged me to try pole-vaulting. From that moment on, I fell deeply in love with the sport. I dedicated a significant amount of time and effort to training, continuously enhancing my skills and strength.",
+  "During competitions, there were two surprising and memorable experiences that left a deep impression on me. The first one occurred during a crucial international competition when I was about to clear the final bar, and unexpectedly, my pole broke! It was incredibly disheartening and disappointing, but I didn't give up. With the support of the cheering crowd and my determination, I quickly found a substitute pole, adjusted my mindset, and ultimately completed the competition successfully. This experience taught me the importance of perseverance and adaptability in the face of challenges.",
+  "The second unforgettable experience took place at the Olympics. When I finally cleared that towering bar, I felt an unparalleled sense of joy and pride. Standing on the podium, witnessing the national flag being raised, I deeply understood the value of my hard work and the honor it brought to my country. That moment made me realize that every ounce of perseverance and effort was worthwhile.",
+  "Pole-vaulting has given me boundless passion and a sense of accomplishment. I am grateful for the opportunities and challenges this sport has brought into my life. I will continue to train hard, aiming for greater heights and outstanding achievements. Thank you all!",
+],
+[
+  "Dear Neanderthal friend, let me introduce you to an incredible invention that will revolutionize your life: the wheel. Yes, I know it may seem strange and unfamiliar, but trust me, it's a game-changer. Let me explain why you should consider buying not just one, but four wheels.",
+  "Firstly, imagine the convenience of transporting heavy items. With four wheels attached to a sturdy platform, you can effortlessly move objects that would otherwise require tremendous effort. Whether it's carrying large rocks for construction or transporting a load of firewood, the wheel will make your life so much easier.",
+  "Secondly, think about the efficiency of travel. Imagine yourself exploring vast landscapes without tiring yourself out. By attaching wheels to a cart, you can cover long distances with minimal exertion. Traveling to different hunting grounds or gathering locations will be much faster, allowing you to gather resources and return home swiftly.",
+  "Furthermore, let's talk about agriculture. With wheels, you can create a simple cart or plow to help you till the soil. Instead of relying solely on brute force, you can harness the power of the wheel to cultivate larger areas of land, leading to increased food production and better sustainability for your tribe.",
+  "Now, I must admit, this first version of the wheel has a few drawbacks. It may not be as refined as future iterations. The wheels might be a bit rough, and they won't handle uneven terrain as smoothly as we would like. However, we are continuously improving this invention, and these initial flaws shouldn't overshadow the tremendous benefits it offers.",
+  "So, my Neanderthal friend, I urge you to embrace this new invention. Picture yourself effortlessly transporting heavy loads, traveling swiftly across vast lands, and revolutionizing your agricultural practices. The wheel will make your life more efficient and open up numerous possibilities for you and your tribe.",
+  "Don't miss out on this incredible opportunity. Embrace the wheel, and you'll be at the forefront of innovation and progress. Together, we can shape a brighter future for our communities. Thank you for considering my offer."
+],
+[
   "Okay, let's see. Another patient with blurred vision and dizziness. This could be anything from a benign condition to something more serious. Gotta start by gathering some information.",
   "Blurred vision and dizziness... Could it be related to the patient's eyes? Maybe they have a refractive error, like nearsightedness or astigmatism. But wait, if it's just an issue with their eyes, would that really cause dizziness? Hmm... I should ask them if the dizziness is more like a spinning sensation or if it feels more like lightheadedness.",
   "If it's lightheadedness, then it could be related to their blood pressure. Perhaps they have orthostatic hypotension, where their blood pressure drops when they change positions, like when they stand up. That could definitely cause dizziness. But would it also cause blurred vision? I'm not entirely sure.",
@@ -359,12 +460,101 @@ eng_monologue_library = [
   "Firstly, when starting the car, you followed the correct procedure by adjusting the seat and mirrors, fastening the seatbelt, and inserting the key into the ignition. You demonstrated good control and awareness of the vehicle's functions.",
   "Moving on to exiting the driving school car park, you displayed smooth steering and appropriate use of signals. You effectively checked for oncoming traffic and executed a safe exit from the car park, indicating a good understanding of spatial awareness.",
   "During the subsequent drive around the block, you encountered traffic lights and a roundabout. You demonstrated proper observation skills, promptly stopping at red lights, and smoothly accelerating when the lights turned green. At the roundabout, you correctly yielded to the right and smoothly merged into traffic, maintaining a safe and steady speed.",
-  "However, unfortunately, we encountered an unexpected incident. While driving, a fly seemed to distract you, causing you to lose focus. In an attempt to swat the fly, you momentarily lost control of the vehicle and veered off the road, ending up in a ditch. This incident demonstrates a lapse in attention and a failure to prioritize the task of driving.",
+  "However, at this point a fly seemed to distract you, causing you to lose focus. In an attempt to swat the fly, you momentarily lost control of the vehicle and veered off the road, ending up in a ditch. This incident demonstrates a lapse in attention and a failure to prioritize the task of driving.",
   "Based on this overall assessment, I regret to inform you that you have not met the requirements to pass the driving exam. It is crucial to maintain focus and attention while operating a vehicle, as distractions can lead to dangerous situations. I would encourage you to continue practicing and prioritize safety on the road."
 ]
     ]//end library
 
 zh_monologue_library = [
+[
+  "当我踏入博物馆宏伟的大厅时，我目光立刻被巨大的恐龙骨架所吸引。它的庞大身躯悬挂在天花板上，投下庄严的影子在光滑的大理石地板上。这景象激发了我的想象力，让我充满了惊叹和好奇心。",
+  "随着我靠近，骨架的精细细节逐渐显现。那些被时间侵蚀的骨头诉说着一个曾经以雄伟力量徜徉地球的生物故事。我围绕其周围，从不同的角度仔细观察，试图理解它所拥有的巨大体型和力量。",
+  "从侧面看，我对其纤长的脖颈感到惊叹，想象它曾经优雅地伸长，够到古老树木上的叶子。那些肋骨像一道保护的笼子，透露出曾经容纳着一颗跳动的心脏的巨大身躯。那弯曲的尾巴，此刻静止不动，仿佛定格在永恒平衡的一瞬间。",
+  "绕到背后，我注意到复杂的脊柱结构，每个椎骨都被精心保存着。它见证了进化的奇迹和生命的坚韧。我情不自禁地感到与这个来自遥远过去的生物有一种连接，它提醒着我们在这个星球上共同存在的事实。",
+  "最后，我来到骨架的正面，面对恐龙的头骨。它空洞的眼窝似乎凝视着时间的深渊，仿佛承载着一个已逝时代的秘密。那些锋利的牙齿，曾经用于撕裂肉类，此刻静默无声，永远展示着力量的永恒。",
+  "就在那一刻，当我站在那里，被这个庞然大物深深吸引时，一个奇怪的想法涌上心头。就在刹那间，当光线在头骨上跳动时，它眨了眨眼睛。"
+],
+[
+  "我曾经思考过我为什么选择打网球，以及它对我的生活产生了怎样的积极影响。",
+  "我还记得小时候，我第一次拿起网球拍的那一刻。当时，我对网球一无所知，只是听说它是一项受欢迎的运动，并且可以锻炼身体。我决定试一试，从那一刻起，我就深深地爱上了这项运动。",
+  "打网球给了我很多机会去挑战自己。我学会了坚持不懈，无论面对多大的困难和挑战。每次在球场上，我都会全身心地投入，努力追求每一个球。这种毅力和决心不仅在比赛中有所体现，也渗透到了我的日常生活中。",
+  "还有一次，我参加了一场重要的比赛。在比赛中，我遇到了一个非常强大的对手，我一度陷入了困境。我感到沮丧和不安，但我没有放弃。我回顾了我所学到的技术和战术，调整了自己的心态，并继续努力。最终，我战胜了对手，赢得了比赛。那一刻，我感到无比自豪和满足，因为我证明了自己的能力和坚持不懈的价值。",
+  "另一个令我难忘的经历是当我成为了一个团队的一员。加入网球队让我结识了一群志同道合的朋友。我们一起训练、互相支持，在比赛中互相激励。这个团队成为了我的第二个家庭，他们的友谊和支持使我更加坚定地追求网球的梦想。",
+  "综上所述，打网球对我产生了巨大的积极影响。它不仅让我拥有了一个健康的身体，更塑造了我的性格和价值观。通过网球，我学会了坚持、毅力和团队合作。我相信，这些品质将伴随我一生，并在我的未来中发挥重要作用。"
+],
+[
+"天哪，刚才发生了什么？我坐在观众席上，欣赏着小丑的表演，突然间这个小丑就倒在我面前。我毫不犹豫地从座位上跳起来，赶到他身边。我是一名医生，帮助别人是我的职责。",
+"观众都吓呆了，剧院里充满了惊呼和窃窃私语的声音。我屏蔽掉周围的噪音，全神贯注地关注着这个躺在地上、似乎失去意识的小丑。我迅速评估了情况，突然意识到没有急救箱可用。我必须临时 improvisation，用我能找到的任何东西。",
+"我检查了小丑的呼吸道，确保通畅。我轻轻地把他的头往后仰，祈祷他能再次呼吸。每一秒钟都让责任感变得更重。没有犹豫或怀疑的余地。我必须果断行动。",
+"我四处张望，拼命寻找能帮助我的任何东西。一个丢弃的水瓶吸引了我的注意。我拿起它，迅速打开盖子，倒了一点水在手上。我把湿手轻轻按在小丑的额头上，希望这种感觉能引起他的反应。",
+"观众们专注地观察着，他们的窃窃私语变成了一种期待的寂静。时间似乎变得很长，每一秒钟都感觉像是一辈子。我检查小丑的脉搏，我的手指微微颤抖。脉搏虽然微弱，但还在。一丝希望。",
+"我记得多年前接受的基本生命支持培训。我把小丑放在一边，希望能预防任何窒息或误吸。我观察着他的胸部起伏，祈祷能看到呼吸的迹象。观众屏住呼吸，等待奇迹的出现。",
+"几分钟过去了，然后，一丝动作。小丑动了一下，眼皮颤动着。观众爆发出掌声，以为这都是表演的一部分。但我心里仍然不确定小丑是否真的没事。我需要继续观察，继续评估。",
+"我退后一步，给小丑留出空间让他恢复镇定。掌声继续响起，但我的关注点仍然是他的健康状况。我观察任何痛苦的迹象，任何仍然存在问题的迹象。是脑震荡吗？是隐藏的伤势吗？我无法确定。",
+"随着掌声逐渐消退，我慢慢回到座位上，内心充满了安心和关切。表演继续进行，小丑们继续表演，但我无法摆脱不确定感。我是否做得足够？小丑是否真的没事？",
+"我坐在那里，情绪纠结，感激掌声，但心中仍然萦绕着疑虑。我全心全意地希望小丑完全康复，希望我在那个关键时刻起到了作用。此刻，我只能等待，希望一切顺利，并对自己的每一个行动产生怀疑。"
+],
+[
+  "当我踏入这家杂货店时，一股情绪涌上心头。已经过去二十年了，自从我上次走过这些过道、体验日常生活的景象和声音。世界已经不同，而此刻我活着，呼吸自如。",
+  "首先让我印象深刻的是极度丰富的商品。货架上摆满了各种我难以想象的产品。水果和蔬菜种类繁多，其中有些我从未见过，色彩鲜艳、形状奇特，令我感官愉悦。真是幸运能够亲眼目睹这个满载滋养的多彩世界！",
+  "科技已经渗透到这家商店的方方面面。人们在触摸屏上轻点、扫描条形码，手持设备轻松穿梭在各个货架之间。这个场景让我叹为观止，也是人类进步的见证。一切看起来如此高效和紧密相连，让生活变得更加便利。我既敬畏又稍感忐忑，仿佛置身于一个曾经只存在于梦境中的未来世界。",
+  "然而，在这一切的变化中，我在熟悉之中找到了安慰。新鲜烘焙面包的香气弥漫在空气中，勾起了我对那些更简单时光的回忆。购物车在光滑的地板上滚动，发出悦耳的声响。人们依然聚集在这里，交谈、笑声不断，通过共同的经历和美食建立起联系。看到人与人之间的联系依然存在，尽管岁月流转，我内心感到温暖。",
+  "当我走到收银台时，我与友好的收银员交换了微笑。他们的眼神中透露着好奇和善意。或许他们对我的故事充满了好奇，对我经历了怎样的旅程才能回到今天的这个场景感到好奇。我想向他们传达我的感激之情，感激我能够重返这里，在昏迷中苏醒后，目睹这个世界的美丽。",
+  "离开商店，我踏入阳光下。温暖的阳光洒在身上，让我想起在医院床上度过的那些日子。我深呼吸，尽情享受充盈着肺腑的新鲜空气。是的，世界发生了变化，但生活的本质依然存在。我怀着感激之心继续我的旅程，敞开胸怀迎接未知，知道每一刻都是珍贵的恩赐，值得细细珍视。"
+],
+[
+  "青蛙的心肺循环系统是一种适应于两栖生活方式的高度特化系统。",
+  "心脏：青蛙的心脏是三腔心脏，由两个心房和一个心室组成。心房接收来自身体组织的氧合程度较低的血液，而心室将血液泵送到肺部和身体其他部位。尽管心脏结构与哺乳动物有所不同，但它能够有效地将氧合和脱氧血液分开，以确保足够的氧供给和二氧化碳排出。",
+  "肺：青蛙的肺是主要的呼吸器官。当青蛙处于陆地上时，它们通过肺部进行气体交换。在呼吸过程中，青蛙通过张开嘴巴和鼻孔，将空气吸入肺部。氧气进入肺泡，通过肺泡壁进入血液，同时二氧化碳从血液中释放出来，并通过呼气被排出体外。",
+  "皮肤：除了通过肺进行呼吸，青蛙还可以通过皮肤进行气体交换。青蛙的皮肤非常薄且高度血管化，能够吸收氧气并排出二氧化碳。这在水中特别重要，因为在水中，青蛙通常通过皮肤呼吸来满足其氧气需求。",
+  "循环系统：青蛙的循环系统是一个封闭的循环系统，将氧合和脱氧血液分开。在青蛙的体内，氧合血液从肺部返回左心房，然后被泵送到左心室。从左心室出发的氧合血液被送到全身各个组织，为其提供氧气和营养物质。然后，脱氧血液从组织返回到右心房，再被泵送到右心室。最后，脱氧血液通过肺动脉回到肺部进行再氧合。这种分离的循环方式确保了氧合血液和脱氧血液不会混合。",
+  "肺动脉：与哺乳动物不同，青蛙的肺动脉不是主要的氧合血管。相反，肺动脉主要负责将脱氧血液从右心室输送到肺部。在肺部，血液通过肺毛细血管得到氧合，然后返回到左心房。",
+  "心肺循环的调节：青蛙的心肺循环系统受到神经系统和激素的调节。当青蛙处于休息状态时，心脏的收缩频率较低，血液流动缓慢。而当青蛙活动时，神经和激素的调节会增加心脏的收缩频率和力度，以提供更多的氧气和营养物质给活动的肌肉。",
+	"总体来说，青蛙的心肺循环系统是一种适应于两栖生活方式的高度特化系统。它包括心脏、肺、皮肤和循环系统等多个组成部分。通过这些部分的协同工作，青蛙能够有效地进行气体交换和营养输送。"],
+[
+  "1. 原材料选择：毛巾制造的第一步是选择原材料。毛巾通常采用棉花制作，因为棉花具有吸水性和柔软性。优质的棉纤维被选用用于制造高品质的毛巾。",
+  "2. 棉花采摘：棉花植株在适宜的地区种植和培育。一旦棉铃成熟，可以通过人工或机械方式进行采摘。采摘的棉花随后被运输到加工设施。",
+  "3. 集棉：在集棉过程中，棉纤维与种子和其他杂质分离。这一步骤使用称为棉花轧棉机的专用机械完成。提取的棉纤维称为棉絮，准备进行进一步的加工。",
+  "4. 纺纱：棉絮通过纺纱工艺转化为纱线。纤维被拉直、清洁并扭绞在一起形成连续的线。纱线可以通过梳理或梳棉两种方法制备，具体取决于所需的毛巾质量和纹理。",
+  "5. 织造或编织：然后使用纺织或编织机将纱线制成毛巾的织物。织造是将纱线以直角交织在一起形成稳定的布匹，而编织则使用一系列互锁的环来制造织物。通过不同的织造或编织技术可以实现不同的毛巾设计和图案。",
+  "6. 染色：织物生产完成后，经过染色工艺添加颜色。毛巾可以使用各种染色方法进行染色，例如片染、纱线染色或印花。",
+  "7. 切割和缝制：经过染色的织物随后被裁剪成各种尺寸的毛巾，如浴巾、手巾或洗脸巾。边缘通常会进行折边或整理处理，以防止起毛。在此阶段还可以附加毛巾标签或吊牌。",
+  "8. 后整理：毛巾经过后整理工艺，以增强其柔软性、吸水性和外观。这可能包括清洗、漂白、干燥和熨烫。可以应用软化剂或化学处理以达到所需的质地和手感。",
+  "9. 质量控制：在整个制造过程中，实施质量控制措施以确保毛巾符合所需的标准。这包括检查织物、检查瑕疵，并验证吸水性和色牢度。",
+  "10. 包装和分销：一旦毛巾通过质量控制检查，它们将被包装并准备进行分销。毛巾可以单独包装或成套包装。然后将它们运送到批发商、零售商或直接销售给消费者。"
+],
+[
+  "张三发现他心爱的小鸡似乎不太对劲，于是决定带它去医院。他小心翼翼地将小鸡放进篮子里，然后匆匆忙忙地赶往最近的医院。",
+  "一到医院，张三抱着篮子走进了诊室。医生看到他的表情有些惊讶，但还是礼貌地问道：“您好，请问有什么问题？”",
+  "张三有些紧张地说：“医生，我的小鸡生病了，我担心它不舒服。”",
+  "医生微笑着回答：“好的，请您告诉我关于小鸡的症状和情况。”",
+  "张三有些为难地开始描述小鸡的情况：“它最近食欲不振，也不爱动，还总是发出奇怪的声音。”",
+  "医生继续询问：“它有没有其他症状？比如呼吸困难、发烧或者其他异常？”",
+  "张三思考了一下，然后回答：“没有，它看起来只是有点不开心。”",
+  "医生停顿了一下，然后轻轻笑了笑：“先生，我明白您对小鸡的关心，但是我们这里是人医院，专门治疗人的疾病。”",
+  "张三尴尬地笑了笑，低下了头：“对不起，我不知道。那我应该怎么办呢？”",
+  "医生友善地解释：“没关系，我建议您去兽医那里，他们专门治疗动物。他们会更了解如何帮助您的小鸡恢复健康。”",
+  "张三点点头，感激地说道：“谢谢医生，我会去找兽医的。对不起打扰了。”",
+  "医生微笑着回答：“不用客气，希望您的小鸡早日康复。”",
+  "张三离开了医院，带着小鸡回家，决定立刻前往兽医那里。尽管他走错了医院，但他的爱心和关怀让人感动。",
+],
+[
+  "大家好！我是奥运会撑杆跳冠军，很高兴能有机会和大家分享我对这项运动的热爱。",
+  "首先，我喜欢撑杆跳的原因是它的挑战性和刺激感。这项运动要求我在极短的时间内充分发挥我的力量、速度和技术，以跨越那根高高悬挂在空中的撑杆。每次成功的跳跃都给我无比的成就感，而每次失败的尝试都激励着我不断进步和超越自我。",
+  "我开始训练撑杆跳是因为一个偶然的机会。当时我还在上中学，体育老师发现了我的身体协调性和弹跳能力，便鼓励我尝试撑杆跳。从那一刻起，我就深深地爱上了这项运动。我投入了大量的时间和努力进行训练，不断提高自己的技术和力量。",
+  "在比赛中，有两次令我印象深刻且令人惊讶的经历。第一次是在一场重要的国际比赛上，当我即将跨越最后一根撑杆时，我的撑杆竟然断裂了！这让我感到非常挫败和失望，但我没有放弃。借助观众的加油声和我的毅力，我临时找到了替代的撑杆，重新调整心态，最终成功完成比赛。这次经历教会了我面对困难时的坚持和应变能力。",
+  "第二次令我难以忘怀的经历是在奥运会上。当我最终跨越那根高高的撑杆，我感受到了前所未有的喜悦和骄傲。站在领奖台上，看着国旗冉冉升起，我深深体会到了自己努力的价值和对国家的荣誉。这一刻让我明白，每一次坚持和付出都是值得的。",
+  "撑杆跳给予了我无尽的激情和成就感。我感谢这项运动带给我的机会和挑战。我将继续努力训练，追求更高的高度和更出色的成绩。谢谢大家！"
+],
+[
+  "亲爱的尼安德特人朋友，让我向你介绍一个将彻底改变你生活的不可思议发明：轮子。是的，我知道它可能看起来奇怪而陌生，但请相信我，它是一个改变游戏规则的发明。让我解释为什么你应该考虑购买不只一个，而是四个轮子。",
+  "首先，想象一下搬运重物的便利性。通过将四个轮子安装在坚固的平台上，你可以轻松移动那些本来需要巨大力气才能搬动的物品。无论是搬运建筑用的大石头还是运送一堆柴火，轮子将使你的生活变得轻松许多。",
+  "其次，想象一下旅行的效率。想象一下自己在广阔的风景中畅游而不感到疲惫。通过在车辆上安装轮子，你可以轻松地行进长距离，几乎不需要费力。前往不同的狩猎场地或采集地点将更加迅速，让你能够快速收集资源并迅速返回家中。",
+  "此外，让我们谈谈农业。有了轮子，你可以制作一个简单的车或犁来助你耕作。不再只依赖蛮力，你可以利用轮子的力量耕种更大的土地面积，从而提高粮食产量，为你的部落带来更好的可持续性。",
+  "现在，我必须承认，这个第一版的轮子有一些缺点。它可能没有后续版本那样精致。轮子可能有些粗糙，无法像我们希望的那样平稳地通过不平坦的地形。然而，我们正在不断改进这个发明，这些初期的缺陷不应该掩盖它所带来的巨大好处。",
+  "因此，我亲爱的尼安德特人朋友，我敦促你接受这个新发明。想象一下自己轻松地搬运重物，迅速穿越广袤的土地，以及彻底改变你的农业实践。轮子将使你的生活更加高效，并为你和你的部落带来无数可能性。",
+  "不要错过这个难得的机会。拥抱轮子，你将站在创新和进步的前沿。我们共同能够为我们的社群塑造一个更加光明的未来。感谢你考虑我的建议。"
+],
     ["亲爱的孩子们，我想和你们分享我在圣诞节收到的七件礼物以及我打算如何使用它们。首先，是这个漂亮的围巾。我打算在寒冷的冬天里用它保暖。它的颜色和花纹都很漂亮，会让我看起来时尚又温暖。",
   "接下来，我收到了一本精美的烹饪书。我一直热爱烹饪，这本书将为我提供更多的灵感和食谱。我计划尝试一些新的菜肴，给家人带来惊喜的美食体验。",
   "第三个礼物是一套园艺工具。我非常喜欢花园里的工作，这些工具将帮助我更好地照料花草。我打算在春天来临时，种植一些新的花朵和蔬菜，让花园更加美丽和多样化。",
@@ -711,7 +901,17 @@ zh_monologue_library = [
   "请记住，切勿尝试任何家庭疗法或自行使用止血带。",
   "这些做法可能会加重情况，延误适当的医疗治疗。",
   "您及时寻求医疗帮助是正确的选择，我们将共同努力，帮助您康复。"
-]
+    ],
+    [
+  "好的，是时候检查这位乘客的行李了。我们从这个行李箱开始，看起来是个普通的箱子。",
+  "嗯，这是什么？一个看起来可疑的装置，有线缆。这是炸弹吗？最好小心处理。哦，等等！原来只是一个移动充电器。虚惊一场，太好了！",
+  "接下来是下一个包。哦，那是什么液体？是危险的化学物品吗？小心地打开它。哦，原来只是一瓶洗发水。没什么危害。",
+  "现在这个包裹感觉很重。可能是一些非法物品吗？我需要小心。等等...原来只是一盒巧克力。我的心白跳了一拍。",
+  "这个奇怪的工具是什么？是武器吗？最好仔细检查一下。哦，原来只是一把瑞士军刀。没什么好担心的。",
+  "哦不，那是什么滴答滴答的声音？是定时炸弹吗？保持冷静，小心处理。等等...原来只是一个闹钟。又是虚惊一场。",
+  "最后一个，一个神秘的信封。里面有危险的东西吗？小心地打开它。哦，原来只是一封亲人的手写信件。没什么好担心的。",
+  "哇！这是一段情绪起伏不定的经历。连续六次虚警。这再次证明了彻底检查每一件物品的重要性。现在，继续检查下一个乘客的行李。希望这次检查顺利些。",
+],
 
 ]
 

@@ -134,16 +134,16 @@ function start_nback(){
     }
 	     
     targ_lang = document.querySelector('input[name="targ_language"]:checked').value;
-    text_type = document.querySelector('input[name="text_type"]:checked').value;
+    text_type = "words"//document.querySelector('input[name="text_type"]:checked').value;
     wins_to_increase = parseInt(document.getElementById("nback_to_increase").value);//TODO user input: need to handle garbage!
     fails_to_decrease = parseInt(document.getElementById("nback_to_decrease").value);
 
     if(targ_lang == "rnd"){
 	targ_lang = shuffle(["zh","eng","mix"])[0];
     }
-    if(text_type == "rnd"){
-	text_type = shuffle(["words","texts"])[0];
-    }
+//    if(text_type == "rnd"){
+//	text_type = shuffle(["words","texts"])[0];
+//    }
 
     nback_drawnext();
 }
@@ -170,7 +170,7 @@ function nback_drawnext(){
 //    }
     
     //current_n refs n blanked items, +2 is to add current_target and candidate
-    nback_itemlist.length < current_n + 2 ? my_table = my_table + "<p class='nback_inner_p'><button onclick='nback_drawnext()'>LOAD</button></p>" : my_table = my_table + "<p class='nback_response_p'><button onclick=nback_respond('same')>Same</button>&nbsp<button onclick=nback_respond('different')>Different</button></p>"
+    nback_itemlist.length < current_n + 2 ? my_table = my_table + "<p class='nback_inner_p'><button onclick='nback_drawnext()'>LOAD</button></p>" : my_table = my_table + "<p class='nback_response_p'><button onclick=nback_respond('same')>Same <br/>('a')</button>&nbsp<button onclick=nback_respond('different')>Different <br/>('l')</button></p>"
     
     my_table = my_table + "</div>"+
 	"<div> <div style='text-align:left; width:45%; margin:auto; display:inline-block;'>Hits: "+(current_wins)+" / "+(current_n + wins_to_increase)+"</div><div style='text-align:right; display:inline-block; width:45%;margin:auto;'>"+current_fails+" /"+fails_to_decrease+" :Misses</div>"+
@@ -188,8 +188,8 @@ function nback_home(){
 	    "      <p><button onclick=location.reload()>Main menu</button><p>"+
 	    "    <div class='settings_div'>"+
 	    "    <h2>Settings</h2>"+
-	    "<p>Increase list length at level + <input type='text' id='nback_to_increase' value='5' size='2'> wins</p>"+
-	    "<p>Decrease list length every <input type='text' id='nback_to_decrease' value='3' size='2'> failures</p>"+
+	    "<p>Increase list length <br/> at level + <input type='text' id='nback_to_increase' value='5' size='2'> wins</p>"+
+	    "<p>Decrease list length <br/> every <input type='text' id='nback_to_decrease' value='3' size='2'> failures</p>"+
 	    "      <h3>Language</h3>"+
 	    "      <input type='radio' id='eng' name='targ_language' value='eng'>"+
 	    "      <label for='eng'>English</label><br>"+
@@ -199,13 +199,13 @@ function nback_home(){
 	    "      <label for='mix'>Mixture</label><br>"+
 	    "      <input type='radio' id='rnd' name='targ_language' value='rnd' checked>"+
 	    "      <label for='rnd'>Surprise me</label><br>"+
-	    "      <h3>Text type</h3>"+
-	    "      <input type='radio' id='tt_words' name='text_type' value='words'>"+
-	    "      <label for='eng'>Words</label><br>"+
-	    "      <input type='radio' id='tt_texts' name='text_type' value='texts'>"+
-	    "      <label for='zh'>Texts</label><br>"+
-	    "      <input type='radio' id='tt_rnd' name='text_type' value='rnd' checked>"+
-	    "      <label for='rnd'>Surprise me</label><br>"+
+//	    "      <h3>Text type</h3>"+ //only words make sense? Pargraphs are dumb here?
+//	    "      <input type='radio' id='tt_words' name='text_type' value='words'>"+
+//	    "      <label for='eng'>Words</label><br>"+
+//	    "      <input type='radio' id='tt_texts' name='text_type' value='texts'>"+
+//	    "      <label for='zh'>Texts</label><br>"+
+//	    "      <input type='radio' id='tt_rnd' name='text_type' value='rnd' checked>"+
+//	    "      <label for='rnd'>Surprise me</label><br>"+
 	"<button onclick='start_nback()'> Start n-back</button>"+
 	    "    </div>"
     )}
