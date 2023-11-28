@@ -1,0 +1,64 @@
+const lcwc_instructions = ["bite me"]
+const lcwc_motivation = "I mean it"
+
+
+function lcwc_howtoplay(){
+    if(instruction_index == lcwc_instructions.length){
+	document.getElementById("instructionnext").disabled = true;
+	return;
+    }
+    toUberdiv(
+	"<h1>How to play look-cover-write-check</h1>"+
+	    lcwc_instructions[instruction_index]+
+	    "<p><button id='instructionnext' onclick=lcwc_howtoplay()>Next</button></p>"+
+	"<p><button onclick='location.reload()'>Main menu</button></p>"
+    )
+    instruction_index = instruction_index + 1;
+}
+
+function lcwc_whytoplay(){
+    toUberdiv(lcwc_motivation);
+}
+
+function lcwc_start(){
+        if(isNaN(parseInt(document.getElementById("lcwc_startlen").value))){
+	alert("Start length needs to be an integer")
+	return;
+    }
+
+    targ_language = document.querySelector('input[name="targ_language"]:checked').value;
+    wins_to_increase = parseInt(document.getElementById("lcwc_startlen").value);
+
+    if(targ_language == "rnd"){
+	targ_language = shuffle(["eng","zh"])[0]
+    }
+    
+    // Todo: get some texts from the bilang resources?
+    // total_length = bi_text_pairs.length + monos.length;
+    // apick = Math.floor(Math.random()*total_length);
+    // console.log(total_length)
+    
+    let my_text = targ_language=="eng" ? eng_monologue_library : zh_monologue_library //js will by-reference right :-P
+
+    
+}
+
+function lcwc_home(){
+    
+    toUberdiv(
+	random_eyecandy()+
+	    "      <p><button onclick=location.reload()>Main menu</button><p>"+
+	    "    <div class='settings_div'>"+
+	    "    <h2>Settings</h2>"+
+	    "<p>Start length <br/><input type='text' id='lcwc_startlen' value='5' size='2'></p>"+
+	    "      <h3>Language</h3>"+
+	    "      <input type='radio' id='eng' name='targ_language' value='eng'>"+
+	    "      <label for='eng'>English</label><br>"+
+	    "      <input type='radio' id='zh' name='targ_language' value='zh'>"+
+	    "      <label for='zh'>Chinese</label><br>"+
+	    "      <input type='radio' id='rnd' name='targ_language' value='rnd' checked>"+
+	    "      <label for='rnd'>Surprise me</label><br>"+
+	"<button onclick='lcwc_start()'> Start <br/>Look-cover-write-check</button>"+
+	    "    </div>"
+    )//end toUberdiv
+ }

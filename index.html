@@ -14,6 +14,7 @@
   <script src="https://unpkg.com/chinese-numbering@1.x/bundle/iife.js"></script> <!-- external dependency! -->
   <script type="text/javascript" src="infnumbers_scripts.js"></script>
   <script type="text/javascript" src="clozetrans_scripts.js"></script>
+  <script type="text/javascript" src="LCWC_scripts.js"></script>
 </head>
 <body>
 
@@ -73,6 +74,18 @@
       <td></td>
       <td><button onclick='numbers_howtoplay()'>How to play</button></td>
       <td><button onclick='numbers_whytoplay()'>Why to play</button></td>
+    </tr>
+  <tr>
+      <td><button onClick='lcwc_home()' disabled>Accent gym</button></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><button onclick='lcwc_howtoplay()' disabled>How to play</button></td>
+      <td><button onclick='lcwc_whytoplay()' disabled>Why to play</button></td>
     </tr>
     <tr>
       <td><button onClick='accent_home()' disabled>Accent gym</button></td>
@@ -210,6 +223,7 @@
     //    draw_numberChallenge()
     //    nback_home()
     // clozetrans_home()
+    lcwc_home()
  </script>
  
 <!-- resource files come last because they can contain getters that reference target language, text type etc, vars must exist -->
