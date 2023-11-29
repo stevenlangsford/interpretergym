@@ -109,6 +109,22 @@ table{
     color:blue;
 }
 
+#twocol_container{
+    /* border: 3px solid #fff; */
+    padding: 20px;
+    width: 100%;
+}
+.twocol_child{
+    width: 40%;
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid blue;
+}
+.lcwc_acceptrejectdiv{
+    display:fixed;
+    bottom:0;
+}
 /* #rnd_drill_button{ */
 /*     position:absolute; */
 /*     bottom:0%; */

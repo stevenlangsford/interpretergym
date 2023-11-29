@@ -2,7 +2,7 @@ const lcwc_instructions = ["bite me"]
 const lcwc_motivation = "I mean it"
 
 let lcwc_length = 1
-let lcwc_text = ["lcwc", "default text"]
+let lcwc_text = []
 
 function lcwc_howtoplay(){
     if(instruction_index == lcwc_instructions.length){
@@ -21,6 +21,29 @@ function lcwc_howtoplay(){
 function lcwc_whytoplay(){
     toUberdiv(lcwc_motivation);
 }
+function lcwc_gettext(){
+    while(lcwc_text.length < lcwc_length){	
+
+	pulled_text = shuffle(targ_language=="eng" ? eng_monologue_library : zh_monologue_library)[0] //by-reference (right?)
+	
+	for(i=0;i<pulled_text.length;i++){
+	    if(targ_language == "eng"){
+		sentences = pulled_text[i].split(/[\.!\?:]/)
+	    }else if (targ_language == "zh") {
+		sentences = pulled_text[i].split(/[。？！：]/)
+	    }
+	    for(asentence = 0; asentence < sentences.length; asentence++){
+		if(sentences[asentence]==undefined || sentences[asentence].length==0)continue; //sometimes split on punctuation produces null chunks?		
+		lcwc_text.push(sentences[asentence])
+		if(lcwc_text[lcwc_text.length - 1].length < 10){
+		    asentence++;//is it gross to mess with loop var?
+		    lcwc_text[lcwc_text.length - 1]+=sentences[asentence]
+		    console.log("added to a short sentence")
+		}
+	    }
+	}//end push individual sentences from each chunk in the text.
+    }//end while lcwc_text less than target length
+}
 
 function lcwc_start(){
         if(isNaN(parseInt(document.getElementById("lcwc_startlen").value))){
@@ -34,19 +57,17 @@ function lcwc_start(){
     if(targ_language == "rnd"){
 	targ_language = shuffle(["eng","zh"])[0]
     }
-    
+
+    lcwc_gettext()
     // Todo: get some texts from the bilang resources?
     // total_length = bi_text_pairs.length + monos.length;
     // apick = Math.floor(Math.random()*total_length);
     // console.log(total_length)
-    
-    lcwc_text = shuffle(targ_language=="eng" ? eng_monologue_library : zh_monologue_library)[0] //js will by-reference right :-P
-
-    draw_lcwc()
+    lcwc_draw()
 }
 
 
-function draw_lcwc(){
+function lcwc_draw(){
     prompt = "<div class='lcwc_prompt_div'>"
 
     for(i=0; i < lcwc_length;i++){
@@ -57,10 +78,16 @@ function draw_lcwc(){
     toUberdiv(prompt)
 }
 
+function lcwc_keydown(){
+     if (event.ctrlKey && event.keyCode === 13) {
+	 lcwc_check()
+  }
+}
+
 function lcwc_cover(){
     toUberdiv(
-	"<textarea id='responsetext' oninput='this.style.height = \"\";this.style.height = this.scrollHeight + \"px\"'></textarea>"+
-	    "<p><button onclick='lcwc_check()'>Check</button>"
+	"<textarea id='responsetext' onkeydown=lcwc_keydown(this) cols='70' oninput='this.style.height = \"\";this.style.height = this.scrollHeight + \"px\"'></textarea>"+
+	    "<p><button onclick='lcwc_check()'>Check<br/(ctrl+enter)></button>"
     )
     
     document.getElementById('responsetext').focus();
@@ -69,11 +96,35 @@ function lcwc_cover(){
 
 function lcwc_check(){
     //Get the user's answer from the textbox first:
+    usertext = document.getElementById("responsetext").value
+    
     //toUberdiv a 'check' screen.
     //Align how? Top bottom? Highlighting on matches?
+    checker = "<div id='twocol_container'><div class='twocol_child' id='lcwc_original'><h2>Original</h2>"
+    for(i=0; i < lcwc_length;i++){
+	checker = checker + "<p>"+lcwc_text[i]+"<p>"
+    } 
+    checker = checker + "</div>"+ //end lcwc_original
+	"<div class='twocol_child' id='lcwc_response'><h2>You said:</h2>"+
+	usertext +
+	"</div></div>"+//first end lcwc response, second end twocol_container
+	"<div style='width:100%' class = 'lcwc_acceptrejectdiv'><button onclick = 'lcwc_accept()'>Accept</button><button onclick='lcwc_reject()'>Reject</button></div>"+
+	    "      <br/><p><button onclick=location.reload()>Main menu</button><p>"
     //accept button: adds to the text length? Pulls a new random text? (should be a menu setting)
     //reject button: repeat this text.
-    alert("coming soon")
+    toUberdiv(checker)
+}
+function lcwc_accept(){
+    lcwc_length += 1;
+    if(lcwc_length > lcwc_text.length){
+	lcwc_gettext();//re-start -> get new texts
+    }else{
+	lcwc_draw();//re-draw with same text but longer length
+    }
+    
+}
+function lcwc_reject(){
+    lcwc_draw()//go again, same text.
 }
 
 function lcwc_home(){
