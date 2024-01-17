@@ -115,13 +115,15 @@ function mempalace_home(){
 //Available but not defined here: eng_concrete_nouns (an array of strings)
 
 let live_item = 0;
-let itemlist = [1,2]; //startfresh gives a new list 1 longer
+let itemlist = [1,2];//placeholder 
 let responselist = [];
 let correct_count = 0;
+let ans_offset = 0;
 
 //USER ACTIONS
 function mempalace_startfresh(new_length){
     live_item = 0;
+    ans_offset = 0;
     //resources getter functions check targ_language
     
     if(targ_lang =="rnd"){
@@ -204,7 +206,6 @@ function testItem(){
     document.getElementById('responsetext').focus();
 }
 
-let ans_offset = 0;
 
 function ansoffset(mv){
     ans_offset = ans_offset + mv;

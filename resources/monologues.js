@@ -1,5 +1,68 @@
 //assumes the existence of shuffle and global var targ_language taking values eng or zh
 eng_monologue_library = [
+    [
+	"Introducing 'Legal Luminary', an immersive computer game that places you in the shoes of a heroic lawyer. Prepare to navigate the thrilling world of law, where you'll solve real legal puzzles and experience the drama of the courtroom.",
+	"In 'Legal Luminary,' you'll step into the role of a talented attorney, taking on a variety of challenging cases. Your objective? To uncover the truth, fight for justice, and defend the innocent. The game showcases various legal practice areas, each presenting unique puzzles and dilemmas to overcome.",
+	"As a criminal defense lawyer, you'll defend clients accused of heinous crimes. Analyze crime scenes, gather evidence, and cross-examine witnesses to expose the truth. Uncover hidden motives, challenge unreliable testimonies, and craft compelling arguments to secure acquittals for your clients.",
+	"In the corporate law sector, you'll navigate complex business disputes and negotiations. Draft contracts, review legal documents, and strategize to protect your clients' interests. Solve intricate puzzles involving mergers, intellectual property battles, and high-stakes negotiations that can make or break careers.",
+	"Become a human rights advocate, fighting for the oppressed and marginalized. Tackle cases involving civil rights violations, discrimination, and social injustice. Unearth injustice, interview witnesses, and build compelling cases to bring about systemic change and secure landmark victories.",
+	"In the family law arena, you'll handle emotionally charged cases involving divorce, child custody, and adoption. Navigate delicate situations, mediate disputes, and make tough decisions that impact the lives of families. Resolve puzzles related to parental rights, inheritance disputes, and complex family dynamics.",
+	"'Legal Luminary' also features a constitutional law component, where you'll tackle important legal precedents and defend constitutional rights. Argue before the Supreme Court, analyze historical cases, and shape legal principles that impact society.",
+	"Throughout the game, you'll encounter legal puzzles inspired by real-world cases. You'll research legal precedents, interview clients and witnesses, and craft persuasive arguments in the courtroom. Your decisions and strategies will shape the outcome of each case, with consequences that ripple throughout the game.",
+	"Are you ready to become a Legal Luminary? Step into the courtroom, solve intricate legal puzzles, and fight for justice in this thrilling and immersive legal adventure."
+    ],
+    [
+	"'Heroic Doctor' is a computer game where you play as a courageous doctor, taking on the role of a life-saving hero to rescue patients. The game immerses you in a hospital setting with various departments, each presenting unique challenges to overcome.",
+	"As you step into the Emergency Department, you'll face critical situations that require quick diagnosis and treatment to ensure the patients' lives are not at risk. You'll tackle cases like sudden cardiac arrests, severe traumas, and severe allergic reactions, utilizing your medical skills to provide immediate care.",
+	"Transitioning to the Surgery Department, you'll assume the role of a skilled surgeon. Prepare the operating room and perform complex surgeries to save patients in need of surgical intervention. From intricate cardiac procedures to urgent brain surgeries and organ transplants, you must stay calm and focused for successful outcomes.",
+	"The Pediatrics Department will require your care and expertise in treating young patients, including infants and children. Establishing a rapport with the little ones, you'll address common health issues, manage rare pediatric diseases, and handle emergency pediatric traumas.",
+	"The Internal Medicine Department will challenge you with a range of diseases affecting internal organs and systems. Through careful diagnosis and treatment, you'll help patients recover their health. Expect to diagnose and treat complex cardiovascular conditions, manage chronic pain, and address acute infections and inflammations.",
+	"In the Ophthalmology Department, you'll specialize in eye health and vision-related problems. Utilize advanced equipment and techniques to diagnose and treat various eye conditions. Perform eye surgeries to correct vision issues, detect and manage eye infections, and handle eye traumas and injuries.",
+	"'Heroic Doctor' offers an immersive hospital environment where you'll experience the challenges and responsibilities of being a heroic doctor. By solving a variety of medical cases, you'll feel the satisfaction of saving lives and witness the demanding yet rewarding journey of a doctor."
+    ],
+[
+  "Okay, let's see... I've got this big celebratory dinner at the hospital, and my task is to organize the seating arrangements. It's not as easy as it sounds, considering all the personality quirks associated with each medical specialty involved. I mean, we've got surgeons, ER doctors, pediatricians, psychiatrists, radiologists, anesthesiologists, and oncologists. Quite the mix!",
+  "First, I need to consider who needs to work together closely. Surgeons and anesthesiologists definitely need to be seated together. They're like a dynamic duo in the operating room. And let's not forget the ER doctors, who need to collaborate with the surgeons in emergency situations. So, I'll make sure they're all seated at a table near the center.",
+  "Now, the pediatricians. They're the ones who deal with those adorable little patients. They should probably be seated close to the pediatric nurses and maybe even the child psychologists. They can exchange insights and stories about their little patients' antics. That'll be a fun table!",
+  "Hmm, the radiologists are a bit more introverted and tend to spend most of their time behind those screens, analyzing images. I think they would appreciate a quieter corner where they can discuss the latest advancements in their field. I'll keep them away from the boisterous tables.",
+  "The psychiatrists. They deal with the emotional and psychological aspects of patient care. It might be interesting to seat them with the oncologists. They both deal with serious emotional and psychological aspects of patient care. Plus, they can discuss the impact of a cancer diagnosis on mental health. That pairing could foster some insightful conversations.",
+  "Now, I need to consider the dynamics of the remaining specialties. Let's see... I'll seat the oncologists with the hematologists. They often collaborate in the treatment of blood-related cancers. And the hematologists can share their knowledge of blood disorders too. That should work well.",
+  "As for the remaining seats, I'll seat the remaining doctors based on their affinities and shared interests. Maybe mix in some interdepartmental collaboration and foster new connections. After all, a celebratory dinner is an opportunity for them to unwind and connect outside of their usual routines.",
+  "Alright, I think I've got it! I've shuffled the seating arrangements, taking into account the various personalities, collaborations, and interests of each medical specialty. Now, it's time to present the plan and hope that everyone finds their assigned seats acceptable. Fingers crossed for a harmonious and enjoyable celebratory dinner at the hospital!"
+],
+    [
+  "Being a zookeeper is an incredible and rewarding job, but let me tell you about the times I've been bitten by various animals. It's not something I'm proud of, but it comes with the territory. Each bite was a unique experience, and looking back, I can see how my mistakes played a role.",
+  "First, there was the time a parrot bit my finger. I was a bit too confident and didn't approach with caution while trying to retrieve a dropped object from its enclosure. Lesson learned: always be mindful of a parrot's territorial nature.",
+  "Then, there was the chimpanzee who bit my hand. I made the error of not wearing protective gloves during a routine feeding. Chimps can be unpredictable, and I should have taken better precautions.",
+  "The next encounter was with a playful otter who nipped at my ankle. I got a bit too close to its personal space while cleaning the exhibit. I should have maintained a safe distance and respected its boundaries.",
+  "Oh, and who can forget the time a snake bit my arm? It was during a routine handling session, and I didn't secure its head properly. I underestimated the strength and agility of the snake. Never make assumptions when it comes to reptiles.",
+  "Then there was the incident with a mischievous monkey. It bit my ear when I turned my back for just a second. I should have been more aware of its presence and anticipated its curious nature.",
+  "A tiger once bit my leg, and it was entirely my fault. I accidentally left a door slightly ajar in its enclosure. Tigers are powerful animals, and it was a painful reminder to double-check and secure all enclosures properly.",
+  "Lastly, there was the time a penguin bit my nose. Yes, a penguin! I made the mistake of getting too close while trying to capture a photo. Penguins may seem harmless, but they can be quite territorial, especially during mating season.",
+  "These incidents have taught me valuable lessons about animal behavior and handling. It's essential to approach each animal with respect, maintain appropriate boundaries, and always prioritize safety. Animals have their instincts, and it's our responsibility to understand and work with them. Despite the bites, my love and passion for animals remain unwavering, and I strive to learn and grow from every experience, ensuring the well-being of both the animals and myself."
+    ],
+[
+  "Oh, dear, I'm waiting in the doctor's waiting room and I'm really not feeling well.",
+  "I feel dizzy and lightheaded. Could it be high blood pressure?",
+  "I often feel my heart racing. Could it be a heart problem?",
+  "My stomach is always uncomfortable. Could it be a stomach ulcer?",
+  "I've been coughing a lot recently. Could it be pneumonia?",
+  "My finger joints sometimes swell and hurt. Could it be arthritis?",
+  "I feel extremely fatigued. Could it be chronic fatigue syndrome?",
+  "I've noticed some strange spots on my skin. Could it be skin cancer?",
+  "My memory seems to be getting worse. Could it be Alzheimer's disease?",
+  "I also have trouble sleeping. Could it be a severe sleep disorder?",
+  "Sometimes I have trouble breathing. Could it be asthma?",
+  "I often feel anxious and tense. Could it be anxiety disorder?",
+  "Sometimes I feel sad for no reason. Could it be depression?",
+  "I have a headache every day. Could it be a brain tumor?",
+  "I feel abdominal pain. Could it be a gastrointestinal disease?",
+  "Maybe I just have a cold or it's because of work stress.",
+  "But what if I really have something serious? I should tell the doctor about all my symptoms.",
+  "Perhaps I need some tests to ensure my physical health.",
+  "I hope the doctor will give me a clear diagnosis and tell me what to do.",
+  "However, I still hope that I'm just overly worried and there's nothing major wrong."
+],
 [
   "I stood in awe as I entered the museum's grand hall, my eyes immediately drawn to the colossal dinosaur skeleton that loomed before me. Its massive frame stretched out, suspended from the ceiling, casting an imposing shadow on the polished marble floor. It was a sight that sparked my imagination and filled me with wonder.",
   "As I walked closer, the intricate details of the skeleton began to reveal themselves. The bones, weathered by time, told a story of a creature that once roamed the Earth with majestic power. I circled around, examining it from different angles, trying to comprehend the sheer size and strength it must have possessed.",
@@ -466,6 +529,69 @@ eng_monologue_library = [
     ]//end library
 
 zh_monologue_library = [
+    [
+	"介绍一款名为《法律英豪》的电脑游戏，让你扮演一位英勇的律师。准备好进入扣人心弦的法律世界，解决真实的法律难题，体验法庭戏剧的刺激。",
+	"在《法律英豪》中，你将化身为一名才华横溢的律师，承担各种具有挑战性的案件。你的目标是揭示真相，为正义而战，捍卫无辜者。游戏展示了各种法律领域，每个领域都有独特的难题和困境需要克服。",
+	"作为一名刑事辩护律师，你将为被指控犯下恶行的客户辩护。分析犯罪现场，收集证据，对证人进行盘问以揭示真相。发现隐藏的动机，质疑不可靠的证词，并构建令人信服的论据来确保客户获得无罪释放。",
+	"在公司法领域，你将应对复杂的商业争端和谈判。起草合同，审查法律文件，并制定策略以保护客户的利益。解决与并购、知识产权争议和高风险谈判相关的复杂难题，这些问题可能会成就或毁掉一个事业。",
+	"成为人权捍卫者，为被压迫和边缘化的人士而战。处理涉及侵犯公民权利、歧视和社会不公的案件。揭示不公正，采访证人，并构建令人信服的案件，以实现系统性变革并取得里程碑式的胜利。",
+	"在家庭法领域，你将处理情感充沛的离婚、子女抚养和收养等案件。应对敏感的情况，调解纠纷，并做出影响家庭生活的艰难决定。解决与父母权益、继承争议和复杂的家庭关系相关的难题。",
+	"《法律英豪》还涵盖宪法法律部分，你将处理重要的法律先例并捍卫宪法权利。在最高法院辩论，分析历史案例，并塑造影响社会的法律原则。",
+	"在游戏中，你将遇到受真实案例启发的法律难题，稍作戏剧化以提供引人入胜和具有挑战性的体验。你将研究法律先例，采访客户和证人，并在法庭上构建有力的论据。你的决策和策略将塑造每个案件的结果，并在游戏中产生连锁反应的后果。",
+	"准备好成为一位法律英豪了吗？踏入法庭，解决复杂的法律难题，在这个扣人心弦、引人入胜的法律冒险中为正义而战。"
+    ],
+    [
+	"这是一款名为《英勇医生》的电脑游戏。在这个游戏中，你将成为一位英勇的医生，扮演一个救死扶伤的角色，拯救患者的生命。游戏中包含多个医院部门，每个部门都有不同的问题需要解决。",
+	"在游戏中，你将体验到医生的多个角色和责任。首先，你将进入急诊科，面对紧急情况。你需要迅速响应并进行诊断和治疗，以拯救病人的生命。你会处理突发的心脏骤停病例、严重外伤和大面积烧伤，以及迅速判断和治疗过敏反应等问题。",
+	"在进入外科时，你将承担手术医生的角色。你需要准备手术室，进行复杂的手术来拯救需要手术治疗的患者。你可能会执行心脏手术、脑部手术，甚至进行器官移植手术。在手术过程中，你需要保持冷静和专注，确保手术的成功。",
+	"游戏中还包括儿科部门，你将照顾和治疗年幼的患者，包括婴儿和儿童。你需要与小患者建立良好的关系，解决他们的常见健康问题，治疗罕见的儿童疾病，以及处理紧急的儿童外伤等。",
+	"另外，内科部门将让你面对各种内部器官和系统的疾病。通过仔细的诊断和治疗，你可以帮助患者恢复健康。你将诊断和治疗复杂的心血管疾病，管理患者的慢性疼痛，处理急性感染和炎症等问题。",
+	"眼科部门将让你专注于眼部健康和视力问题。你将使用先进的设备和技术来确诊和治疗眼科疾病。你可能会进行眼部手术以修复视力问题，检测和治疗眼部感染，处理眼部创伤和损伤等。",
+	"《英勇医生》将为玩家提供一个逼真的医院环境，让他们体验到成为一名英勇医生的挑战和责任。通过解决各种各样的医疗问题，玩家将感受到救死扶伤的成就感，并在游戏中体验到医生的艰辛和荣耀。"
+    ],
+[
+  "好的，让我看看……在医院有一个盛大的庆功晚宴，我的任务是组织座位安排。这并不像听起来那么容易，考虑到涉及到的每个医学专业的个性特点。我是说，我们有外科医生、急诊医生、儿科医生、精神科医生、放射科医生、麻醉科医生和肿瘤科医生。真是五花八门的组合啊！",
+  "首先，我需要考虑哪些人需要密切合作。外科医生和麻醉科医生肯定要坐在一起。他们就像手术室里的默契搭档。还有别忘了急诊医生，他们需要在紧急情况下与外科医生合作。所以，我会确保他们都坐在中间位置的一个桌子上。",
+  "现在是儿科医生。他们是负责可爱小患者的医生。他们应该坐在靠近儿科护士甚至儿童心理医生的位置。他们可以交流他们的见解和关于小患者的趣事。那将是一个有趣的桌子！",
+  "嗯，放射科医生比较内向，大部分时间都在屏幕后面分析图像。我想他们会喜欢一个安静的角落，在那里他们可以讨论领域内的最新进展。我会把他们远离喧闹的桌子。",
+  "精神科医生。他们处理患者的情感和心理问题。让他们和肿瘤科医生坐在一起可能会很有意思。他们都处理患者的严重情感和心理问题。而且，他们可以讨论癌症诊断对心理健康的影响。这种搭配可能会引发一些有深度的对话。",
+  "现在，我需要考虑其他专业的动态。让我看看……我会让肿瘤科医生和血液学家坐在一起。他们经常在血液相关癌症的治疗中进行合作。而且血液学家也可以分享他们对血液疾病的知识。这应该会很好。",
+  "至于剩下的座位，我会根据他们的共同兴趣和亲和力来安排其他医生。也许加入一些跨科室的合作，促进新的联系。毕竟，庆功晚宴是他们放松和在日常例行工作之外交流的机会。",
+  "好了，我想我明白了！我已经重新安排了座位，考虑到每个医学专业的不同个性、合作关系和兴趣。现在，是时候呈现这个计划了，希望每个人都能接受他们被分配的座位。为医院的和谐愉快的庆功晚宴祈祷吧！"
+],
+[
+  "作为一名动物园管理员，这份工作令人难以置信且充满了回报。但是，让我来告诉你我被各种动物咬过的经历。这不是我引以为豪的事情，但这是这个行业的一部分。每一次咬伤都是独特的经历，回想起来，我能看到自己的错误起了作用。",
+  "首先，有一次我被一只鹦鹉咬了手指。当我试图从它的围栏中取回一个掉落的物品时，我过于自信，没有谨慎接近。教训就是：在面对鹦鹉的领地性时要时刻保持警惕。",
+  "然后，有一次黑猩猩咬了我的手。在日常喂养时，我犯了不戴防护手套的错误。黑猩猩可能会变得不可预测，我应该采取更好的预防措施。",
+  "接下来是一只调皮的水獭咬了我的脚踝。在清洁展览时，我离它的个人空间太近了。我应该保持安全距离并尊重它的界限。",
+  "哦，还有一次是蛇咬了我的手臂。那是在日常处理过程中，我没有正确固定住它的头部。我低估了蛇的力量和敏捷性。在处理爬行动物时，绝不能妄下断言。",
+  "然后有一次与一只调皮的猴子发生了意外。当我转身只有一秒钟的功夫，它就咬了我的耳朵。我应该更加留意它的存在，并预料到它好奇的天性。",
+  "有一次老虎咬了我的腿，完全是我的过错。我不小心在它的围栏里留了一道微微敞开的门。老虎是强大的动物，这是一个痛苦的提醒，要仔细检查和正确锁好所有的围栏。",
+  "最后，有一次企鹅咬了我的鼻子。是的，一只企鹅！我犯了一个错误，靠得太近，试图拍摄照片。企鹅看似无害，但在繁殖季节尤其具有领地意识。",
+  "这些事件教会了我关于动物行为和处理的宝贵经验。我们必须尊重每一只动物，保持适当的界限，并始终优先考虑安全。动物有它们自己的本能，我们有责任去理解并与之相处。尽管受到咬伤，我对动物的热爱和激情始终如一，我努力从每一次经历中学习和成长，确保动物和我自己的福祉。"
+],
+    [
+  "哎呀，我在医生的候诊室等待，我的确不舒服。",
+  "我感觉头晕目眩，难道是血压升高？",
+  "我经常觉得心跳加速，难道是心脏问题？",
+  "我的胃总是不舒服，难道是胃溃疡？",
+  "我最近咳嗽得很厉害，难道是肺炎？",
+  "我的手指关节有时会肿痛，难道是关节炎？",
+  "我感觉特别疲倦，难道是慢性疲劳综合征？",
+  "我发现皮肤上有一些奇怪的斑点，难道是皮肤癌？",
+  "我的记忆力好像变差了，难道是阿尔茨海默病？",
+  "我还经常失眠，难道是严重的睡眠障碍？",
+  "我有时候喘不过气来，难道是哮喘？",
+  "我经常感到焦虑和紧张，难道是焦虑症？",
+  "我有时候感到无缘无故地悲伤，难道是抑郁症？",
+  "我每天都有点头痛，难道是脑肿瘤？",
+  "我觉得腹部疼痛，难道是肠道疾病？",
+  "也许我只是感冒了，或者是因为工作压力太大。",
+  "但是，如果我真的有什么严重的病呢？我应该告诉医生我所有的症状。",
+  "也许我需要一些检查来确保自己的身体健康。",
+  "希望医生会给我一个明确的诊断，并告诉我该怎么办。",
+  "不过，我还是希望自己只是过于担心，而并没有什么大问题。"
+    ],
 [
   "当我踏入博物馆宏伟的大厅时，我目光立刻被巨大的恐龙骨架所吸引。它的庞大身躯悬挂在天花板上，投下庄严的影子在光滑的大理石地板上。这景象激发了我的想象力，让我充满了惊叹和好奇心。",
   "随着我靠近，骨架的精细细节逐渐显现。那些被时间侵蚀的骨头诉说着一个曾经以雄伟力量徜徉地球的生物故事。我围绕其周围，从不同的角度仔细观察，试图理解它所拥有的巨大体型和力量。",

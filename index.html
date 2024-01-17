@@ -14,7 +14,7 @@
   <script src="https://unpkg.com/chinese-numbering@1.x/bundle/iife.js"></script> <!-- external dependency! -->
   <script type="text/javascript" src="infnumbers_scripts.js"></script>
   <script type="text/javascript" src="clozetrans_scripts.js"></script>
-  <script type="text/javascript" src="LCWC_scripts.js"></script>
+  <script type="text/javascript" src="lcwc_scripts.js"></script>
 </head>
 <body>
 
@@ -76,7 +76,7 @@
       <td><button onclick='numbers_whytoplay()'>Why to play</button></td>
     </tr>
   <tr>
-      <td><button onClick='lcwc_home()' disabled>Accent gym</button></td>
+      <td><button onClick='lcwc_home()'>Look-cover-write-check</button></td>
       <td></td>
       <td></td>
       <td></td>
@@ -84,8 +84,8 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><button onclick='lcwc_howtoplay()' disabled>How to play</button></td>
-      <td><button onclick='lcwc_whytoplay()' disabled>Why to play</button></td>
+      <td><button onclick='lcwc_howtoplay()' >How to play</button></td>
+      <td><button onclick='lcwc_whytoplay()' >Why to play</button></td>
     </tr>
     <tr>
       <td><button onClick='accent_home()' disabled>Accent gym</button></td>
@@ -179,7 +179,8 @@
 	shuffle([mempalace_home,
 		 nback_home,
 		 numbers_home,
-		 clozetrans_home
+		 clozetrans_home,
+		 lcwc_home
 		])[0]();
     }
 
@@ -188,6 +189,8 @@
 	css_class = shuffle(["bleft_img","bright_img"])[0]
 	img_src = shuffle(
 	    [
+		"el_buffo.png",
+		"onehanded.png",
 		"olympic_unreal.png",
 		"fem_vault_unreal.png",
 		"porcelain.png",
@@ -218,12 +221,21 @@
 	my_html = "<img src ='"+path+img_src+"' class = '"+css_class+"'>"
 	return(my_html)
     }
+
+    function devtest(){//still testing/playing.
+	//seems to work in firefox but not chrome (violates autoplay policy? There might be workarounds? Too hard RN)
+	//definitely no good for Chinese as of Dec 2023. Try: https://github.com/byhow/yanyu (?)
+	console.log("in")
+	var msg = new SpeechSynthesisUtterance('I crave existence'); 
+	window.speechSynthesis.speak(msg);
+	console.log("out")
+    }
     //DEV ONLY: skip to current exercise here if you're gonna.
     //    nback_home()
     //    draw_numberChallenge()
     //    nback_home()
-    // clozetrans_home()
-    lcwc_home()
+    //    clozetrans_home()
+    //    lcwc_home()
  </script>
  
 <!-- resource files come last because they can contain getters that reference target language, text type etc, vars must exist -->

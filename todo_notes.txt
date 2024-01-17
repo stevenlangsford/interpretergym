@@ -1,8 +1,5 @@
 Let mempalace get texts from everywhere: the monologues it's using now, plus the bilang cloze texts which it can't currently see.
 
-Have the mempalace input text box expand to fit the text you're writing into it.
-
-Add a back-to-main footer button throughout mempalace.
 
 
 **FIGURE OUT A HOST: must support backend db.**
