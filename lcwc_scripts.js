@@ -1,6 +1,6 @@
 const lcwc_instructions = ["Look-cover-write-check starts with some prompt text.","When you click the 'cover' button, the prompt text will vanish and be replaced by an input box.","When you're done trying to reproduce the input, click the 'check' button (or use the keyboard shortcut ctrl+enter to submit)","The original prompt and your reproduction will appear side-by-side in two blue boxes","It's up to you whether to accept your reproduction or not. You can be strict or forgiving about paraphrasing/typos, it's up to you.","If you accept, some more text will be added to the prompt","If you reject, the same prompt will be shown again.","Enjoy!"]
 
-const lcwc_motivation = "<p>This is just another 'shadowing' exercise. Get some text, repeat it back. It's not fundamentally different from the memory palace exercise.</p><p>The format does seem to encourage more verbatim memorization than the memory palace one though? See what you think.</p><button onclick='location.reload()'>Main menu</button>"
+const lcwc_motivation = "<h1>Look cover write check</h1> <p>This is just another 'shadowing' exercise. Get some text, repeat it back. It's not fundamentally different from the memory palace exercise.</p><p>The format does seem to encourage more verbatim memorization than the memory palace one though? See what you think.</p><button onclick='location.reload()'>Main menu</button>"
 
 let lcwc_length = 1
 let lcwc_text = []
